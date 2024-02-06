@@ -19,6 +19,9 @@ app.use(
 
 app.post("/signup", db.createUser);
 app.post("/login", db.getUser);
+app.get("/getCurrentUser", verifyToken, (req, res) => {
+  res.status(200).json({ message: "token is verified and looks good" });
+});
 
 app.get("/dashboard", verifyToken, (req, res) => {
   res.json({ message: "You Landed on Dashboard" });
