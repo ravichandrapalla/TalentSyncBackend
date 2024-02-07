@@ -34,7 +34,7 @@ const createUser = async (request, response) => {
             ) VALUES ($1, $2, $3) RETURNING registration_number`,
           [fullName, email, hashedPassword],
           (error, results) => {
-            console.log("query resp ", error, results);
+            // console.log("query resp ", error, results);
             if (error) {
               throw new Error(error);
             }
@@ -61,7 +61,7 @@ const getUser = async (request, response) => {
         throw new Error(error);
       }
       if (results.rows.length > 0) {
-        console.log("results are ---", results);
+        // console.log("results are ---", results);
         const {
           username,
           email: storedEmail,
@@ -69,23 +69,25 @@ const getUser = async (request, response) => {
           created_at,
           updated_at,
           registration_number,
+          role_id,
         } = results.rows[0];
         bcrypt.compare(password, storedPassword, (err, result) => {
           if (err) {
             throw new Error("Hach issue");
           }
-          console.log("compare ", password, results.rows[0].password, result);
+          // console.log("compare ", password, results.rows[0].password, result);
           if (result) {
             const payload = {
               username,
               storedEmail,
               registration_number,
+              role_id,
             };
             // const user = { name: email };
             jwt.sign(
               payload,
               process.env.SECRET_KEY,
-              { expiresIn: "1m" },
+              { expiresIn: "1h" },
               (err, token) => {
                 if (err) {
                   return response
@@ -116,7 +118,19 @@ const getUser = async (request, response) => {
   );
 };
 
+const getAllUsers = async (request, response) => {
+  try {
+    const queryResult = await pool.query(`SELECT * FROM users`);
+    console.log("result ", queryResult);
+    response.status(200).json({ users: queryResult.rows });
+  } catch (error) {
+    console.log("result ", error);
+    response.status(500).json({ message: "Internal Server Error" });
+  }
+};
+
 module.exports = {
   createUser,
   getUser,
+  getAllUsers,
 };

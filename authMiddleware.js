@@ -13,7 +13,7 @@ const verifyToken = (request, response, next) => {
         .status(401)
         .json({ message: "Invalid Session please Login again" });
     }
-    console.log("decoaded data in backend is ", decoded);
+    // console.log("decoaded data in backend is ", decoded);
     request.user = decoded.username;
     next();
   });
