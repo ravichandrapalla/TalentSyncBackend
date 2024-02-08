@@ -12,7 +12,7 @@ const pool = new Pool({
 });
 
 const createUser = async (request, response) => {
-  const { fullName, email, password } = request.body;
+  const { fullName, email, password, mobileNumber, role } = request.body;
   const saltRounds = 10;
   const hashedPassword = await bcrypt.hash(password, saltRounds);
 
@@ -30,9 +30,9 @@ const createUser = async (request, response) => {
           .json({ message: "Email already registered. Please Login..." });
       } else {
         pool.query(
-          `INSERT INTO users (username, email, password
-            ) VALUES ($1, $2, $3) RETURNING registration_number`,
-          [fullName, email, hashedPassword],
+          `INSERT INTO users (username, email, password, mobile_number,	role
+            ) VALUES ($1, $2, $3, $4, $5) RETURNING registration_number`,
+          [fullName, email, hashedPassword, mobileNumber, role],
           (error, results) => {
             // console.log("query resp ", error, results);
             if (error) {
@@ -84,27 +84,25 @@ const getUser = async (request, response) => {
               role_id,
             };
             // const user = { name: email };
-            jwt.sign(
+            const accessToken = jwt.sign(
               payload,
               process.env.SECRET_KEY,
-              { expiresIn: "1h" },
-              (err, token) => {
-                if (err) {
-                  return response
-                    .status(500)
-                    .json({ message: "internal Server Error" });
-                }
-
-                response.setHeader("Authorization", `Bearer ${token}`);
-                response.setHeader(
-                  "Access-Control-Expose-Headers",
-                  "Authorization"
-                );
-                response
-                  .status(200)
-                  .json({ message: "Successfully Logged in" });
-              }
+              { expiresIn: "10000" } // Access token expires in 1 minute, adjust as needed
             );
+            const refreshToken = jwt.sign(
+              payload,
+              process.env.REFRESH_SECRET_KEY,
+              { expiresIn: "7d" } // Refresh token expires in 7 days, adjust as needed
+            );
+
+            response.setHeader("Authorization", `Bearer ${accessToken}`);
+            response.setHeader("RefreshToken", refreshToken);
+            response.setHeader(
+              "Access-Control-Expose-Headers",
+              "Authorization, RefreshToken"
+            );
+
+            response.status(200).json({ message: "Successfully logged in" });
           } else {
             response.status(401).json({ message: "Incorrect Password" });
           }
@@ -121,10 +119,10 @@ const getUser = async (request, response) => {
 const getAllUsers = async (request, response) => {
   try {
     const queryResult = await pool.query(`SELECT * FROM users`);
-    console.log("result ", queryResult);
+    // console.log("result ", queryResult);
     response.status(200).json({ users: queryResult.rows });
   } catch (error) {
-    console.log("result ", error);
+    // console.log("result ", error);
     response.status(500).json({ message: "Internal Server Error" });
   }
 };

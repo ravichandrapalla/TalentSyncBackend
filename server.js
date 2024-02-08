@@ -2,8 +2,9 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express();
+const jwt = require("jsonwebtoken");
 const db = require("./queries");
-const verifyToken = require("./authMiddleware");
+const authMiddleware = require("./authMiddleware");
 const port = process.env.PORT || 3001;
 // const HOST = "127.0.0.1";
 require("dotenv").config();
@@ -19,12 +20,22 @@ app.use(
 
 app.post("/signup", db.createUser);
 app.post("/login", db.getUser);
-app.get("/getAllUsers", verifyToken, db.getAllUsers);
-app.get("/getCurrentUser", verifyToken, (req, res) => {
+
+app.post("/refreshToken", authMiddleware.verifyRefresh, (req, res) => {
+  const user = req.user;
+  console.log("req.body is -> ", req);
+  const newAccessToken = jwt.sign(user, process.env.SECRET_KEY, {});
+  res.setHeader("Authorization", `Bearer ${newAccessToken}`);
+  res.setHeader("Access-Control-Expose-Headers", "Authorization");
+  res.status(200).json({ message: "Token Refresh Complete" });
+});
+
+app.get("/getAllUsers", authMiddleware.verifyToken, db.getAllUsers);
+app.get("/getCurrentUser", authMiddleware.verifyToken, (req, res) => {
   res.status(200).json({ message: "token is verified and looks good" });
 });
 
-app.get("/dashboard", verifyToken, (req, res) => {
+app.get("/dashboard", authMiddleware.verifyToken, (req, res) => {
   res.json({ message: "You Landed on Dashboard" });
 });
 
