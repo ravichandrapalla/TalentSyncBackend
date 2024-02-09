@@ -3,6 +3,8 @@ require("dotenv").config();
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const express = require("express");
+const { transporter } = require("./nodemailer");
+const { v4: uuidv4 } = require("uuid");
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
@@ -15,6 +17,8 @@ const createUser = async (request, response) => {
   const { fullName, email, password, mobileNumber, role } = request.body;
   const saltRounds = 10;
   const hashedPassword = await bcrypt.hash(password, saltRounds);
+
+  // const verificationToken = uuidv4();
 
   pool.query(
     `SELECT * FROM users WHERE email = $1`,
@@ -31,13 +35,23 @@ const createUser = async (request, response) => {
       } else {
         pool.query(
           `INSERT INTO users (username, email, password, mobile_number,	role
-            ) VALUES ($1, $2, $3, $4, $5) RETURNING registration_number`,
+            ) VALUES ($1, $2, $3, $4, $5) RETURNING id, registration_number, verified `,
           [fullName, email, hashedPassword, mobileNumber, role],
           (error, results) => {
             // console.log("query resp ", error, results);
             if (error) {
               throw new Error(error);
             }
+            if (!results.rows[0].verified) {
+              sendVerificationEmail(email, results.rows[0].id);
+            } else {
+              response
+                .status(200)
+                .send(
+                  `Email is already verified. Your Registration Id is: ${results.rows[0].registration_number}. `
+                );
+            }
+
             response
               .status(201)
               .send(
@@ -45,6 +59,62 @@ const createUser = async (request, response) => {
               );
           }
         );
+      }
+    }
+  );
+};
+
+const sendVerificationEmail = (email, verificationToken) => {
+  const mailOptions = {
+    from: "TalentSync@gmail.com",
+    to: email,
+    subject: "Email Verification",
+    text: `Please click the following link to verify your email:http://localhost:4000/verify/${verificationToken}`,
+  };
+  console.log("text is ", mailOptions.text);
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      throw new Error("Error in sending mail");
+    } else {
+      console.log("mail sent successfully", info);
+    }
+  });
+};
+const verifyEmail = async (request, response) => {
+  const receivedToken = request.params.verificationToken;
+  console.log("received  ------>", receivedToken);
+  pool.query(
+    `SELECT * FROM users WHERE id = $1`,
+    [receivedToken],
+    (error, result) => {
+      if (error) {
+        return response.status(500).json({ message: "Internal Server Error" });
+      }
+      if (result.rowCount) {
+        // Token not found or expired
+        console.log("got result -----> ", result);
+
+        pool.query(
+          `UPDATE users
+          SET verified = true
+          WHERE id = $1 RETURNING email`,
+          [result.rows[0].id],
+          (error, result) => {
+            if (error) {
+              throw new Error(error);
+            }
+            if (result.rowCount) {
+              // console.log("got update response -----> ", result);
+              return response.status(200).json({
+                message: `Email ${result.rows[0].email}  Verified Successfully`,
+              });
+            }
+          }
+        );
+      } else {
+        return response
+          .status(404)
+          .json({ message: `Email not found in Database` });
       }
     }
   );
@@ -131,4 +201,5 @@ module.exports = {
   createUser,
   getUser,
   getAllUsers,
+  verifyEmail,
 };

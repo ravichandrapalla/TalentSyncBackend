@@ -30,6 +30,8 @@ app.post("/refreshToken", authMiddleware.verifyRefresh, (req, res) => {
   res.status(200).json({ message: "Token Refresh Complete" });
 });
 
+app.get("/verify/:verificationToken", db.verifyEmail);
+
 app.get("/getAllUsers", authMiddleware.verifyToken, db.getAllUsers);
 app.get("/getCurrentUser", authMiddleware.verifyToken, (req, res) => {
   res.status(200).json({ message: "token is verified and looks good" });
