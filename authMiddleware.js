@@ -8,14 +8,14 @@ const verifyToken = (request, response, next) => {
   if (!token) {
     return response.status(401).json({ message: "Unauthorized Access" });
   }
-
+  console.log("token ---------------------> ", token);
   jwt.verify(token, secretKey, (err, decoded) => {
     if (err) {
       return response
         .status(401)
         .json({ message: "Invalid Session please Login again" });
     }
-    // console.log("decoaded data in backend is ", decoded);
+    console.log("decoaded data in backend is ---------------> ", decoded);
     request.user = decoded;
     next();
   });

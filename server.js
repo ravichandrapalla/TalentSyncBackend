@@ -6,6 +6,8 @@ const jwt = require("jsonwebtoken");
 const db = require("./queries");
 const authMiddleware = require("./authMiddleware");
 const port = process.env.PORT || 3001;
+const multer = require("multer");
+const upload = multer();
 // const HOST = "127.0.0.1";
 require("dotenv").config();
 
@@ -29,6 +31,25 @@ app.post("/refreshToken", authMiddleware.verifyRefresh, (req, res) => {
   res.setHeader("Access-Control-Expose-Headers", "Authorization");
   res.status(200).json({ message: "Token Refresh Complete" });
 });
+
+app.post(
+  "/uploadResume/:regId",
+  authMiddleware.verifyToken,
+  upload.single("resume"),
+  (req, res) => {
+    const { regId } = req.params;
+    const { file, user } = req;
+    const {
+      fieldname: mappedKey,
+      originalname: fileName,
+      buffer: actualFileContent,
+      size: fileSize,
+    } = file;
+    console.log("userfiles ------>", req);
+    console.log("resume ------>", file, regId);
+    res.status(201).send("gone through");
+  }
+);
 
 app.get("/verify/:verificationToken", db.verifyEmail);
 
