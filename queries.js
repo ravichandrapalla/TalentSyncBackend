@@ -5,6 +5,7 @@ const jwt = require("jsonwebtoken");
 const express = require("express");
 const { transporter } = require("./nodemailer");
 const { v4: uuidv4 } = require("uuid");
+const { PdfDocument } = require("@ironsoftware/ironpdf");
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
@@ -59,6 +60,65 @@ const createUser = async (request, response) => {
               );
           }
         );
+      }
+    }
+  );
+};
+const pdfExtract = async (fileBuffer) => {
+  const pdf = await PdfDocument.fromFile(fileBuffer);
+  let extractedText = await pdf.extractText();
+  console.log("extracted text is  ----------------> ", extractedText);
+};
+const storeResume = async (request, response) => {
+  const { regId } = request.params;
+  const { file, user } = request;
+  const {
+    fieldname: mappedKey,
+    originalname: fileName,
+    buffer: actualFileContent,
+    size: fileSize,
+  } = file;
+  console.log("userfiles ------>", request);
+  console.log("resume ------>", file, regId);
+  console.log(
+    "destructured ---------> ",
+    mappedKey,
+    fileName,
+    actualFileContent,
+    fileSize
+  );
+  pool.query(
+    `SELECT * FROM users WHERE registration_number = $1`,
+    [regId],
+    (error, result) => {
+      // console.log("result is =------>", result);
+      // console.log(
+      //   "types  ----> ",
+      //   typeof result.rows[0].registration_number,
+      //   regId.toString()
+      // );
+      if (error) {
+        throw new Error(error);
+      }
+
+      if (result.rows[0].id) {
+        pdfExtract(actualFileContent);
+        pool.query(
+          `INSERT INTO resumes (user_id, upload_timestamp, resume) VALUES($1, $2, $3) RETURNING id`,
+          [result.rows[0].id, new Date(), actualFileContent],
+          (error, result) => {
+            if (error) {
+              throw new Error(error);
+            }
+            if (result.rows[0].id) {
+              response
+                .status(201)
+                .json({ message: "Resume Uploaded Successfully" });
+            }
+          }
+        );
+      } else {
+        throw new Error("Error in finding uuid");
       }
     }
   );
@@ -202,4 +262,5 @@ module.exports = {
   getUser,
   getAllUsers,
   verifyEmail,
+  storeResume,
 };
