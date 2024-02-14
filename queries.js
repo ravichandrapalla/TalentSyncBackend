@@ -6,6 +6,7 @@ const express = require("express");
 const { transporter } = require("./nodemailer");
 const { v4: uuidv4 } = require("uuid");
 const { PdfDocument } = require("@ironsoftware/ironpdf");
+const axios = require("axios").default;
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
@@ -68,6 +69,35 @@ const pdfExtract = async (fileBuffer) => {
   const pdf = await PdfDocument.fromFile(fileBuffer);
   let extractedText = await pdf.extractText();
   console.log("extracted text is  ----------------> ", extractedText);
+
+  const options = {
+    method: "POST",
+    url: "https://api.edenai.run/v2/text/keyword_extraction",
+    headers: {
+      authorization:
+        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNzQ5ZGM1MjQtZTZmNy00NjQ0LWIyNzUtMDQ1YzI0Yzg3ZDBlIiwidHlwZSI6ImFwaV90b2tlbiJ9.n_5gaV2gay76u-GYNXSGk5tJGLTqx-qTMxn9nF82iJs",
+    },
+    data: {
+      providers: "microsoft",
+      text: extractedText,
+      language: "en",
+      fallback_providers: "amazon",
+    },
+  };
+
+  const returnedData = await axios
+    .request(options)
+    .then((response) => {
+      const foundKeywords =
+        response.data.microsoft.items.length > 0
+          ? [...response.data.microsoft.items]
+          : [...response.data.amazon.items];
+      // console.log("keywords response ------>", response.data.microsoft.items);
+      return foundKeywords;
+    })
+    .catch((error) => error);
+  const filteredData = returnedData.map((obj) => obj.keyword).slice(0, 10);
+  return filteredData;
 };
 const storeResume = async (request, response) => {
   const { regId } = request.params;
@@ -91,32 +121,30 @@ const storeResume = async (request, response) => {
     `SELECT * FROM users WHERE registration_number = $1`,
     [regId],
     (error, result) => {
-      // console.log("result is =------>", result);
-      // console.log(
-      //   "types  ----> ",
-      //   typeof result.rows[0].registration_number,
-      //   regId.toString()
-      // );
       if (error) {
         throw new Error(error);
       }
 
       if (result.rows[0].id) {
-        pdfExtract(actualFileContent);
-        pool.query(
-          `INSERT INTO resumes (user_id, upload_timestamp, resume) VALUES($1, $2, $3) RETURNING id`,
-          [result.rows[0].id, new Date(), actualFileContent],
-          (error, result) => {
-            if (error) {
-              throw new Error(error);
-            }
-            if (result.rows[0].id) {
-              response
-                .status(201)
-                .json({ message: "Resume Uploaded Successfully" });
-            }
-          }
-        );
+        pdfExtract(actualFileContent)
+          .then((foundKeywords) => {
+            pool.query(
+              `INSERT INTO resumes (user_id, upload_timestamp, resume, key_words) VALUES($1, $2, $3, $4) RETURNING id`,
+              [result.rows[0].id, new Date(), actualFileContent, foundKeywords],
+              (error, result) => {
+                if (error) {
+                  throw new Error(error);
+                }
+                if (result.rows[0].id) {
+                  response
+                    .status(201)
+                    .json({ message: "Resume Uploaded Successfully" });
+                }
+              }
+            );
+            console.log("found key words --------> ", foundKeywords);
+          })
+          .catch((err) => console.log(err));
       } else {
         throw new Error("Error in finding uuid");
       }
