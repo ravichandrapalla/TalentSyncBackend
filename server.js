@@ -65,6 +65,7 @@ app.get("/getAllUsers", authMiddleware.verifyToken, db.getAllUsers);
 app.get("/getCurrentUser", authMiddleware.verifyToken, (req, res) => {
   res.status(200).json({ message: "token is verified and looks good" });
 });
+app.get("/getJobMatches", authMiddleware.verifyToken, db.getJobMatches);
 
 app.get("/dashboard", authMiddleware.verifyToken, (req, res) => {
   res.json({ message: "You Landed on Dashboard" });

@@ -74,8 +74,7 @@ const pdfExtract = async (fileBuffer) => {
     method: "POST",
     url: "https://api.edenai.run/v2/text/keyword_extraction",
     headers: {
-      authorization:
-        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNzQ5ZGM1MjQtZTZmNy00NjQ0LWIyNzUtMDQ1YzI0Yzg3ZDBlIiwidHlwZSI6ImFwaV90b2tlbiJ9.n_5gaV2gay76u-GYNXSGk5tJGLTqx-qTMxn9nF82iJs",
+      authorization: `Bearer ${process.env.EDENAIKEY}`,
     },
     data: {
       providers: "microsoft",
@@ -284,6 +283,25 @@ const getAllUsers = async (request, response) => {
     response.status(500).json({ message: "Internal Server Error" });
   }
 };
+const getJobMatches = async (request, response) => {
+  const searchText = request.body.searchText;
+
+  console.log("backend search text  ---------> ", searchText);
+  pool.query(
+    `SELECT key_words FROM resumes ANY (key_words) = $1 `,
+    [searchText],
+    (error, result) => {
+      if (error) {
+        throw new Error(error);
+      }
+      if (result.rows.length > 0) {
+        console.log("found matches obj ---------> ", result.rows);
+      }
+    }
+  );
+
+  response.status(200).json({ message: "Found JOb matches", data: "" });
+};
 
 module.exports = {
   createUser,
@@ -291,4 +309,5 @@ module.exports = {
   getAllUsers,
   verifyEmail,
   storeResume,
+  getJobMatches,
 };
