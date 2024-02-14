@@ -95,3 +95,1240 @@
 [2024-02-13 18:55:30] Document 0 has 1 references remaining (+1)
 [2024-02-13 18:55:30] In-memory object store fetching document ab21c384-faed-40c6-8f20-a07d295e3627
 [2024-02-13 18:55:30] In-memory object store fetching document ab21c384-faed-40c6-8f20-a07d295e3627
+[2024-02-14 10:37:36] ---------- Microsoft Windows NT 10.0.22631.0 (C:\Users\ravic\Desktop\TalentSyncBackend\IronPdfEngine.log) ----------
+[2024-02-14 10:37:36] Using deployment directory 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 10:37:36] Creating deployment candidates using root path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\' (download: False)
+[2024-02-14 10:37:36] Creating folder deployments for win-x64
+[2024-02-14 10:37:36] Creating embedded deployments for win-x64
+[2024-02-14 10:37:36] Successfully located 'IronPdfInterop' at 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 10:37:36] Warning! Missing deployment configuration file for deployment 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 10:37:36] IronSoftware.Exceptions.IronSoftwareDeploymentConfigurationMissingException: Error while locating deployment configuration file 'Pdfium*.deployment.json' within 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+   at IronSoftware.Deployment.SmartDeploymentBase.GetDeploymentConfiguration(IDeployment deployment)
+   at IronSoftware.Deployment.SmartDeploymentBase.ExecuteDeploymentCommands(IDeployment deployment)
+   at IronSoftware.Deployment.SmartDeploymentBase.Deploy(Boolean download)
+[2024-02-14 10:37:36] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 10:37:36] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 10:37:36] Successfully loaded native library from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 10:37:36] Successfully loaded 'IronPdfInterop' version '2024.1.0.143' from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 10:37:36] Successfully deployed 'Pdfium' using 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 10:37:36] Creating new job collection resource
+[2024-02-14 10:37:36] Creating new document collection resource
+[2024-02-14 10:37:36] Successfully initialized local pdf client
+[2024-02-14 10:37:36] Initializing local Chrome client...
+[2024-02-14 10:37:36] Using deployment directory 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 10:37:36] Creating deployment candidates using root path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\' (download: False)
+[2024-02-14 10:37:36] Creating folder deployments for win-x64
+[2024-02-14 10:37:36] Creating embedded deployments for win-x64
+[2024-02-14 10:37:36] Successfully located 'IronInterop' at 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 10:37:36] Determining deployment commands for platform 'Windows' v10.0.22631.0
+[2024-02-14 10:37:36] Using deployment instructions for 'default' v
+[2024-02-14 10:37:36] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 10:37:36] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 10:37:36] Successfully loaded native library from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 10:37:36] Successfully loaded 'IronInterop' version '2024.1.0.143' from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 10:37:36] Successfully deployed 'Chrome' using 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 10:37:36] Initializing Chrome renderer for OS Name: Windows, Identifier: win, Version: 10.0.22631.0, VersionName: , Domain: IronPdfEngineConsole, Thread: , Path: C:\Users\ravic\Desktop\TalentSyncBackend
+[2024-02-14 10:37:36] 10:37:36 (12884): ~ Chrome renderer v2024.1.0.143~
+[2024-02-14 10:37:36] 10:37:36 (12884): register JobManager as publisher for event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 10:37:36] 10:37:36 (12884): [EventRegistry] Register event_readyToInitializeNetworkEventsDevToolsHandler for a publisher
+[2024-02-14 10:37:36] 10:37:36 (12884): IsSingleProcess: 0
+[2024-02-14 10:37:36] 10:37:36 (12884): Creating Cef proxy controller
+[2024-02-14 10:37:36] 10:37:36 (12884): Creating Cef interface
+[2024-02-14 10:37:36] 10:37:36 (12884): JobManager subscribes a new sub, eventStr=event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 10:37:36] 10:37:36 (12884): JobManager subscribes a new sub, eventStr=event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 10:37:36] 10:37:36 (12884): Destroying Cef proxy event handler
+[2024-02-14 10:37:36] 10:37:36 (12884): Initializing Cef proxy controller
+[2024-02-14 10:37:36] 10:37:36 (12884): Using subprocess path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe'
+[2024-02-14 10:37:36] 10:37:36 (12884): Using framework path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 10:37:36] 10:37:36 (12884): Using locales path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales'
+[2024-02-14 10:37:36] 10:37:36 (12884): Using resources path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 10:37:36] 10:37:36 (12884): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfEngineConsole.exe" --browser-subprocess-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --no-sandbox --lang=en-US --log-file=cef.log --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --disable-features=CalculateNativeWinOcclusion,WinUseBrowserSpellChecker,BackForwardCache host=127.0.0.1 port=33350 docker_build=false keep_alive=true linux_and_docker_auto_config=false skip_initialization=false log_path=./IronPdfEngine.log single_process=false chrome_browser_limit=30 chrome_gpu_mode=0 linux_and_docker_auto_config=true programming_language=nodejs'
+[2024-02-14 10:37:36] 10:37:36 (12884): gpu_mode: '0'
+[2024-02-14 10:37:36] 10:37:36 (28612): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --type=gpu-process --no-sandbox --headless --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --lang=en-US --user-data-dir="C:\Users\ravic\AppData\Local\Temp" /prefetch:2'
+[2024-02-14 10:37:36] 10:37:36 (28612): gpu_mode: '0'
+[2024-02-14 10:37:36] 10:37:36 (12884): Cef initialization succeeded
+[2024-02-14 10:37:36] Successfully initialized local Chrome client
+[2024-02-14 10:37:36] 10:37:36 (28612): Cef context initialized
+[2024-02-14 10:37:36] 10:37:36 (28612): Registering custom scheme for rendering raw html
+[2024-02-14 10:37:36] 10:37:36 (28612): Successfully registered custom scheme
+[2024-02-14 10:37:36] 10:37:36 (28612): Cef engine initialization complete
+[2024-02-14 10:37:36] 10:37:36 (28612): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --ignore-urlfetcher-cert-requests --no-sandbox --ignore-certificate-errors --mute-audio --ignore-certificate-errors --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --lang=en-US --user-data-dir="C:\Users\ravic\AppData\Local\Temp" /prefetch:8'
+[2024-02-14 10:37:36] 10:37:36 (28612): gpu_mode: '0'
+[2024-02-14 10:37:46] 'UsageData' module is disabled
+[2024-02-14 10:37:46] Attempting to obtain value for a key 'IronPdf.LicenseKey' from settings
+[2024-02-14 10:37:46] Couldn't find key 'IronPdf.LicenseKey' in json config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 10:37:46] Couldn't find key 'IronPdf.LicenseKey' in xml config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 10:37:46] Warning! Error while retrieving app settings value
+[2024-02-14 10:37:46] System.ArgumentNullException: Value cannot be null. (Parameter 'path')
+   at System.IO.Path.GetFullPath(String path)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.ReadAzureFunctionConfig(String key, Assembly context)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.TryReadFromDefaultConfigs(String key, Assembly context, String& configValue)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.Read(String key, Assembly context)
+   at IronSoftware.Licenses.LicenseManager.GetConfigValue(String key, Assembly assembly)
+[2024-02-14 10:37:46] Attempting to obtain value for a key 'IronSuite.LicenseKey' from settings
+[2024-02-14 10:37:46] Couldn't find key 'IronSuite.LicenseKey' in json config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 10:37:46] Couldn't find key 'IronSuite.LicenseKey' in xml config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 10:37:46] Warning! Error while retrieving app settings value
+[2024-02-14 10:37:46] System.ArgumentNullException: Value cannot be null. (Parameter 'path')
+   at System.IO.Path.GetFullPath(String path)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.ReadAzureFunctionConfig(String key, Assembly context)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.TryReadFromDefaultConfigs(String key, Assembly context, String& configValue)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.Read(String key, Assembly context)
+   at IronSoftware.Licenses.LicenseManager.GetConfigValue(String key, Assembly assembly)
+[2024-02-14 10:37:46] Setting license key to 'AppAnalytics' module
+[2024-02-14 10:37:46] Error 0x00 while validating license key
+[2024-02-14 10:37:46] Failed to create LicenseKey, returning null. Exception occured:'Error 0x00 while validating license key'
+[2024-02-14 10:37:46] 10:37:46 (31096): PdfDocumentFactory created document 000001EEACD796B0 from 29731 bytes
+[2024-02-14 10:37:46] 10:37:46 (31096): Document opened from vector
+[2024-02-14 10:37:46] 10:37:46 (31096): Storing new document 0
+[2024-02-14 10:37:46] Document 0 has 1 references remaining (+1)
+[2024-02-14 10:37:46] In-memory object store fetching document 1c2235a7-0665-4bd1-bf4f-2be4a7edac57
+[2024-02-14 10:37:46] In-memory object store fetching document 1c2235a7-0665-4bd1-bf4f-2be4a7edac57
+[2024-02-14 11:58:12] ---------- Microsoft Windows NT 10.0.22631.0 (C:\Users\ravic\Desktop\TalentSyncBackend\IronPdfEngine.log) ----------
+[2024-02-14 11:58:12] Using deployment directory 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 11:58:12] Creating deployment candidates using root path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\' (download: False)
+[2024-02-14 11:58:12] Creating folder deployments for win-x64
+[2024-02-14 11:58:12] Creating embedded deployments for win-x64
+[2024-02-14 11:58:12] Successfully located 'IronPdfInterop' at 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 11:58:12] Warning! Missing deployment configuration file for deployment 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 11:58:12] IronSoftware.Exceptions.IronSoftwareDeploymentConfigurationMissingException: Error while locating deployment configuration file 'Pdfium*.deployment.json' within 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+   at IronSoftware.Deployment.SmartDeploymentBase.GetDeploymentConfiguration(IDeployment deployment)
+   at IronSoftware.Deployment.SmartDeploymentBase.ExecuteDeploymentCommands(IDeployment deployment)
+   at IronSoftware.Deployment.SmartDeploymentBase.Deploy(Boolean download)
+[2024-02-14 11:58:12] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 11:58:12] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 11:58:12] Successfully loaded native library from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 11:58:12] Successfully loaded 'IronPdfInterop' version '2024.1.0.143' from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 11:58:12] Successfully deployed 'Pdfium' using 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 11:58:12] Creating new job collection resource
+[2024-02-14 11:58:12] Creating new document collection resource
+[2024-02-14 11:58:12] Successfully initialized local pdf client
+[2024-02-14 11:58:12] Initializing local Chrome client...
+[2024-02-14 11:58:12] Using deployment directory 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 11:58:12] Creating deployment candidates using root path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\' (download: False)
+[2024-02-14 11:58:12] Creating folder deployments for win-x64
+[2024-02-14 11:58:12] Creating embedded deployments for win-x64
+[2024-02-14 11:58:12] Successfully located 'IronInterop' at 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 11:58:12] Determining deployment commands for platform 'Windows' v10.0.22631.0
+[2024-02-14 11:58:12] Using deployment instructions for 'default' v
+[2024-02-14 11:58:12] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 11:58:12] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 11:58:12] Successfully loaded native library from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 11:58:12] Successfully loaded 'IronInterop' version '2024.1.0.143' from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 11:58:12] Successfully deployed 'Chrome' using 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 11:58:12] Initializing Chrome renderer for OS Name: Windows, Identifier: win, Version: 10.0.22631.0, VersionName: , Domain: IronPdfEngineConsole, Thread: , Path: C:\Users\ravic\Desktop\TalentSyncBackend
+[2024-02-14 11:58:12] 11:58:12 (12248): ~ Chrome renderer v2024.1.0.143~
+[2024-02-14 11:58:12] 11:58:12 (12248): register JobManager as publisher for event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 11:58:12] 11:58:12 (12248): [EventRegistry] Register event_readyToInitializeNetworkEventsDevToolsHandler for a publisher
+[2024-02-14 11:58:12] 11:58:12 (12248): IsSingleProcess: 0
+[2024-02-14 11:58:12] 11:58:12 (12248): Creating Cef proxy controller
+[2024-02-14 11:58:12] 11:58:12 (12248): Creating Cef interface
+[2024-02-14 11:58:12] 11:58:12 (12248): JobManager subscribes a new sub, eventStr=event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 11:58:12] 11:58:12 (12248): JobManager subscribes a new sub, eventStr=event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 11:58:12] 11:58:12 (12248): Destroying Cef proxy event handler
+[2024-02-14 11:58:12] 11:58:12 (12248): Initializing Cef proxy controller
+[2024-02-14 11:58:12] 11:58:12 (12248): Using subprocess path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe'
+[2024-02-14 11:58:12] 11:58:12 (12248): Using framework path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 11:58:12] 11:58:12 (12248): Using locales path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales'
+[2024-02-14 11:58:12] 11:58:12 (12248): Using resources path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 11:58:12] 11:58:12 (12248): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfEngineConsole.exe" --browser-subprocess-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --no-sandbox --lang=en-US --log-file=cef.log --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --disable-features=CalculateNativeWinOcclusion,WinUseBrowserSpellChecker,BackForwardCache host=127.0.0.1 port=33350 docker_build=false keep_alive=true linux_and_docker_auto_config=false skip_initialization=false log_path=./IronPdfEngine.log single_process=false chrome_browser_limit=30 chrome_gpu_mode=0 linux_and_docker_auto_config=true programming_language=nodejs'
+[2024-02-14 11:58:12] 11:58:12 (12248): gpu_mode: '0'
+[2024-02-14 11:58:12] 11:58:12 (36432): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --type=gpu-process --no-sandbox --headless --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --lang=en-US --user-data-dir="C:\Users\ravic\AppData\Local\Temp" /prefetch:2'
+[2024-02-14 11:58:12] 11:58:12 (36432): gpu_mode: '0'
+[2024-02-14 11:58:12] 11:58:12 (12248): Cef initialization succeeded
+[2024-02-14 11:58:12] Successfully initialized local Chrome client
+[2024-02-14 11:58:12] 11:58:12 (36432): Cef context initialized
+[2024-02-14 11:58:12] 11:58:12 (36432): Registering custom scheme for rendering raw html
+[2024-02-14 11:58:12] 11:58:12 (36432): Successfully registered custom scheme
+[2024-02-14 11:58:12] 11:58:12 (36432): Cef engine initialization complete
+[2024-02-14 11:58:12] 11:58:12 (36432): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --ignore-urlfetcher-cert-requests --no-sandbox --ignore-certificate-errors --mute-audio --ignore-certificate-errors --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --lang=en-US --user-data-dir="C:\Users\ravic\AppData\Local\Temp" /prefetch:8'
+[2024-02-14 11:58:12] 11:58:12 (36432): gpu_mode: '0'
+[2024-02-14 11:58:22] 'UsageData' module is disabled
+[2024-02-14 11:58:22] Attempting to obtain value for a key 'IronPdf.LicenseKey' from settings
+[2024-02-14 11:58:22] Couldn't find key 'IronPdf.LicenseKey' in json config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 11:58:22] Couldn't find key 'IronPdf.LicenseKey' in xml config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 11:58:22] Warning! Error while retrieving app settings value
+[2024-02-14 11:58:22] System.ArgumentNullException: Value cannot be null. (Parameter 'path')
+   at System.IO.Path.GetFullPath(String path)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.ReadAzureFunctionConfig(String key, Assembly context)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.TryReadFromDefaultConfigs(String key, Assembly context, String& configValue)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.Read(String key, Assembly context)
+   at IronSoftware.Licenses.LicenseManager.GetConfigValue(String key, Assembly assembly)
+[2024-02-14 11:58:22] Attempting to obtain value for a key 'IronSuite.LicenseKey' from settings
+[2024-02-14 11:58:22] Couldn't find key 'IronSuite.LicenseKey' in json config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 11:58:22] Couldn't find key 'IronSuite.LicenseKey' in xml config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 11:58:22] Warning! Error while retrieving app settings value
+[2024-02-14 11:58:22] System.ArgumentNullException: Value cannot be null. (Parameter 'path')
+   at System.IO.Path.GetFullPath(String path)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.ReadAzureFunctionConfig(String key, Assembly context)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.TryReadFromDefaultConfigs(String key, Assembly context, String& configValue)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.Read(String key, Assembly context)
+   at IronSoftware.Licenses.LicenseManager.GetConfigValue(String key, Assembly assembly)
+[2024-02-14 11:58:22] Setting license key to 'AppAnalytics' module
+[2024-02-14 11:58:22] Error 0x00 while validating license key
+[2024-02-14 11:58:22] Failed to create LicenseKey, returning null. Exception occured:'Error 0x00 while validating license key'
+[2024-02-14 11:58:22] 11:58:22 (34600): PdfDocumentFactory created document 000001CA77386960 from 29731 bytes
+[2024-02-14 11:58:22] 11:58:22 (34600): Document opened from vector
+[2024-02-14 11:58:22] 11:58:22 (34600): Storing new document 0
+[2024-02-14 11:58:22] Document 0 has 1 references remaining (+1)
+[2024-02-14 11:58:22] In-memory object store fetching document 19437e4c-69cd-47c0-b9f1-bd780b9a744e
+[2024-02-14 11:58:22] In-memory object store fetching document 19437e4c-69cd-47c0-b9f1-bd780b9a744e
+[2024-02-14 12:03:34] ---------- Microsoft Windows NT 10.0.22631.0 (C:\Users\ravic\Desktop\TalentSyncBackend\IronPdfEngine.log) ----------
+[2024-02-14 12:03:34] Using deployment directory 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:03:34] Creating deployment candidates using root path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\' (download: False)
+[2024-02-14 12:03:34] Creating folder deployments for win-x64
+[2024-02-14 12:03:34] Creating embedded deployments for win-x64
+[2024-02-14 12:03:34] Successfully located 'IronPdfInterop' at 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:03:34] Warning! Missing deployment configuration file for deployment 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:03:34] IronSoftware.Exceptions.IronSoftwareDeploymentConfigurationMissingException: Error while locating deployment configuration file 'Pdfium*.deployment.json' within 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+   at IronSoftware.Deployment.SmartDeploymentBase.GetDeploymentConfiguration(IDeployment deployment)
+   at IronSoftware.Deployment.SmartDeploymentBase.ExecuteDeploymentCommands(IDeployment deployment)
+   at IronSoftware.Deployment.SmartDeploymentBase.Deploy(Boolean download)
+[2024-02-14 12:03:34] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 12:03:34] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 12:03:34] Successfully loaded native library from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 12:03:34] Successfully loaded 'IronPdfInterop' version '2024.1.0.143' from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:03:34] Successfully deployed 'Pdfium' using 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:03:34] Creating new job collection resource
+[2024-02-14 12:03:34] Creating new document collection resource
+[2024-02-14 12:03:34] Successfully initialized local pdf client
+[2024-02-14 12:03:34] Initializing local Chrome client...
+[2024-02-14 12:03:34] Using deployment directory 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:03:34] Creating deployment candidates using root path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\' (download: False)
+[2024-02-14 12:03:34] Creating folder deployments for win-x64
+[2024-02-14 12:03:34] Creating embedded deployments for win-x64
+[2024-02-14 12:03:34] Successfully located 'IronInterop' at 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:03:34] Determining deployment commands for platform 'Windows' v10.0.22631.0
+[2024-02-14 12:03:34] Using deployment instructions for 'default' v
+[2024-02-14 12:03:34] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 12:03:34] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 12:03:34] Successfully loaded native library from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 12:03:34] Successfully loaded 'IronInterop' version '2024.1.0.143' from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:03:34] Successfully deployed 'Chrome' using 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:03:34] Initializing Chrome renderer for OS Name: Windows, Identifier: win, Version: 10.0.22631.0, VersionName: , Domain: IronPdfEngineConsole, Thread: , Path: C:\Users\ravic\Desktop\TalentSyncBackend
+[2024-02-14 12:03:34] 12:03:34 (4152): ~ Chrome renderer v2024.1.0.143~
+[2024-02-14 12:03:34] 12:03:34 (4152): register JobManager as publisher for event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 12:03:34] 12:03:34 (4152): [EventRegistry] Register event_readyToInitializeNetworkEventsDevToolsHandler for a publisher
+[2024-02-14 12:03:34] 12:03:34 (4152): IsSingleProcess: 0
+[2024-02-14 12:03:34] 12:03:34 (4152): Creating Cef proxy controller
+[2024-02-14 12:03:34] 12:03:34 (4152): Creating Cef interface
+[2024-02-14 12:03:34] 12:03:34 (4152): JobManager subscribes a new sub, eventStr=event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 12:03:34] 12:03:34 (4152): JobManager subscribes a new sub, eventStr=event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 12:03:34] 12:03:34 (4152): Destroying Cef proxy event handler
+[2024-02-14 12:03:34] 12:03:34 (4152): Initializing Cef proxy controller
+[2024-02-14 12:03:34] 12:03:34 (4152): Using subprocess path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe'
+[2024-02-14 12:03:34] 12:03:34 (4152): Using framework path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:03:34] 12:03:34 (4152): Using locales path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales'
+[2024-02-14 12:03:34] 12:03:34 (4152): Using resources path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:03:34] 12:03:34 (4152): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfEngineConsole.exe" --browser-subprocess-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --no-sandbox --lang=en-US --log-file=cef.log --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --disable-features=CalculateNativeWinOcclusion,WinUseBrowserSpellChecker,BackForwardCache host=127.0.0.1 port=33350 docker_build=false keep_alive=true linux_and_docker_auto_config=false skip_initialization=false log_path=./IronPdfEngine.log single_process=false chrome_browser_limit=30 chrome_gpu_mode=0 linux_and_docker_auto_config=true programming_language=nodejs'
+[2024-02-14 12:03:34] 12:03:34 (4152): gpu_mode: '0'
+[2024-02-14 12:03:34] 12:03:34 (33840): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --type=gpu-process --no-sandbox --headless --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --lang=en-US --user-data-dir="C:\Users\ravic\AppData\Local\Temp" /prefetch:2'
+[2024-02-14 12:03:34] 12:03:34 (33840): gpu_mode: '0'
+[2024-02-14 12:03:34] 12:03:34 (4152): Cef initialization succeeded
+[2024-02-14 12:03:34] Successfully initialized local Chrome client
+[2024-02-14 12:03:34] 12:03:34 (33840): Cef context initialized
+[2024-02-14 12:03:34] 12:03:34 (33840): Registering custom scheme for rendering raw html
+[2024-02-14 12:03:34] 12:03:34 (33840): Successfully registered custom scheme
+[2024-02-14 12:03:34] 12:03:34 (33840): Cef engine initialization complete
+[2024-02-14 12:03:34] 12:03:34 (33840): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --ignore-urlfetcher-cert-requests --no-sandbox --ignore-certificate-errors --mute-audio --ignore-certificate-errors --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --lang=en-US --user-data-dir="C:\Users\ravic\AppData\Local\Temp" /prefetch:8'
+[2024-02-14 12:03:34] 12:03:34 (33840): gpu_mode: '0'
+[2024-02-14 12:03:44] 'UsageData' module is disabled
+[2024-02-14 12:03:44] Attempting to obtain value for a key 'IronPdf.LicenseKey' from settings
+[2024-02-14 12:03:44] Couldn't find key 'IronPdf.LicenseKey' in json config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 12:03:44] Couldn't find key 'IronPdf.LicenseKey' in xml config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 12:03:44] Warning! Error while retrieving app settings value
+[2024-02-14 12:03:44] System.ArgumentNullException: Value cannot be null. (Parameter 'path')
+   at System.IO.Path.GetFullPath(String path)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.ReadAzureFunctionConfig(String key, Assembly context)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.TryReadFromDefaultConfigs(String key, Assembly context, String& configValue)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.Read(String key, Assembly context)
+   at IronSoftware.Licenses.LicenseManager.GetConfigValue(String key, Assembly assembly)
+[2024-02-14 12:03:44] Attempting to obtain value for a key 'IronSuite.LicenseKey' from settings
+[2024-02-14 12:03:44] Couldn't find key 'IronSuite.LicenseKey' in json config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 12:03:44] Couldn't find key 'IronSuite.LicenseKey' in xml config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 12:03:44] Warning! Error while retrieving app settings value
+[2024-02-14 12:03:44] System.ArgumentNullException: Value cannot be null. (Parameter 'path')
+   at System.IO.Path.GetFullPath(String path)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.ReadAzureFunctionConfig(String key, Assembly context)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.TryReadFromDefaultConfigs(String key, Assembly context, String& configValue)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.Read(String key, Assembly context)
+   at IronSoftware.Licenses.LicenseManager.GetConfigValue(String key, Assembly assembly)
+[2024-02-14 12:03:44] Setting license key to 'AppAnalytics' module
+[2024-02-14 12:03:44] Error 0x00 while validating license key
+[2024-02-14 12:03:44] Failed to create LicenseKey, returning null. Exception occured:'Error 0x00 while validating license key'
+[2024-02-14 12:03:44] 12:03:44 (19300): PdfDocumentFactory created document 00000202C2A6A850 from 29731 bytes
+[2024-02-14 12:03:44] 12:03:44 (19300): Document opened from vector
+[2024-02-14 12:03:44] 12:03:44 (19300): Storing new document 0
+[2024-02-14 12:03:44] Document 0 has 1 references remaining (+1)
+[2024-02-14 12:03:44] In-memory object store fetching document daf91aef-e0ad-4fcd-b194-2dc035b9885e
+[2024-02-14 12:03:44] In-memory object store fetching document daf91aef-e0ad-4fcd-b194-2dc035b9885e
+[2024-02-14 12:15:27] ---------- Microsoft Windows NT 10.0.22631.0 (C:\Users\ravic\Desktop\TalentSyncBackend\IronPdfEngine.log) ----------
+[2024-02-14 12:15:27] Using deployment directory 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:15:27] Creating deployment candidates using root path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\' (download: False)
+[2024-02-14 12:15:27] Creating folder deployments for win-x64
+[2024-02-14 12:15:27] Creating embedded deployments for win-x64
+[2024-02-14 12:15:27] Successfully located 'IronPdfInterop' at 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:15:27] Warning! Missing deployment configuration file for deployment 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:15:27] IronSoftware.Exceptions.IronSoftwareDeploymentConfigurationMissingException: Error while locating deployment configuration file 'Pdfium*.deployment.json' within 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+   at IronSoftware.Deployment.SmartDeploymentBase.GetDeploymentConfiguration(IDeployment deployment)
+   at IronSoftware.Deployment.SmartDeploymentBase.ExecuteDeploymentCommands(IDeployment deployment)
+   at IronSoftware.Deployment.SmartDeploymentBase.Deploy(Boolean download)
+[2024-02-14 12:15:27] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 12:15:27] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 12:15:27] Successfully loaded native library from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 12:15:27] Successfully loaded 'IronPdfInterop' version '2024.1.0.143' from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:15:27] Successfully deployed 'Pdfium' using 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:15:27] Creating new job collection resource
+[2024-02-14 12:15:27] Creating new document collection resource
+[2024-02-14 12:15:27] Successfully initialized local pdf client
+[2024-02-14 12:15:27] Initializing local Chrome client...
+[2024-02-14 12:15:27] Using deployment directory 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:15:27] Creating deployment candidates using root path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\' (download: False)
+[2024-02-14 12:15:27] Creating folder deployments for win-x64
+[2024-02-14 12:15:27] Creating embedded deployments for win-x64
+[2024-02-14 12:15:27] Successfully located 'IronInterop' at 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:15:27] Determining deployment commands for platform 'Windows' v10.0.22631.0
+[2024-02-14 12:15:27] Using deployment instructions for 'default' v
+[2024-02-14 12:15:27] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 12:15:27] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 12:15:27] Successfully loaded native library from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 12:15:27] Successfully loaded 'IronInterop' version '2024.1.0.143' from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:15:27] Successfully deployed 'Chrome' using 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:15:27] Initializing Chrome renderer for OS Name: Windows, Identifier: win, Version: 10.0.22631.0, VersionName: , Domain: IronPdfEngineConsole, Thread: , Path: C:\Users\ravic\Desktop\TalentSyncBackend
+[2024-02-14 12:15:27] 12:15:27 (29772): ~ Chrome renderer v2024.1.0.143~
+[2024-02-14 12:15:27] 12:15:27 (29772): register JobManager as publisher for event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 12:15:27] 12:15:27 (29772): [EventRegistry] Register event_readyToInitializeNetworkEventsDevToolsHandler for a publisher
+[2024-02-14 12:15:27] 12:15:27 (29772): IsSingleProcess: 0
+[2024-02-14 12:15:27] 12:15:27 (29772): Creating Cef proxy controller
+[2024-02-14 12:15:27] 12:15:27 (29772): Creating Cef interface
+[2024-02-14 12:15:27] 12:15:27 (29772): JobManager subscribes a new sub, eventStr=event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 12:15:27] 12:15:27 (29772): JobManager subscribes a new sub, eventStr=event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 12:15:27] 12:15:27 (29772): Destroying Cef proxy event handler
+[2024-02-14 12:15:27] 12:15:27 (29772): Initializing Cef proxy controller
+[2024-02-14 12:15:27] 12:15:27 (29772): Using subprocess path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe'
+[2024-02-14 12:15:27] 12:15:27 (29772): Using framework path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:15:27] 12:15:27 (29772): Using locales path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales'
+[2024-02-14 12:15:27] 12:15:27 (29772): Using resources path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:15:27] 12:15:27 (29772): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfEngineConsole.exe" --browser-subprocess-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --no-sandbox --lang=en-US --log-file=cef.log --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --disable-features=CalculateNativeWinOcclusion,WinUseBrowserSpellChecker,BackForwardCache host=127.0.0.1 port=33350 docker_build=false keep_alive=true linux_and_docker_auto_config=false skip_initialization=false log_path=./IronPdfEngine.log single_process=false chrome_browser_limit=30 chrome_gpu_mode=0 linux_and_docker_auto_config=true programming_language=nodejs'
+[2024-02-14 12:15:27] 12:15:27 (29772): gpu_mode: '0'
+[2024-02-14 12:15:27] 12:15:27 (29688): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --type=gpu-process --no-sandbox --headless --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --lang=en-US --user-data-dir="C:\Users\ravic\AppData\Local\Temp" /prefetch:2'
+[2024-02-14 12:15:27] 12:15:27 (29688): gpu_mode: '0'
+[2024-02-14 12:15:27] 12:15:27 (29772): Cef initialization succeeded
+[2024-02-14 12:15:27] Successfully initialized local Chrome client
+[2024-02-14 12:15:27] 12:15:27 (29688): Cef context initialized
+[2024-02-14 12:15:27] 12:15:27 (29688): Registering custom scheme for rendering raw html
+[2024-02-14 12:15:27] 12:15:27 (29688): Successfully registered custom scheme
+[2024-02-14 12:15:27] 12:15:27 (29688): Cef engine initialization complete
+[2024-02-14 12:15:27] 12:15:27 (29688): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --ignore-urlfetcher-cert-requests --no-sandbox --ignore-certificate-errors --mute-audio --ignore-certificate-errors --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --lang=en-US --user-data-dir="C:\Users\ravic\AppData\Local\Temp" /prefetch:8'
+[2024-02-14 12:15:27] 12:15:27 (29688): gpu_mode: '0'
+[2024-02-14 12:15:37] 'UsageData' module is disabled
+[2024-02-14 12:15:37] Attempting to obtain value for a key 'IronPdf.LicenseKey' from settings
+[2024-02-14 12:15:37] Couldn't find key 'IronPdf.LicenseKey' in json config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 12:15:37] Couldn't find key 'IronPdf.LicenseKey' in xml config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 12:15:37] Warning! Error while retrieving app settings value
+[2024-02-14 12:15:37] System.ArgumentNullException: Value cannot be null. (Parameter 'path')
+   at System.IO.Path.GetFullPath(String path)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.ReadAzureFunctionConfig(String key, Assembly context)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.TryReadFromDefaultConfigs(String key, Assembly context, String& configValue)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.Read(String key, Assembly context)
+   at IronSoftware.Licenses.LicenseManager.GetConfigValue(String key, Assembly assembly)
+[2024-02-14 12:15:37] Attempting to obtain value for a key 'IronSuite.LicenseKey' from settings
+[2024-02-14 12:15:37] Couldn't find key 'IronSuite.LicenseKey' in json config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 12:15:37] Couldn't find key 'IronSuite.LicenseKey' in xml config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 12:15:37] Warning! Error while retrieving app settings value
+[2024-02-14 12:15:37] System.ArgumentNullException: Value cannot be null. (Parameter 'path')
+   at System.IO.Path.GetFullPath(String path)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.ReadAzureFunctionConfig(String key, Assembly context)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.TryReadFromDefaultConfigs(String key, Assembly context, String& configValue)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.Read(String key, Assembly context)
+   at IronSoftware.Licenses.LicenseManager.GetConfigValue(String key, Assembly assembly)
+[2024-02-14 12:15:37] Setting license key to 'AppAnalytics' module
+[2024-02-14 12:15:37] Error 0x00 while validating license key
+[2024-02-14 12:15:37] Failed to create LicenseKey, returning null. Exception occured:'Error 0x00 while validating license key'
+[2024-02-14 12:15:37] 12:15:37 (35284): PdfDocumentFactory created document 000001BA75E755F0 from 29731 bytes
+[2024-02-14 12:15:37] 12:15:37 (35284): Document opened from vector
+[2024-02-14 12:15:37] 12:15:37 (35284): Storing new document 0
+[2024-02-14 12:15:37] Document 0 has 1 references remaining (+1)
+[2024-02-14 12:15:37] In-memory object store fetching document 462de89d-62d6-4031-83a5-7a199174c909
+[2024-02-14 12:15:37] In-memory object store fetching document 462de89d-62d6-4031-83a5-7a199174c909
+[2024-02-14 12:16:59] ---------- Microsoft Windows NT 10.0.22631.0 (C:\Users\ravic\Desktop\TalentSyncBackend\IronPdfEngine.log) ----------
+[2024-02-14 12:16:59] Using deployment directory 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:16:59] Creating deployment candidates using root path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\' (download: False)
+[2024-02-14 12:16:59] Creating folder deployments for win-x64
+[2024-02-14 12:16:59] Creating embedded deployments for win-x64
+[2024-02-14 12:16:59] Successfully located 'IronPdfInterop' at 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:16:59] Warning! Missing deployment configuration file for deployment 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:16:59] IronSoftware.Exceptions.IronSoftwareDeploymentConfigurationMissingException: Error while locating deployment configuration file 'Pdfium*.deployment.json' within 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+   at IronSoftware.Deployment.SmartDeploymentBase.GetDeploymentConfiguration(IDeployment deployment)
+   at IronSoftware.Deployment.SmartDeploymentBase.ExecuteDeploymentCommands(IDeployment deployment)
+   at IronSoftware.Deployment.SmartDeploymentBase.Deploy(Boolean download)
+[2024-02-14 12:16:59] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 12:16:59] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 12:16:59] Successfully loaded native library from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 12:16:59] Successfully loaded 'IronPdfInterop' version '2024.1.0.143' from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:16:59] Successfully deployed 'Pdfium' using 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:16:59] Creating new job collection resource
+[2024-02-14 12:16:59] Creating new document collection resource
+[2024-02-14 12:16:59] Successfully initialized local pdf client
+[2024-02-14 12:16:59] Initializing local Chrome client...
+[2024-02-14 12:16:59] Using deployment directory 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:16:59] Creating deployment candidates using root path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\' (download: False)
+[2024-02-14 12:16:59] Creating folder deployments for win-x64
+[2024-02-14 12:16:59] Creating embedded deployments for win-x64
+[2024-02-14 12:16:59] Successfully located 'IronInterop' at 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:16:59] Determining deployment commands for platform 'Windows' v10.0.22631.0
+[2024-02-14 12:16:59] Using deployment instructions for 'default' v
+[2024-02-14 12:16:59] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 12:16:59] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 12:16:59] Successfully loaded native library from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 12:16:59] Successfully loaded 'IronInterop' version '2024.1.0.143' from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:16:59] Successfully deployed 'Chrome' using 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:16:59] Initializing Chrome renderer for OS Name: Windows, Identifier: win, Version: 10.0.22631.0, VersionName: , Domain: IronPdfEngineConsole, Thread: , Path: C:\Users\ravic\Desktop\TalentSyncBackend
+[2024-02-14 12:16:59] 12:16:59 (16928): ~ Chrome renderer v2024.1.0.143~
+[2024-02-14 12:16:59] 12:16:59 (16928): register JobManager as publisher for event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 12:16:59] 12:16:59 (16928): [EventRegistry] Register event_readyToInitializeNetworkEventsDevToolsHandler for a publisher
+[2024-02-14 12:16:59] 12:16:59 (16928): IsSingleProcess: 0
+[2024-02-14 12:16:59] 12:16:59 (16928): Creating Cef proxy controller
+[2024-02-14 12:16:59] 12:16:59 (16928): Creating Cef interface
+[2024-02-14 12:16:59] 12:16:59 (16928): JobManager subscribes a new sub, eventStr=event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 12:16:59] 12:16:59 (16928): JobManager subscribes a new sub, eventStr=event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 12:16:59] 12:16:59 (16928): Destroying Cef proxy event handler
+[2024-02-14 12:16:59] 12:16:59 (16928): Initializing Cef proxy controller
+[2024-02-14 12:16:59] 12:16:59 (16928): Using subprocess path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe'
+[2024-02-14 12:16:59] 12:16:59 (16928): Using framework path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:16:59] 12:16:59 (16928): Using locales path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales'
+[2024-02-14 12:16:59] 12:16:59 (16928): Using resources path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:16:59] 12:16:59 (16928): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfEngineConsole.exe" --browser-subprocess-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --no-sandbox --lang=en-US --log-file=cef.log --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --disable-features=CalculateNativeWinOcclusion,WinUseBrowserSpellChecker,BackForwardCache host=127.0.0.1 port=33350 docker_build=false keep_alive=true linux_and_docker_auto_config=false skip_initialization=false log_path=./IronPdfEngine.log single_process=false chrome_browser_limit=30 chrome_gpu_mode=0 linux_and_docker_auto_config=true programming_language=nodejs'
+[2024-02-14 12:16:59] 12:16:59 (16928): gpu_mode: '0'
+[2024-02-14 12:16:59] 12:16:59 (19300): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --type=gpu-process --no-sandbox --headless --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --lang=en-US --user-data-dir="C:\Users\ravic\AppData\Local\Temp" /prefetch:2'
+[2024-02-14 12:16:59] 12:16:59 (19300): gpu_mode: '0'
+[2024-02-14 12:16:59] 12:16:59 (16928): Cef initialization succeeded
+[2024-02-14 12:16:59] Successfully initialized local Chrome client
+[2024-02-14 12:16:59] 12:16:59 (19300): Cef context initialized
+[2024-02-14 12:16:59] 12:16:59 (19300): Registering custom scheme for rendering raw html
+[2024-02-14 12:16:59] 12:16:59 (19300): Successfully registered custom scheme
+[2024-02-14 12:16:59] 12:16:59 (19300): Cef engine initialization complete
+[2024-02-14 12:16:59] 12:16:59 (19300): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --ignore-urlfetcher-cert-requests --no-sandbox --ignore-certificate-errors --mute-audio --ignore-certificate-errors --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --lang=en-US --user-data-dir="C:\Users\ravic\AppData\Local\Temp" /prefetch:8'
+[2024-02-14 12:16:59] 12:16:59 (19300): gpu_mode: '0'
+[2024-02-14 12:17:09] 'UsageData' module is disabled
+[2024-02-14 12:17:09] Attempting to obtain value for a key 'IronPdf.LicenseKey' from settings
+[2024-02-14 12:17:09] Couldn't find key 'IronPdf.LicenseKey' in json config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 12:17:09] Couldn't find key 'IronPdf.LicenseKey' in xml config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 12:17:09] Warning! Error while retrieving app settings value
+[2024-02-14 12:17:09] System.ArgumentNullException: Value cannot be null. (Parameter 'path')
+   at System.IO.Path.GetFullPath(String path)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.ReadAzureFunctionConfig(String key, Assembly context)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.TryReadFromDefaultConfigs(String key, Assembly context, String& configValue)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.Read(String key, Assembly context)
+   at IronSoftware.Licenses.LicenseManager.GetConfigValue(String key, Assembly assembly)
+[2024-02-14 12:17:09] Attempting to obtain value for a key 'IronSuite.LicenseKey' from settings
+[2024-02-14 12:17:09] Couldn't find key 'IronSuite.LicenseKey' in json config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 12:17:09] Couldn't find key 'IronSuite.LicenseKey' in xml config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 12:17:09] Warning! Error while retrieving app settings value
+[2024-02-14 12:17:09] System.ArgumentNullException: Value cannot be null. (Parameter 'path')
+   at System.IO.Path.GetFullPath(String path)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.ReadAzureFunctionConfig(String key, Assembly context)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.TryReadFromDefaultConfigs(String key, Assembly context, String& configValue)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.Read(String key, Assembly context)
+   at IronSoftware.Licenses.LicenseManager.GetConfigValue(String key, Assembly assembly)
+[2024-02-14 12:17:09] Setting license key to 'AppAnalytics' module
+[2024-02-14 12:17:09] Error 0x00 while validating license key
+[2024-02-14 12:17:09] Failed to create LicenseKey, returning null. Exception occured:'Error 0x00 while validating license key'
+[2024-02-14 12:17:09] 12:17:09 (10560): PdfDocumentFactory created document 000002A630AF4AC0 from 29731 bytes
+[2024-02-14 12:17:09] 12:17:09 (10560): Document opened from vector
+[2024-02-14 12:17:09] 12:17:09 (10560): Storing new document 0
+[2024-02-14 12:17:09] Document 0 has 1 references remaining (+1)
+[2024-02-14 12:17:09] In-memory object store fetching document f488b1a8-1978-4f44-9f13-abde19461109
+[2024-02-14 12:17:09] In-memory object store fetching document f488b1a8-1978-4f44-9f13-abde19461109
+[2024-02-14 12:19:52] ---------- Microsoft Windows NT 10.0.22631.0 (C:\Users\ravic\Desktop\TalentSyncBackend\IronPdfEngine.log) ----------
+[2024-02-14 12:19:52] Using deployment directory 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:19:52] Creating deployment candidates using root path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\' (download: False)
+[2024-02-14 12:19:52] Creating folder deployments for win-x64
+[2024-02-14 12:19:52] Creating embedded deployments for win-x64
+[2024-02-14 12:19:52] Successfully located 'IronPdfInterop' at 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:19:52] Warning! Missing deployment configuration file for deployment 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:19:52] IronSoftware.Exceptions.IronSoftwareDeploymentConfigurationMissingException: Error while locating deployment configuration file 'Pdfium*.deployment.json' within 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+   at IronSoftware.Deployment.SmartDeploymentBase.GetDeploymentConfiguration(IDeployment deployment)
+   at IronSoftware.Deployment.SmartDeploymentBase.ExecuteDeploymentCommands(IDeployment deployment)
+   at IronSoftware.Deployment.SmartDeploymentBase.Deploy(Boolean download)
+[2024-02-14 12:19:52] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 12:19:52] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 12:19:52] Successfully loaded native library from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 12:19:52] Successfully loaded 'IronPdfInterop' version '2024.1.0.143' from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:19:52] Successfully deployed 'Pdfium' using 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:19:52] Creating new job collection resource
+[2024-02-14 12:19:52] Creating new document collection resource
+[2024-02-14 12:19:52] Successfully initialized local pdf client
+[2024-02-14 12:19:52] Initializing local Chrome client...
+[2024-02-14 12:19:52] Using deployment directory 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:19:52] Creating deployment candidates using root path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\' (download: False)
+[2024-02-14 12:19:52] Creating folder deployments for win-x64
+[2024-02-14 12:19:52] Creating embedded deployments for win-x64
+[2024-02-14 12:19:52] Successfully located 'IronInterop' at 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:19:52] Determining deployment commands for platform 'Windows' v10.0.22631.0
+[2024-02-14 12:19:52] Using deployment instructions for 'default' v
+[2024-02-14 12:19:52] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 12:19:52] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 12:19:52] Successfully loaded native library from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 12:19:52] Successfully loaded 'IronInterop' version '2024.1.0.143' from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:19:52] Successfully deployed 'Chrome' using 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:19:52] Initializing Chrome renderer for OS Name: Windows, Identifier: win, Version: 10.0.22631.0, VersionName: , Domain: IronPdfEngineConsole, Thread: , Path: C:\Users\ravic\Desktop\TalentSyncBackend
+[2024-02-14 12:19:52] 12:19:52 (34104): ~ Chrome renderer v2024.1.0.143~
+[2024-02-14 12:19:52] 12:19:52 (34104): register JobManager as publisher for event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 12:19:52] 12:19:52 (34104): [EventRegistry] Register event_readyToInitializeNetworkEventsDevToolsHandler for a publisher
+[2024-02-14 12:19:52] 12:19:52 (34104): IsSingleProcess: 0
+[2024-02-14 12:19:52] 12:19:52 (34104): Creating Cef proxy controller
+[2024-02-14 12:19:52] 12:19:52 (34104): Creating Cef interface
+[2024-02-14 12:19:52] 12:19:52 (34104): JobManager subscribes a new sub, eventStr=event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 12:19:52] 12:19:52 (34104): JobManager subscribes a new sub, eventStr=event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 12:19:52] 12:19:52 (34104): Destroying Cef proxy event handler
+[2024-02-14 12:19:52] 12:19:52 (34104): Initializing Cef proxy controller
+[2024-02-14 12:19:52] 12:19:52 (34104): Using subprocess path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe'
+[2024-02-14 12:19:52] 12:19:52 (34104): Using framework path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:19:52] 12:19:52 (34104): Using locales path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales'
+[2024-02-14 12:19:52] 12:19:52 (34104): Using resources path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:19:52] 12:19:52 (34104): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfEngineConsole.exe" --browser-subprocess-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --no-sandbox --lang=en-US --log-file=cef.log --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --disable-features=CalculateNativeWinOcclusion,WinUseBrowserSpellChecker,BackForwardCache host=127.0.0.1 port=33350 docker_build=false keep_alive=true linux_and_docker_auto_config=false skip_initialization=false log_path=./IronPdfEngine.log single_process=false chrome_browser_limit=30 chrome_gpu_mode=0 linux_and_docker_auto_config=true programming_language=nodejs'
+[2024-02-14 12:19:52] 12:19:52 (34104): gpu_mode: '0'
+[2024-02-14 12:19:52] 12:19:52 (34692): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --type=gpu-process --no-sandbox --headless --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --lang=en-US --user-data-dir="C:\Users\ravic\AppData\Local\Temp" /prefetch:2'
+[2024-02-14 12:19:52] 12:19:52 (34692): gpu_mode: '0'
+[2024-02-14 12:19:52] 12:19:52 (34104): Cef initialization succeeded
+[2024-02-14 12:19:52] Successfully initialized local Chrome client
+[2024-02-14 12:19:52] 12:19:52 (34692): Cef context initialized
+[2024-02-14 12:19:52] 12:19:52 (34692): Registering custom scheme for rendering raw html
+[2024-02-14 12:19:52] 12:19:52 (34692): Successfully registered custom scheme
+[2024-02-14 12:19:52] 12:19:52 (34692): Cef engine initialization complete
+[2024-02-14 12:19:52] 12:19:52 (34692): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --ignore-urlfetcher-cert-requests --no-sandbox --ignore-certificate-errors --mute-audio --ignore-certificate-errors --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --lang=en-US --user-data-dir="C:\Users\ravic\AppData\Local\Temp" /prefetch:8'
+[2024-02-14 12:19:52] 12:19:52 (34692): gpu_mode: '0'
+[2024-02-14 12:20:02] 'UsageData' module is disabled
+[2024-02-14 12:20:02] Attempting to obtain value for a key 'IronPdf.LicenseKey' from settings
+[2024-02-14 12:20:02] Couldn't find key 'IronPdf.LicenseKey' in json config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 12:20:02] Couldn't find key 'IronPdf.LicenseKey' in xml config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 12:20:02] Warning! Error while retrieving app settings value
+[2024-02-14 12:20:02] System.ArgumentNullException: Value cannot be null. (Parameter 'path')
+   at System.IO.Path.GetFullPath(String path)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.ReadAzureFunctionConfig(String key, Assembly context)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.TryReadFromDefaultConfigs(String key, Assembly context, String& configValue)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.Read(String key, Assembly context)
+   at IronSoftware.Licenses.LicenseManager.GetConfigValue(String key, Assembly assembly)
+[2024-02-14 12:20:02] Attempting to obtain value for a key 'IronSuite.LicenseKey' from settings
+[2024-02-14 12:20:02] Couldn't find key 'IronSuite.LicenseKey' in json config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 12:20:02] Couldn't find key 'IronSuite.LicenseKey' in xml config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 12:20:02] Warning! Error while retrieving app settings value
+[2024-02-14 12:20:02] System.ArgumentNullException: Value cannot be null. (Parameter 'path')
+   at System.IO.Path.GetFullPath(String path)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.ReadAzureFunctionConfig(String key, Assembly context)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.TryReadFromDefaultConfigs(String key, Assembly context, String& configValue)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.Read(String key, Assembly context)
+   at IronSoftware.Licenses.LicenseManager.GetConfigValue(String key, Assembly assembly)
+[2024-02-14 12:20:02] Setting license key to 'AppAnalytics' module
+[2024-02-14 12:20:02] Error 0x00 while validating license key
+[2024-02-14 12:20:02] Failed to create LicenseKey, returning null. Exception occured:'Error 0x00 while validating license key'
+[2024-02-14 12:20:02] 12:20:02 (38484): PdfDocumentFactory created document 000001A2543A3410 from 29731 bytes
+[2024-02-14 12:20:02] 12:20:02 (38484): Document opened from vector
+[2024-02-14 12:20:02] 12:20:02 (38484): Storing new document 0
+[2024-02-14 12:20:02] Document 0 has 1 references remaining (+1)
+[2024-02-14 12:20:02] In-memory object store fetching document 819a5f80-dffa-466c-bb65-ceef91c366d9
+[2024-02-14 12:20:02] In-memory object store fetching document 819a5f80-dffa-466c-bb65-ceef91c366d9
+[2024-02-14 12:21:08] ---------- Microsoft Windows NT 10.0.22631.0 (C:\Users\ravic\Desktop\TalentSyncBackend\IronPdfEngine.log) ----------
+[2024-02-14 12:21:08] Using deployment directory 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:21:08] Creating deployment candidates using root path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\' (download: False)
+[2024-02-14 12:21:08] Creating folder deployments for win-x64
+[2024-02-14 12:21:08] Creating embedded deployments for win-x64
+[2024-02-14 12:21:08] Successfully located 'IronPdfInterop' at 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:21:08] Warning! Missing deployment configuration file for deployment 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:21:08] IronSoftware.Exceptions.IronSoftwareDeploymentConfigurationMissingException: Error while locating deployment configuration file 'Pdfium*.deployment.json' within 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+   at IronSoftware.Deployment.SmartDeploymentBase.GetDeploymentConfiguration(IDeployment deployment)
+   at IronSoftware.Deployment.SmartDeploymentBase.ExecuteDeploymentCommands(IDeployment deployment)
+   at IronSoftware.Deployment.SmartDeploymentBase.Deploy(Boolean download)
+[2024-02-14 12:21:08] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 12:21:08] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 12:21:08] Successfully loaded native library from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 12:21:08] Successfully loaded 'IronPdfInterop' version '2024.1.0.143' from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:21:08] Successfully deployed 'Pdfium' using 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:21:08] Creating new job collection resource
+[2024-02-14 12:21:08] Creating new document collection resource
+[2024-02-14 12:21:08] Successfully initialized local pdf client
+[2024-02-14 12:21:08] Initializing local Chrome client...
+[2024-02-14 12:21:08] Using deployment directory 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:21:08] Creating deployment candidates using root path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\' (download: False)
+[2024-02-14 12:21:08] Creating folder deployments for win-x64
+[2024-02-14 12:21:08] Creating embedded deployments for win-x64
+[2024-02-14 12:21:08] Successfully located 'IronInterop' at 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:21:08] Determining deployment commands for platform 'Windows' v10.0.22631.0
+[2024-02-14 12:21:08] Using deployment instructions for 'default' v
+[2024-02-14 12:21:08] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 12:21:08] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 12:21:08] Successfully loaded native library from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 12:21:08] Successfully loaded 'IronInterop' version '2024.1.0.143' from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:21:08] Successfully deployed 'Chrome' using 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:21:08] Initializing Chrome renderer for OS Name: Windows, Identifier: win, Version: 10.0.22631.0, VersionName: , Domain: IronPdfEngineConsole, Thread: , Path: C:\Users\ravic\Desktop\TalentSyncBackend
+[2024-02-14 12:21:08] 12:21:08 (28884): ~ Chrome renderer v2024.1.0.143~
+[2024-02-14 12:21:08] 12:21:08 (28884): register JobManager as publisher for event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 12:21:08] 12:21:08 (28884): [EventRegistry] Register event_readyToInitializeNetworkEventsDevToolsHandler for a publisher
+[2024-02-14 12:21:08] 12:21:08 (28884): IsSingleProcess: 0
+[2024-02-14 12:21:08] 12:21:08 (28884): Creating Cef proxy controller
+[2024-02-14 12:21:08] 12:21:08 (28884): Creating Cef interface
+[2024-02-14 12:21:08] 12:21:08 (28884): JobManager subscribes a new sub, eventStr=event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 12:21:08] 12:21:08 (28884): JobManager subscribes a new sub, eventStr=event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 12:21:08] 12:21:08 (28884): Destroying Cef proxy event handler
+[2024-02-14 12:21:08] 12:21:08 (28884): Initializing Cef proxy controller
+[2024-02-14 12:21:08] 12:21:08 (28884): Using subprocess path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe'
+[2024-02-14 12:21:08] 12:21:08 (28884): Using framework path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:21:08] 12:21:08 (28884): Using locales path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales'
+[2024-02-14 12:21:08] 12:21:08 (28884): Using resources path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:21:08] 12:21:08 (28884): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfEngineConsole.exe" --browser-subprocess-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --no-sandbox --lang=en-US --log-file=cef.log --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --disable-features=CalculateNativeWinOcclusion,WinUseBrowserSpellChecker,BackForwardCache host=127.0.0.1 port=33350 docker_build=false keep_alive=true linux_and_docker_auto_config=false skip_initialization=false log_path=./IronPdfEngine.log single_process=false chrome_browser_limit=30 chrome_gpu_mode=0 linux_and_docker_auto_config=true programming_language=nodejs'
+[2024-02-14 12:21:08] 12:21:08 (28884): gpu_mode: '0'
+[2024-02-14 12:21:09] 12:21:09 (37112): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --type=gpu-process --no-sandbox --headless --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --lang=en-US --user-data-dir="C:\Users\ravic\AppData\Local\Temp" /prefetch:2'
+[2024-02-14 12:21:09] 12:21:09 (37112): gpu_mode: '0'
+[2024-02-14 12:21:09] 12:21:09 (28884): Cef initialization succeeded
+[2024-02-14 12:21:09] Successfully initialized local Chrome client
+[2024-02-14 12:21:09] 12:21:09 (37112): Cef context initialized
+[2024-02-14 12:21:09] 12:21:09 (37112): Registering custom scheme for rendering raw html
+[2024-02-14 12:21:09] 12:21:09 (37112): Successfully registered custom scheme
+[2024-02-14 12:21:09] 12:21:09 (37112): Cef engine initialization complete
+[2024-02-14 12:21:09] 12:21:09 (37112): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --ignore-urlfetcher-cert-requests --no-sandbox --ignore-certificate-errors --mute-audio --ignore-certificate-errors --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --lang=en-US --user-data-dir="C:\Users\ravic\AppData\Local\Temp" /prefetch:8'
+[2024-02-14 12:21:09] 12:21:09 (37112): gpu_mode: '0'
+[2024-02-14 12:21:18] 'UsageData' module is disabled
+[2024-02-14 12:21:18] Attempting to obtain value for a key 'IronPdf.LicenseKey' from settings
+[2024-02-14 12:21:18] Couldn't find key 'IronPdf.LicenseKey' in json config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 12:21:18] Couldn't find key 'IronPdf.LicenseKey' in xml config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 12:21:18] Warning! Error while retrieving app settings value
+[2024-02-14 12:21:18] System.ArgumentNullException: Value cannot be null. (Parameter 'path')
+   at System.IO.Path.GetFullPath(String path)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.ReadAzureFunctionConfig(String key, Assembly context)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.TryReadFromDefaultConfigs(String key, Assembly context, String& configValue)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.Read(String key, Assembly context)
+   at IronSoftware.Licenses.LicenseManager.GetConfigValue(String key, Assembly assembly)
+[2024-02-14 12:21:18] Attempting to obtain value for a key 'IronSuite.LicenseKey' from settings
+[2024-02-14 12:21:18] Couldn't find key 'IronSuite.LicenseKey' in json config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 12:21:18] Couldn't find key 'IronSuite.LicenseKey' in xml config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 12:21:18] Warning! Error while retrieving app settings value
+[2024-02-14 12:21:18] System.ArgumentNullException: Value cannot be null. (Parameter 'path')
+   at System.IO.Path.GetFullPath(String path)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.ReadAzureFunctionConfig(String key, Assembly context)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.TryReadFromDefaultConfigs(String key, Assembly context, String& configValue)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.Read(String key, Assembly context)
+   at IronSoftware.Licenses.LicenseManager.GetConfigValue(String key, Assembly assembly)
+[2024-02-14 12:21:18] Setting license key to 'AppAnalytics' module
+[2024-02-14 12:21:18] Error 0x00 while validating license key
+[2024-02-14 12:21:18] Failed to create LicenseKey, returning null. Exception occured:'Error 0x00 while validating license key'
+[2024-02-14 12:21:18] 12:21:18 (30868): PdfDocumentFactory created document 000001EC32859940 from 29731 bytes
+[2024-02-14 12:21:18] 12:21:18 (30868): Document opened from vector
+[2024-02-14 12:21:18] 12:21:18 (30868): Storing new document 0
+[2024-02-14 12:21:18] Document 0 has 1 references remaining (+1)
+[2024-02-14 12:21:18] In-memory object store fetching document c5813247-a1de-4b70-ba70-ce1ba3299175
+[2024-02-14 12:21:18] In-memory object store fetching document c5813247-a1de-4b70-ba70-ce1ba3299175
+[2024-02-14 12:51:29] ---------- Microsoft Windows NT 10.0.22631.0 (C:\Users\ravic\Desktop\TalentSyncBackend\IronPdfEngine.log) ----------
+[2024-02-14 12:51:29] Using deployment directory 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:51:29] Creating deployment candidates using root path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\' (download: False)
+[2024-02-14 12:51:29] Creating folder deployments for win-x64
+[2024-02-14 12:51:29] Creating embedded deployments for win-x64
+[2024-02-14 12:51:29] Successfully located 'IronPdfInterop' at 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:51:29] Warning! Missing deployment configuration file for deployment 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:51:29] IronSoftware.Exceptions.IronSoftwareDeploymentConfigurationMissingException: Error while locating deployment configuration file 'Pdfium*.deployment.json' within 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+   at IronSoftware.Deployment.SmartDeploymentBase.GetDeploymentConfiguration(IDeployment deployment)
+   at IronSoftware.Deployment.SmartDeploymentBase.ExecuteDeploymentCommands(IDeployment deployment)
+   at IronSoftware.Deployment.SmartDeploymentBase.Deploy(Boolean download)
+[2024-02-14 12:51:29] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 12:51:29] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 12:51:29] Successfully loaded native library from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 12:51:29] Successfully loaded 'IronPdfInterop' version '2024.1.0.143' from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:51:29] Successfully deployed 'Pdfium' using 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:51:29] Creating new job collection resource
+[2024-02-14 12:51:29] Creating new document collection resource
+[2024-02-14 12:51:29] Successfully initialized local pdf client
+[2024-02-14 12:51:29] Initializing local Chrome client...
+[2024-02-14 12:51:29] Using deployment directory 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:51:29] Creating deployment candidates using root path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\' (download: False)
+[2024-02-14 12:51:29] Creating folder deployments for win-x64
+[2024-02-14 12:51:29] Creating embedded deployments for win-x64
+[2024-02-14 12:51:29] Successfully located 'IronInterop' at 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:51:29] Determining deployment commands for platform 'Windows' v10.0.22631.0
+[2024-02-14 12:51:29] Using deployment instructions for 'default' v
+[2024-02-14 12:51:29] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 12:51:29] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 12:51:29] Successfully loaded native library from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 12:51:29] Successfully loaded 'IronInterop' version '2024.1.0.143' from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:51:29] Successfully deployed 'Chrome' using 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:51:29] Initializing Chrome renderer for OS Name: Windows, Identifier: win, Version: 10.0.22631.0, VersionName: , Domain: IronPdfEngineConsole, Thread: , Path: C:\Users\ravic\Desktop\TalentSyncBackend
+[2024-02-14 12:51:29] 12:51:29 (34568): ~ Chrome renderer v2024.1.0.143~
+[2024-02-14 12:51:29] 12:51:29 (34568): register JobManager as publisher for event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 12:51:29] 12:51:29 (34568): [EventRegistry] Register event_readyToInitializeNetworkEventsDevToolsHandler for a publisher
+[2024-02-14 12:51:29] 12:51:29 (34568): IsSingleProcess: 0
+[2024-02-14 12:51:29] 12:51:29 (34568): Creating Cef proxy controller
+[2024-02-14 12:51:29] 12:51:29 (34568): Creating Cef interface
+[2024-02-14 12:51:29] 12:51:29 (34568): JobManager subscribes a new sub, eventStr=event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 12:51:29] 12:51:29 (34568): JobManager subscribes a new sub, eventStr=event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 12:51:29] 12:51:29 (34568): Destroying Cef proxy event handler
+[2024-02-14 12:51:29] 12:51:29 (34568): Initializing Cef proxy controller
+[2024-02-14 12:51:29] 12:51:29 (34568): Using subprocess path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe'
+[2024-02-14 12:51:29] 12:51:29 (34568): Using framework path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:51:29] 12:51:29 (34568): Using locales path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales'
+[2024-02-14 12:51:29] 12:51:29 (34568): Using resources path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:51:29] 12:51:29 (34568): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfEngineConsole.exe" --browser-subprocess-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --no-sandbox --lang=en-US --log-file=cef.log --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --disable-features=CalculateNativeWinOcclusion,WinUseBrowserSpellChecker,BackForwardCache host=127.0.0.1 port=33350 docker_build=false keep_alive=true linux_and_docker_auto_config=false skip_initialization=false log_path=./IronPdfEngine.log single_process=false chrome_browser_limit=30 chrome_gpu_mode=0 linux_and_docker_auto_config=true programming_language=nodejs'
+[2024-02-14 12:51:29] 12:51:29 (34568): gpu_mode: '0'
+[2024-02-14 12:51:29] 12:51:29 (37272): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --type=gpu-process --no-sandbox --headless --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --lang=en-US --user-data-dir="C:\Users\ravic\AppData\Local\Temp" /prefetch:2'
+[2024-02-14 12:51:29] 12:51:29 (37272): gpu_mode: '0'
+[2024-02-14 12:51:29] 12:51:29 (34568): Cef initialization succeeded
+[2024-02-14 12:51:29] Successfully initialized local Chrome client
+[2024-02-14 12:51:29] 12:51:29 (37272): Cef context initialized
+[2024-02-14 12:51:29] 12:51:29 (37272): Registering custom scheme for rendering raw html
+[2024-02-14 12:51:29] 12:51:29 (37272): Successfully registered custom scheme
+[2024-02-14 12:51:29] 12:51:29 (37272): Cef engine initialization complete
+[2024-02-14 12:51:29] 12:51:29 (37272): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --ignore-urlfetcher-cert-requests --no-sandbox --ignore-certificate-errors --mute-audio --ignore-certificate-errors --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --lang=en-US --user-data-dir="C:\Users\ravic\AppData\Local\Temp" /prefetch:8'
+[2024-02-14 12:51:29] 12:51:29 (37272): gpu_mode: '0'
+[2024-02-14 12:51:39] 'UsageData' module is disabled
+[2024-02-14 12:51:39] Attempting to obtain value for a key 'IronPdf.LicenseKey' from settings
+[2024-02-14 12:51:39] Couldn't find key 'IronPdf.LicenseKey' in json config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 12:51:39] Couldn't find key 'IronPdf.LicenseKey' in xml config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 12:51:39] Warning! Error while retrieving app settings value
+[2024-02-14 12:51:39] System.ArgumentNullException: Value cannot be null. (Parameter 'path')
+   at System.IO.Path.GetFullPath(String path)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.ReadAzureFunctionConfig(String key, Assembly context)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.TryReadFromDefaultConfigs(String key, Assembly context, String& configValue)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.Read(String key, Assembly context)
+   at IronSoftware.Licenses.LicenseManager.GetConfigValue(String key, Assembly assembly)
+[2024-02-14 12:51:39] Attempting to obtain value for a key 'IronSuite.LicenseKey' from settings
+[2024-02-14 12:51:39] Couldn't find key 'IronSuite.LicenseKey' in json config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 12:51:39] Couldn't find key 'IronSuite.LicenseKey' in xml config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 12:51:39] Warning! Error while retrieving app settings value
+[2024-02-14 12:51:39] System.ArgumentNullException: Value cannot be null. (Parameter 'path')
+   at System.IO.Path.GetFullPath(String path)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.ReadAzureFunctionConfig(String key, Assembly context)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.TryReadFromDefaultConfigs(String key, Assembly context, String& configValue)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.Read(String key, Assembly context)
+   at IronSoftware.Licenses.LicenseManager.GetConfigValue(String key, Assembly assembly)
+[2024-02-14 12:51:39] Setting license key to 'AppAnalytics' module
+[2024-02-14 12:51:39] Error 0x00 while validating license key
+[2024-02-14 12:51:39] Failed to create LicenseKey, returning null. Exception occured:'Error 0x00 while validating license key'
+[2024-02-14 12:51:39] 12:51:39 (38436): PdfDocumentFactory created document 00000257BA65D200 from 29731 bytes
+[2024-02-14 12:51:39] 12:51:39 (38436): Document opened from vector
+[2024-02-14 12:51:39] 12:51:39 (38436): Storing new document 0
+[2024-02-14 12:51:39] Document 0 has 1 references remaining (+1)
+[2024-02-14 12:51:39] In-memory object store fetching document bf833147-f5ad-4336-b684-ae49cc325844
+[2024-02-14 12:51:39] In-memory object store fetching document bf833147-f5ad-4336-b684-ae49cc325844
+[2024-02-14 12:57:22] ---------- Microsoft Windows NT 10.0.22631.0 (C:\Users\ravic\Desktop\TalentSyncBackend\IronPdfEngine.log) ----------
+[2024-02-14 12:57:22] Using deployment directory 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:57:22] Creating deployment candidates using root path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\' (download: False)
+[2024-02-14 12:57:22] Creating folder deployments for win-x64
+[2024-02-14 12:57:22] Creating embedded deployments for win-x64
+[2024-02-14 12:57:22] Successfully located 'IronPdfInterop' at 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:57:22] Warning! Missing deployment configuration file for deployment 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:57:22] IronSoftware.Exceptions.IronSoftwareDeploymentConfigurationMissingException: Error while locating deployment configuration file 'Pdfium*.deployment.json' within 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+   at IronSoftware.Deployment.SmartDeploymentBase.GetDeploymentConfiguration(IDeployment deployment)
+   at IronSoftware.Deployment.SmartDeploymentBase.ExecuteDeploymentCommands(IDeployment deployment)
+   at IronSoftware.Deployment.SmartDeploymentBase.Deploy(Boolean download)
+[2024-02-14 12:57:22] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 12:57:22] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 12:57:22] Successfully loaded native library from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 12:57:22] Successfully loaded 'IronPdfInterop' version '2024.1.0.143' from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:57:22] Successfully deployed 'Pdfium' using 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:57:22] Creating new job collection resource
+[2024-02-14 12:57:22] Creating new document collection resource
+[2024-02-14 12:57:22] Successfully initialized local pdf client
+[2024-02-14 12:57:22] Initializing local Chrome client...
+[2024-02-14 12:57:22] Using deployment directory 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:57:22] Creating deployment candidates using root path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\' (download: False)
+[2024-02-14 12:57:22] Creating folder deployments for win-x64
+[2024-02-14 12:57:22] Creating embedded deployments for win-x64
+[2024-02-14 12:57:22] Successfully located 'IronInterop' at 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:57:22] Determining deployment commands for platform 'Windows' v10.0.22631.0
+[2024-02-14 12:57:22] Using deployment instructions for 'default' v
+[2024-02-14 12:57:22] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 12:57:22] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 12:57:22] Successfully loaded native library from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 12:57:22] Successfully loaded 'IronInterop' version '2024.1.0.143' from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:57:22] Successfully deployed 'Chrome' using 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:57:22] Initializing Chrome renderer for OS Name: Windows, Identifier: win, Version: 10.0.22631.0, VersionName: , Domain: IronPdfEngineConsole, Thread: , Path: C:\Users\ravic\Desktop\TalentSyncBackend
+[2024-02-14 12:57:22] 12:57:22 (36472): ~ Chrome renderer v2024.1.0.143~
+[2024-02-14 12:57:22] 12:57:22 (36472): register JobManager as publisher for event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 12:57:22] 12:57:22 (36472): [EventRegistry] Register event_readyToInitializeNetworkEventsDevToolsHandler for a publisher
+[2024-02-14 12:57:22] 12:57:22 (36472): IsSingleProcess: 0
+[2024-02-14 12:57:22] 12:57:22 (36472): Creating Cef proxy controller
+[2024-02-14 12:57:22] 12:57:22 (36472): Creating Cef interface
+[2024-02-14 12:57:22] 12:57:22 (36472): JobManager subscribes a new sub, eventStr=event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 12:57:22] 12:57:22 (36472): JobManager subscribes a new sub, eventStr=event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 12:57:22] 12:57:22 (36472): Destroying Cef proxy event handler
+[2024-02-14 12:57:22] 12:57:22 (36472): Initializing Cef proxy controller
+[2024-02-14 12:57:22] 12:57:22 (36472): Using subprocess path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe'
+[2024-02-14 12:57:22] 12:57:22 (36472): Using framework path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:57:22] 12:57:22 (36472): Using locales path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales'
+[2024-02-14 12:57:22] 12:57:22 (36472): Using resources path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:57:22] 12:57:22 (36472): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfEngineConsole.exe" --browser-subprocess-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --no-sandbox --lang=en-US --log-file=cef.log --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --disable-features=CalculateNativeWinOcclusion,WinUseBrowserSpellChecker,BackForwardCache host=127.0.0.1 port=33350 docker_build=false keep_alive=true linux_and_docker_auto_config=false skip_initialization=false log_path=./IronPdfEngine.log single_process=false chrome_browser_limit=30 chrome_gpu_mode=0 linux_and_docker_auto_config=true programming_language=nodejs'
+[2024-02-14 12:57:22] 12:57:22 (36472): gpu_mode: '0'
+[2024-02-14 12:57:22] 12:57:22 (33584): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --type=gpu-process --no-sandbox --headless --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --lang=en-US --user-data-dir="C:\Users\ravic\AppData\Local\Temp" /prefetch:2'
+[2024-02-14 12:57:22] 12:57:22 (33584): gpu_mode: '0'
+[2024-02-14 12:57:22] 12:57:22 (36472): Cef initialization succeeded
+[2024-02-14 12:57:22] Successfully initialized local Chrome client
+[2024-02-14 12:57:22] 12:57:22 (33584): Cef context initialized
+[2024-02-14 12:57:22] 12:57:22 (33584): Registering custom scheme for rendering raw html
+[2024-02-14 12:57:22] 12:57:22 (33584): Successfully registered custom scheme
+[2024-02-14 12:57:22] 12:57:22 (33584): Cef engine initialization complete
+[2024-02-14 12:57:22] 12:57:22 (33584): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --ignore-urlfetcher-cert-requests --no-sandbox --ignore-certificate-errors --mute-audio --ignore-certificate-errors --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --lang=en-US --user-data-dir="C:\Users\ravic\AppData\Local\Temp" /prefetch:8'
+[2024-02-14 12:57:22] 12:57:22 (33584): gpu_mode: '0'
+[2024-02-14 12:57:32] 'UsageData' module is disabled
+[2024-02-14 12:57:32] Attempting to obtain value for a key 'IronPdf.LicenseKey' from settings
+[2024-02-14 12:57:32] Couldn't find key 'IronPdf.LicenseKey' in json config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 12:57:32] Couldn't find key 'IronPdf.LicenseKey' in xml config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 12:57:32] Warning! Error while retrieving app settings value
+[2024-02-14 12:57:32] System.ArgumentNullException: Value cannot be null. (Parameter 'path')
+   at System.IO.Path.GetFullPath(String path)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.ReadAzureFunctionConfig(String key, Assembly context)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.TryReadFromDefaultConfigs(String key, Assembly context, String& configValue)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.Read(String key, Assembly context)
+   at IronSoftware.Licenses.LicenseManager.GetConfigValue(String key, Assembly assembly)
+[2024-02-14 12:57:32] Attempting to obtain value for a key 'IronSuite.LicenseKey' from settings
+[2024-02-14 12:57:32] Couldn't find key 'IronSuite.LicenseKey' in json config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 12:57:32] Couldn't find key 'IronSuite.LicenseKey' in xml config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 12:57:32] Warning! Error while retrieving app settings value
+[2024-02-14 12:57:32] System.ArgumentNullException: Value cannot be null. (Parameter 'path')
+   at System.IO.Path.GetFullPath(String path)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.ReadAzureFunctionConfig(String key, Assembly context)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.TryReadFromDefaultConfigs(String key, Assembly context, String& configValue)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.Read(String key, Assembly context)
+   at IronSoftware.Licenses.LicenseManager.GetConfigValue(String key, Assembly assembly)
+[2024-02-14 12:57:32] Setting license key to 'AppAnalytics' module
+[2024-02-14 12:57:32] Error 0x00 while validating license key
+[2024-02-14 12:57:32] Failed to create LicenseKey, returning null. Exception occured:'Error 0x00 while validating license key'
+[2024-02-14 12:57:32] 12:57:32 (38196): PdfDocumentFactory created document 000002962664A0D0 from 29731 bytes
+[2024-02-14 12:57:32] 12:57:32 (38196): Document opened from vector
+[2024-02-14 12:57:32] 12:57:32 (38196): Storing new document 0
+[2024-02-14 12:57:32] Document 0 has 1 references remaining (+1)
+[2024-02-14 12:57:32] In-memory object store fetching document cb919a1f-58be-4757-ade1-100ef3989e9c
+[2024-02-14 12:57:32] In-memory object store fetching document cb919a1f-58be-4757-ade1-100ef3989e9c
+[2024-02-14 12:59:12] ---------- Microsoft Windows NT 10.0.22631.0 (C:\Users\ravic\Desktop\TalentSyncBackend\IronPdfEngine.log) ----------
+[2024-02-14 12:59:12] Using deployment directory 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:59:12] Creating deployment candidates using root path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\' (download: False)
+[2024-02-14 12:59:12] Creating folder deployments for win-x64
+[2024-02-14 12:59:12] Creating embedded deployments for win-x64
+[2024-02-14 12:59:12] Successfully located 'IronPdfInterop' at 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:59:12] Warning! Missing deployment configuration file for deployment 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:59:12] IronSoftware.Exceptions.IronSoftwareDeploymentConfigurationMissingException: Error while locating deployment configuration file 'Pdfium*.deployment.json' within 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+   at IronSoftware.Deployment.SmartDeploymentBase.GetDeploymentConfiguration(IDeployment deployment)
+   at IronSoftware.Deployment.SmartDeploymentBase.ExecuteDeploymentCommands(IDeployment deployment)
+   at IronSoftware.Deployment.SmartDeploymentBase.Deploy(Boolean download)
+[2024-02-14 12:59:12] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 12:59:12] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 12:59:12] Successfully loaded native library from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 12:59:12] Successfully loaded 'IronPdfInterop' version '2024.1.0.143' from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:59:12] Successfully deployed 'Pdfium' using 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:59:12] Creating new job collection resource
+[2024-02-14 12:59:12] Creating new document collection resource
+[2024-02-14 12:59:12] Successfully initialized local pdf client
+[2024-02-14 12:59:12] Initializing local Chrome client...
+[2024-02-14 12:59:12] Using deployment directory 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:59:12] Creating deployment candidates using root path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\' (download: False)
+[2024-02-14 12:59:12] Creating folder deployments for win-x64
+[2024-02-14 12:59:12] Creating embedded deployments for win-x64
+[2024-02-14 12:59:12] Successfully located 'IronInterop' at 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:59:12] Determining deployment commands for platform 'Windows' v10.0.22631.0
+[2024-02-14 12:59:12] Using deployment instructions for 'default' v
+[2024-02-14 12:59:12] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 12:59:12] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 12:59:12] Successfully loaded native library from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 12:59:12] Successfully loaded 'IronInterop' version '2024.1.0.143' from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:59:12] Successfully deployed 'Chrome' using 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:59:12] Initializing Chrome renderer for OS Name: Windows, Identifier: win, Version: 10.0.22631.0, VersionName: , Domain: IronPdfEngineConsole, Thread: , Path: C:\Users\ravic\Desktop\TalentSyncBackend
+[2024-02-14 12:59:12] 12:59:12 (20112): ~ Chrome renderer v2024.1.0.143~
+[2024-02-14 12:59:12] 12:59:12 (20112): register JobManager as publisher for event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 12:59:12] 12:59:12 (20112): [EventRegistry] Register event_readyToInitializeNetworkEventsDevToolsHandler for a publisher
+[2024-02-14 12:59:12] 12:59:12 (20112): IsSingleProcess: 0
+[2024-02-14 12:59:12] 12:59:12 (20112): Creating Cef proxy controller
+[2024-02-14 12:59:12] 12:59:12 (20112): Creating Cef interface
+[2024-02-14 12:59:12] 12:59:12 (20112): JobManager subscribes a new sub, eventStr=event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 12:59:12] 12:59:12 (20112): JobManager subscribes a new sub, eventStr=event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 12:59:12] 12:59:12 (20112): Destroying Cef proxy event handler
+[2024-02-14 12:59:12] 12:59:12 (20112): Initializing Cef proxy controller
+[2024-02-14 12:59:12] 12:59:12 (20112): Using subprocess path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe'
+[2024-02-14 12:59:12] 12:59:12 (20112): Using framework path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:59:12] 12:59:12 (20112): Using locales path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales'
+[2024-02-14 12:59:12] 12:59:12 (20112): Using resources path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 12:59:12] 12:59:12 (20112): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfEngineConsole.exe" --browser-subprocess-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --no-sandbox --lang=en-US --log-file=cef.log --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --disable-features=CalculateNativeWinOcclusion,WinUseBrowserSpellChecker,BackForwardCache host=127.0.0.1 port=33350 docker_build=false keep_alive=true linux_and_docker_auto_config=false skip_initialization=false log_path=./IronPdfEngine.log single_process=false chrome_browser_limit=30 chrome_gpu_mode=0 linux_and_docker_auto_config=true programming_language=nodejs'
+[2024-02-14 12:59:12] 12:59:12 (20112): gpu_mode: '0'
+[2024-02-14 12:59:12] 12:59:12 (13600): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --type=gpu-process --no-sandbox --headless --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --lang=en-US --user-data-dir="C:\Users\ravic\AppData\Local\Temp" /prefetch:2'
+[2024-02-14 12:59:12] 12:59:12 (13600): gpu_mode: '0'
+[2024-02-14 12:59:12] 12:59:12 (20112): Cef initialization succeeded
+[2024-02-14 12:59:12] Successfully initialized local Chrome client
+[2024-02-14 12:59:12] 12:59:12 (13600): Cef context initialized
+[2024-02-14 12:59:12] 12:59:12 (13600): Registering custom scheme for rendering raw html
+[2024-02-14 12:59:12] 12:59:12 (13600): Successfully registered custom scheme
+[2024-02-14 12:59:12] 12:59:12 (13600): Cef engine initialization complete
+[2024-02-14 12:59:12] 12:59:12 (13600): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --ignore-urlfetcher-cert-requests --no-sandbox --ignore-certificate-errors --mute-audio --ignore-certificate-errors --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --lang=en-US --user-data-dir="C:\Users\ravic\AppData\Local\Temp" /prefetch:8'
+[2024-02-14 12:59:12] 12:59:12 (13600): gpu_mode: '0'
+[2024-02-14 12:59:22] 'UsageData' module is disabled
+[2024-02-14 12:59:22] Attempting to obtain value for a key 'IronPdf.LicenseKey' from settings
+[2024-02-14 12:59:22] Couldn't find key 'IronPdf.LicenseKey' in json config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 12:59:22] Couldn't find key 'IronPdf.LicenseKey' in xml config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 12:59:22] Warning! Error while retrieving app settings value
+[2024-02-14 12:59:22] System.ArgumentNullException: Value cannot be null. (Parameter 'path')
+   at System.IO.Path.GetFullPath(String path)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.ReadAzureFunctionConfig(String key, Assembly context)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.TryReadFromDefaultConfigs(String key, Assembly context, String& configValue)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.Read(String key, Assembly context)
+   at IronSoftware.Licenses.LicenseManager.GetConfigValue(String key, Assembly assembly)
+[2024-02-14 12:59:22] Attempting to obtain value for a key 'IronSuite.LicenseKey' from settings
+[2024-02-14 12:59:22] Couldn't find key 'IronSuite.LicenseKey' in json config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 12:59:22] Couldn't find key 'IronSuite.LicenseKey' in xml config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 12:59:22] Warning! Error while retrieving app settings value
+[2024-02-14 12:59:22] System.ArgumentNullException: Value cannot be null. (Parameter 'path')
+   at System.IO.Path.GetFullPath(String path)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.ReadAzureFunctionConfig(String key, Assembly context)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.TryReadFromDefaultConfigs(String key, Assembly context, String& configValue)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.Read(String key, Assembly context)
+   at IronSoftware.Licenses.LicenseManager.GetConfigValue(String key, Assembly assembly)
+[2024-02-14 12:59:22] Setting license key to 'AppAnalytics' module
+[2024-02-14 12:59:22] Error 0x00 while validating license key
+[2024-02-14 12:59:22] Failed to create LicenseKey, returning null. Exception occured:'Error 0x00 while validating license key'
+[2024-02-14 12:59:22] 12:59:22 (34232): PdfDocumentFactory created document 000002B355E37220 from 29731 bytes
+[2024-02-14 12:59:22] 12:59:22 (34232): Document opened from vector
+[2024-02-14 12:59:22] 12:59:22 (34232): Storing new document 0
+[2024-02-14 12:59:22] Document 0 has 1 references remaining (+1)
+[2024-02-14 12:59:22] In-memory object store fetching document a96b4098-9039-4e63-9414-bcf6acdf7059
+[2024-02-14 12:59:22] In-memory object store fetching document a96b4098-9039-4e63-9414-bcf6acdf7059
+[2024-02-14 13:05:50] ---------- Microsoft Windows NT 10.0.22631.0 (C:\Users\ravic\Desktop\TalentSyncBackend\IronPdfEngine.log) ----------
+[2024-02-14 13:05:50] Using deployment directory 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:05:50] Creating deployment candidates using root path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\' (download: False)
+[2024-02-14 13:05:50] Creating folder deployments for win-x64
+[2024-02-14 13:05:50] Creating embedded deployments for win-x64
+[2024-02-14 13:05:50] Successfully located 'IronPdfInterop' at 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:05:50] Warning! Missing deployment configuration file for deployment 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:05:50] IronSoftware.Exceptions.IronSoftwareDeploymentConfigurationMissingException: Error while locating deployment configuration file 'Pdfium*.deployment.json' within 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+   at IronSoftware.Deployment.SmartDeploymentBase.GetDeploymentConfiguration(IDeployment deployment)
+   at IronSoftware.Deployment.SmartDeploymentBase.ExecuteDeploymentCommands(IDeployment deployment)
+   at IronSoftware.Deployment.SmartDeploymentBase.Deploy(Boolean download)
+[2024-02-14 13:05:50] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 13:05:50] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 13:05:50] Successfully loaded native library from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 13:05:50] Successfully loaded 'IronPdfInterop' version '2024.1.0.143' from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:05:50] Successfully deployed 'Pdfium' using 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:05:50] Creating new job collection resource
+[2024-02-14 13:05:50] Creating new document collection resource
+[2024-02-14 13:05:50] Successfully initialized local pdf client
+[2024-02-14 13:05:50] Initializing local Chrome client...
+[2024-02-14 13:05:50] Using deployment directory 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:05:50] Creating deployment candidates using root path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\' (download: False)
+[2024-02-14 13:05:50] Creating folder deployments for win-x64
+[2024-02-14 13:05:50] Creating embedded deployments for win-x64
+[2024-02-14 13:05:50] Successfully located 'IronInterop' at 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:05:50] Determining deployment commands for platform 'Windows' v10.0.22631.0
+[2024-02-14 13:05:50] Using deployment instructions for 'default' v
+[2024-02-14 13:05:50] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 13:05:50] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 13:05:50] Successfully loaded native library from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 13:05:50] Successfully loaded 'IronInterop' version '2024.1.0.143' from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:05:50] Successfully deployed 'Chrome' using 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:05:50] Initializing Chrome renderer for OS Name: Windows, Identifier: win, Version: 10.0.22631.0, VersionName: , Domain: IronPdfEngineConsole, Thread: , Path: C:\Users\ravic\Desktop\TalentSyncBackend
+[2024-02-14 13:05:50] 13:05:50 (26872): ~ Chrome renderer v2024.1.0.143~
+[2024-02-14 13:05:50] 13:05:50 (26872): register JobManager as publisher for event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 13:05:50] 13:05:50 (26872): [EventRegistry] Register event_readyToInitializeNetworkEventsDevToolsHandler for a publisher
+[2024-02-14 13:05:50] 13:05:50 (26872): IsSingleProcess: 0
+[2024-02-14 13:05:50] 13:05:50 (26872): Creating Cef proxy controller
+[2024-02-14 13:05:50] 13:05:50 (26872): Creating Cef interface
+[2024-02-14 13:05:50] 13:05:50 (26872): JobManager subscribes a new sub, eventStr=event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 13:05:50] 13:05:50 (26872): JobManager subscribes a new sub, eventStr=event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 13:05:50] 13:05:50 (26872): Destroying Cef proxy event handler
+[2024-02-14 13:05:50] 13:05:50 (26872): Initializing Cef proxy controller
+[2024-02-14 13:05:50] 13:05:50 (26872): Using subprocess path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe'
+[2024-02-14 13:05:50] 13:05:50 (26872): Using framework path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:05:50] 13:05:50 (26872): Using locales path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales'
+[2024-02-14 13:05:50] 13:05:50 (26872): Using resources path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:05:50] 13:05:50 (26872): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfEngineConsole.exe" --browser-subprocess-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --no-sandbox --lang=en-US --log-file=cef.log --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --disable-features=CalculateNativeWinOcclusion,WinUseBrowserSpellChecker,BackForwardCache host=127.0.0.1 port=33350 docker_build=false keep_alive=true linux_and_docker_auto_config=false skip_initialization=false log_path=./IronPdfEngine.log single_process=false chrome_browser_limit=30 chrome_gpu_mode=0 linux_and_docker_auto_config=true programming_language=nodejs'
+[2024-02-14 13:05:50] 13:05:50 (26872): gpu_mode: '0'
+[2024-02-14 13:05:50] 13:05:50 (24864): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --type=gpu-process --no-sandbox --headless --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --lang=en-US --user-data-dir="C:\Users\ravic\AppData\Local\Temp" /prefetch:2'
+[2024-02-14 13:05:50] 13:05:50 (24864): gpu_mode: '0'
+[2024-02-14 13:05:50] 13:05:50 (26872): Cef initialization succeeded
+[2024-02-14 13:05:50] Successfully initialized local Chrome client
+[2024-02-14 13:05:50] 13:05:50 (24864): Cef context initialized
+[2024-02-14 13:05:50] 13:05:50 (24864): Registering custom scheme for rendering raw html
+[2024-02-14 13:05:50] 13:05:50 (24864): Successfully registered custom scheme
+[2024-02-14 13:05:50] 13:05:50 (24864): Cef engine initialization complete
+[2024-02-14 13:05:50] 13:05:50 (24864): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --ignore-urlfetcher-cert-requests --no-sandbox --ignore-certificate-errors --mute-audio --ignore-certificate-errors --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --lang=en-US --user-data-dir="C:\Users\ravic\AppData\Local\Temp" /prefetch:8'
+[2024-02-14 13:05:50] 13:05:50 (24864): gpu_mode: '0'
+[2024-02-14 13:05:57] ---------- Microsoft Windows NT 10.0.22631.0 (C:\Users\ravic\Desktop\TalentSyncBackend\IronPdfEngine.log) ----------
+[2024-02-14 13:05:57] Using deployment directory 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:05:57] Creating deployment candidates using root path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\' (download: False)
+[2024-02-14 13:05:57] Creating folder deployments for win-x64
+[2024-02-14 13:05:57] Creating embedded deployments for win-x64
+[2024-02-14 13:05:57] Successfully located 'IronPdfInterop' at 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:05:57] Warning! Missing deployment configuration file for deployment 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:05:57] IronSoftware.Exceptions.IronSoftwareDeploymentConfigurationMissingException: Error while locating deployment configuration file 'Pdfium*.deployment.json' within 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+   at IronSoftware.Deployment.SmartDeploymentBase.GetDeploymentConfiguration(IDeployment deployment)
+   at IronSoftware.Deployment.SmartDeploymentBase.ExecuteDeploymentCommands(IDeployment deployment)
+   at IronSoftware.Deployment.SmartDeploymentBase.Deploy(Boolean download)
+[2024-02-14 13:05:57] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 13:05:57] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 13:05:57] Successfully loaded native library from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 13:05:57] Successfully loaded 'IronPdfInterop' version '2024.1.0.143' from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:05:57] Successfully deployed 'Pdfium' using 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:05:57] Creating new job collection resource
+[2024-02-14 13:05:57] Creating new document collection resource
+[2024-02-14 13:05:57] Successfully initialized local pdf client
+[2024-02-14 13:05:57] Initializing local Chrome client...
+[2024-02-14 13:05:57] Using deployment directory 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:05:57] Creating deployment candidates using root path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\' (download: False)
+[2024-02-14 13:05:57] Creating folder deployments for win-x64
+[2024-02-14 13:05:57] Creating embedded deployments for win-x64
+[2024-02-14 13:05:57] Successfully located 'IronInterop' at 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:05:57] Determining deployment commands for platform 'Windows' v10.0.22631.0
+[2024-02-14 13:05:57] Using deployment instructions for 'default' v
+[2024-02-14 13:05:57] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 13:05:57] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 13:05:57] Successfully loaded native library from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 13:05:57] Successfully loaded 'IronInterop' version '2024.1.0.143' from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:05:57] Successfully deployed 'Chrome' using 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:05:57] Initializing Chrome renderer for OS Name: Windows, Identifier: win, Version: 10.0.22631.0, VersionName: , Domain: IronPdfEngineConsole, Thread: , Path: C:\Users\ravic\Desktop\TalentSyncBackend
+[2024-02-14 13:05:57] 13:05:57 (35460): ~ Chrome renderer v2024.1.0.143~
+[2024-02-14 13:05:57] 13:05:57 (35460): register JobManager as publisher for event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 13:05:57] 13:05:57 (35460): [EventRegistry] Register event_readyToInitializeNetworkEventsDevToolsHandler for a publisher
+[2024-02-14 13:05:57] 13:05:57 (35460): IsSingleProcess: 0
+[2024-02-14 13:05:57] 13:05:57 (35460): Creating Cef proxy controller
+[2024-02-14 13:05:57] 13:05:57 (35460): Creating Cef interface
+[2024-02-14 13:05:57] 13:05:57 (35460): JobManager subscribes a new sub, eventStr=event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 13:05:57] 13:05:57 (35460): JobManager subscribes a new sub, eventStr=event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 13:05:57] 13:05:57 (35460): Destroying Cef proxy event handler
+[2024-02-14 13:05:57] 13:05:57 (35460): Initializing Cef proxy controller
+[2024-02-14 13:05:57] 13:05:57 (35460): Using subprocess path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe'
+[2024-02-14 13:05:57] 13:05:57 (35460): Using framework path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:05:57] 13:05:57 (35460): Using locales path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales'
+[2024-02-14 13:05:57] 13:05:57 (35460): Using resources path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:05:57] 13:05:57 (35460): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfEngineConsole.exe" --browser-subprocess-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --no-sandbox --lang=en-US --log-file=cef.log --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --disable-features=CalculateNativeWinOcclusion,WinUseBrowserSpellChecker,BackForwardCache host=127.0.0.1 port=33350 docker_build=false keep_alive=true linux_and_docker_auto_config=false skip_initialization=false log_path=./IronPdfEngine.log single_process=false chrome_browser_limit=30 chrome_gpu_mode=0 linux_and_docker_auto_config=true programming_language=nodejs'
+[2024-02-14 13:05:57] 13:05:57 (35460): gpu_mode: '0'
+[2024-02-14 13:05:57] 13:05:57 (21628): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --type=gpu-process --no-sandbox --headless --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --lang=en-US --user-data-dir="C:\Users\ravic\AppData\Local\Temp" /prefetch:2'
+[2024-02-14 13:05:57] 13:05:57 (21628): gpu_mode: '0'
+[2024-02-14 13:05:57] 13:05:57 (35460): Cef initialization succeeded
+[2024-02-14 13:05:57] Successfully initialized local Chrome client
+[2024-02-14 13:05:57] 13:05:57 (21628): Cef context initialized
+[2024-02-14 13:05:57] 13:05:57 (21628): Registering custom scheme for rendering raw html
+[2024-02-14 13:05:57] 13:05:57 (21628): Successfully registered custom scheme
+[2024-02-14 13:05:57] 13:05:57 (21628): Cef engine initialization complete
+[2024-02-14 13:05:57] 13:05:57 (21628): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --ignore-urlfetcher-cert-requests --no-sandbox --ignore-certificate-errors --mute-audio --ignore-certificate-errors --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --lang=en-US --user-data-dir="C:\Users\ravic\AppData\Local\Temp" /prefetch:8'
+[2024-02-14 13:05:57] 13:05:57 (21628): gpu_mode: '0'
+[2024-02-14 13:06:00] 'UsageData' module is disabled
+[2024-02-14 13:06:00] Attempting to obtain value for a key 'IronPdf.LicenseKey' from settings
+[2024-02-14 13:06:00] Couldn't find key 'IronPdf.LicenseKey' in json config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 13:06:00] Couldn't find key 'IronPdf.LicenseKey' in xml config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 13:06:00] Warning! Error while retrieving app settings value
+[2024-02-14 13:06:00] System.ArgumentNullException: Value cannot be null. (Parameter 'path')
+   at System.IO.Path.GetFullPath(String path)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.ReadAzureFunctionConfig(String key, Assembly context)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.TryReadFromDefaultConfigs(String key, Assembly context, String& configValue)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.Read(String key, Assembly context)
+   at IronSoftware.Licenses.LicenseManager.GetConfigValue(String key, Assembly assembly)
+[2024-02-14 13:06:00] Attempting to obtain value for a key 'IronSuite.LicenseKey' from settings
+[2024-02-14 13:06:00] Couldn't find key 'IronSuite.LicenseKey' in json config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 13:06:00] Couldn't find key 'IronSuite.LicenseKey' in xml config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 13:06:00] Warning! Error while retrieving app settings value
+[2024-02-14 13:06:00] System.ArgumentNullException: Value cannot be null. (Parameter 'path')
+   at System.IO.Path.GetFullPath(String path)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.ReadAzureFunctionConfig(String key, Assembly context)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.TryReadFromDefaultConfigs(String key, Assembly context, String& configValue)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.Read(String key, Assembly context)
+   at IronSoftware.Licenses.LicenseManager.GetConfigValue(String key, Assembly assembly)
+[2024-02-14 13:06:00] Setting license key to 'AppAnalytics' module
+[2024-02-14 13:06:00] Error 0x00 while validating license key
+[2024-02-14 13:06:00] Failed to create LicenseKey, returning null. Exception occured:'Error 0x00 while validating license key'
+[2024-02-14 13:06:00] 13:06:00 (25108): PdfDocumentFactory created document 00000215E4DC3BB0 from 29731 bytes
+[2024-02-14 13:06:00] 13:06:00 (25108): Document opened from vector
+[2024-02-14 13:06:00] 13:06:00 (25108): Storing new document 0
+[2024-02-14 13:06:00] Document 0 has 1 references remaining (+1)
+[2024-02-14 13:06:00] In-memory object store fetching document f477cd24-22f4-431b-a915-d781e16c060e
+[2024-02-14 13:06:00] In-memory object store fetching document f477cd24-22f4-431b-a915-d781e16c060e
+[2024-02-14 13:06:07] Error 0x01 while validating license key
+[2024-02-14 13:06:07] 13:06:07 (33456): PdfDocumentFactory created document 00000215E4DC3050 from 29731 bytes
+[2024-02-14 13:06:07] 13:06:07 (33456): Document opened from vector
+[2024-02-14 13:06:07] 13:06:07 (33456): Storing new document 1
+[2024-02-14 13:06:07] Document 1 has 1 references remaining (+1)
+[2024-02-14 13:06:07] In-memory object store fetching document cbf49332-2ba7-47f7-823b-9d93cd9e8f95
+[2024-02-14 13:06:07] In-memory object store fetching document cbf49332-2ba7-47f7-823b-9d93cd9e8f95
+[2024-02-14 13:12:03] ---------- Microsoft Windows NT 10.0.22631.0 (C:\Users\ravic\Desktop\TalentSyncBackend\IronPdfEngine.log) ----------
+[2024-02-14 13:12:03] Using deployment directory 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:12:03] Creating deployment candidates using root path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\' (download: False)
+[2024-02-14 13:12:03] Creating folder deployments for win-x64
+[2024-02-14 13:12:03] Creating embedded deployments for win-x64
+[2024-02-14 13:12:03] Successfully located 'IronPdfInterop' at 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:12:03] Warning! Missing deployment configuration file for deployment 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:12:03] IronSoftware.Exceptions.IronSoftwareDeploymentConfigurationMissingException: Error while locating deployment configuration file 'Pdfium*.deployment.json' within 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+   at IronSoftware.Deployment.SmartDeploymentBase.GetDeploymentConfiguration(IDeployment deployment)
+   at IronSoftware.Deployment.SmartDeploymentBase.ExecuteDeploymentCommands(IDeployment deployment)
+   at IronSoftware.Deployment.SmartDeploymentBase.Deploy(Boolean download)
+[2024-02-14 13:12:03] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 13:12:03] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 13:12:03] Successfully loaded native library from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 13:12:03] Successfully loaded 'IronPdfInterop' version '2024.1.0.143' from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:12:03] Successfully deployed 'Pdfium' using 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:12:03] Creating new job collection resource
+[2024-02-14 13:12:03] Creating new document collection resource
+[2024-02-14 13:12:03] Successfully initialized local pdf client
+[2024-02-14 13:12:03] Initializing local Chrome client...
+[2024-02-14 13:12:03] Using deployment directory 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:12:03] Creating deployment candidates using root path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\' (download: False)
+[2024-02-14 13:12:03] Creating folder deployments for win-x64
+[2024-02-14 13:12:03] Creating embedded deployments for win-x64
+[2024-02-14 13:12:03] Successfully located 'IronInterop' at 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:12:03] Determining deployment commands for platform 'Windows' v10.0.22631.0
+[2024-02-14 13:12:03] Using deployment instructions for 'default' v
+[2024-02-14 13:12:03] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 13:12:03] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 13:12:03] Successfully loaded native library from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 13:12:03] Successfully loaded 'IronInterop' version '2024.1.0.143' from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:12:03] Successfully deployed 'Chrome' using 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:12:03] Initializing Chrome renderer for OS Name: Windows, Identifier: win, Version: 10.0.22631.0, VersionName: , Domain: IronPdfEngineConsole, Thread: , Path: C:\Users\ravic\Desktop\TalentSyncBackend
+[2024-02-14 13:12:03] 13:12:03 (33788): ~ Chrome renderer v2024.1.0.143~
+[2024-02-14 13:12:03] 13:12:03 (33788): register JobManager as publisher for event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 13:12:03] 13:12:03 (33788): [EventRegistry] Register event_readyToInitializeNetworkEventsDevToolsHandler for a publisher
+[2024-02-14 13:12:03] 13:12:03 (33788): IsSingleProcess: 0
+[2024-02-14 13:12:03] 13:12:03 (33788): Creating Cef proxy controller
+[2024-02-14 13:12:03] 13:12:03 (33788): Creating Cef interface
+[2024-02-14 13:12:03] 13:12:03 (33788): JobManager subscribes a new sub, eventStr=event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 13:12:03] 13:12:03 (33788): JobManager subscribes a new sub, eventStr=event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 13:12:03] 13:12:03 (33788): Destroying Cef proxy event handler
+[2024-02-14 13:12:03] 13:12:03 (33788): Initializing Cef proxy controller
+[2024-02-14 13:12:03] 13:12:03 (33788): Using subprocess path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe'
+[2024-02-14 13:12:03] 13:12:03 (33788): Using framework path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:12:03] 13:12:03 (33788): Using locales path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales'
+[2024-02-14 13:12:03] 13:12:03 (33788): Using resources path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:12:03] 13:12:03 (33788): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfEngineConsole.exe" --browser-subprocess-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --no-sandbox --lang=en-US --log-file=cef.log --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --disable-features=CalculateNativeWinOcclusion,WinUseBrowserSpellChecker,BackForwardCache host=127.0.0.1 port=33350 docker_build=false keep_alive=true linux_and_docker_auto_config=false skip_initialization=false log_path=./IronPdfEngine.log single_process=false chrome_browser_limit=30 chrome_gpu_mode=0 linux_and_docker_auto_config=true programming_language=nodejs'
+[2024-02-14 13:12:03] 13:12:03 (33788): gpu_mode: '0'
+[2024-02-14 13:12:03] 13:12:03 (12752): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --type=gpu-process --no-sandbox --headless --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --lang=en-US --user-data-dir="C:\Users\ravic\AppData\Local\Temp" /prefetch:2'
+[2024-02-14 13:12:03] 13:12:03 (12752): gpu_mode: '0'
+[2024-02-14 13:12:03] 13:12:03 (33788): Cef initialization succeeded
+[2024-02-14 13:12:03] Successfully initialized local Chrome client
+[2024-02-14 13:12:03] 13:12:03 (12752): Cef context initialized
+[2024-02-14 13:12:03] 13:12:03 (12752): Registering custom scheme for rendering raw html
+[2024-02-14 13:12:03] 13:12:03 (12752): Successfully registered custom scheme
+[2024-02-14 13:12:03] 13:12:03 (12752): Cef engine initialization complete
+[2024-02-14 13:12:03] 13:12:03 (12752): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --ignore-urlfetcher-cert-requests --no-sandbox --ignore-certificate-errors --mute-audio --ignore-certificate-errors --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --lang=en-US --user-data-dir="C:\Users\ravic\AppData\Local\Temp" /prefetch:8'
+[2024-02-14 13:12:03] 13:12:03 (12752): gpu_mode: '0'
+[2024-02-14 13:12:12] 'UsageData' module is disabled
+[2024-02-14 13:12:12] Attempting to obtain value for a key 'IronPdf.LicenseKey' from settings
+[2024-02-14 13:12:13] Couldn't find key 'IronPdf.LicenseKey' in json config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 13:12:13] Couldn't find key 'IronPdf.LicenseKey' in xml config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 13:12:13] Warning! Error while retrieving app settings value
+[2024-02-14 13:12:13] System.ArgumentNullException: Value cannot be null. (Parameter 'path')
+   at System.IO.Path.GetFullPath(String path)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.ReadAzureFunctionConfig(String key, Assembly context)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.TryReadFromDefaultConfigs(String key, Assembly context, String& configValue)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.Read(String key, Assembly context)
+   at IronSoftware.Licenses.LicenseManager.GetConfigValue(String key, Assembly assembly)
+[2024-02-14 13:12:13] Attempting to obtain value for a key 'IronSuite.LicenseKey' from settings
+[2024-02-14 13:12:13] Couldn't find key 'IronSuite.LicenseKey' in json config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 13:12:13] Couldn't find key 'IronSuite.LicenseKey' in xml config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 13:12:13] Warning! Error while retrieving app settings value
+[2024-02-14 13:12:13] System.ArgumentNullException: Value cannot be null. (Parameter 'path')
+   at System.IO.Path.GetFullPath(String path)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.ReadAzureFunctionConfig(String key, Assembly context)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.TryReadFromDefaultConfigs(String key, Assembly context, String& configValue)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.Read(String key, Assembly context)
+   at IronSoftware.Licenses.LicenseManager.GetConfigValue(String key, Assembly assembly)
+[2024-02-14 13:12:13] Setting license key to 'AppAnalytics' module
+[2024-02-14 13:12:13] Error 0x00 while validating license key
+[2024-02-14 13:12:13] Failed to create LicenseKey, returning null. Exception occured:'Error 0x00 while validating license key'
+[2024-02-14 13:12:13] 13:12:13 (35864): PdfDocumentFactory created document 000001C549CFC780 from 29731 bytes
+[2024-02-14 13:12:13] 13:12:13 (35864): Document opened from vector
+[2024-02-14 13:12:13] 13:12:13 (35864): Storing new document 0
+[2024-02-14 13:12:13] Document 0 has 1 references remaining (+1)
+[2024-02-14 13:12:13] In-memory object store fetching document 32a7e8f2-5cc5-4ff0-bff1-80a5a497d05d
+[2024-02-14 13:12:13] In-memory object store fetching document 32a7e8f2-5cc5-4ff0-bff1-80a5a497d05d
+[2024-02-14 13:12:13] Error 0x01 while validating license key
+[2024-02-14 13:12:13] 13:12:13 (21080): PdfDocumentFactory created document 000001C549CFC6A0 from 29731 bytes
+[2024-02-14 13:12:13] 13:12:13 (21080): Document opened from vector
+[2024-02-14 13:12:13] 13:12:13 (21080): Storing new document 1
+[2024-02-14 13:12:13] Document 1 has 1 references remaining (+1)
+[2024-02-14 13:12:13] In-memory object store fetching document 9fbca1e8-2f34-428f-bb2f-504b9e23dacb
+[2024-02-14 13:12:13] In-memory object store fetching document 9fbca1e8-2f34-428f-bb2f-504b9e23dacb
+[2024-02-14 13:14:45] ---------- Microsoft Windows NT 10.0.22631.0 (C:\Users\ravic\Desktop\TalentSyncBackend\IronPdfEngine.log) ----------
+[2024-02-14 13:14:45] Using deployment directory 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:14:45] Creating deployment candidates using root path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\' (download: False)
+[2024-02-14 13:14:45] Creating folder deployments for win-x64
+[2024-02-14 13:14:45] Creating embedded deployments for win-x64
+[2024-02-14 13:14:45] Successfully located 'IronPdfInterop' at 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:14:45] Warning! Missing deployment configuration file for deployment 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:14:45] IronSoftware.Exceptions.IronSoftwareDeploymentConfigurationMissingException: Error while locating deployment configuration file 'Pdfium*.deployment.json' within 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+   at IronSoftware.Deployment.SmartDeploymentBase.GetDeploymentConfiguration(IDeployment deployment)
+   at IronSoftware.Deployment.SmartDeploymentBase.ExecuteDeploymentCommands(IDeployment deployment)
+   at IronSoftware.Deployment.SmartDeploymentBase.Deploy(Boolean download)
+[2024-02-14 13:14:45] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 13:14:45] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 13:14:45] Successfully loaded native library from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfInterop.dll'
+[2024-02-14 13:14:45] Successfully loaded 'IronPdfInterop' version '2024.1.0.143' from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:14:45] Successfully deployed 'Pdfium' using 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:14:45] Creating new job collection resource
+[2024-02-14 13:14:45] Creating new document collection resource
+[2024-02-14 13:14:45] Successfully initialized local pdf client
+[2024-02-14 13:14:45] Initializing local Chrome client...
+[2024-02-14 13:14:45] Using deployment directory 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:14:45] Creating deployment candidates using root path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\' (download: False)
+[2024-02-14 13:14:45] Creating folder deployments for win-x64
+[2024-02-14 13:14:45] Creating embedded deployments for win-x64
+[2024-02-14 13:14:45] Successfully located 'IronInterop' at 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:14:45] Determining deployment commands for platform 'Windows' v10.0.22631.0
+[2024-02-14 13:14:45] Using deployment instructions for 'default' v
+[2024-02-14 13:14:45] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 13:14:45] Attempting to load Windows library 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 13:14:45] Successfully loaded native library from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronInterop.dll'
+[2024-02-14 13:14:45] Successfully loaded 'IronInterop' version '2024.1.0.143' from 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:14:45] Successfully deployed 'Chrome' using 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:14:45] Initializing Chrome renderer for OS Name: Windows, Identifier: win, Version: 10.0.22631.0, VersionName: , Domain: IronPdfEngineConsole, Thread: , Path: C:\Users\ravic\Desktop\TalentSyncBackend
+[2024-02-14 13:14:45] 13:14:45 (23956): ~ Chrome renderer v2024.1.0.143~
+[2024-02-14 13:14:45] 13:14:45 (23956): register JobManager as publisher for event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 13:14:45] 13:14:45 (23956): [EventRegistry] Register event_readyToInitializeNetworkEventsDevToolsHandler for a publisher
+[2024-02-14 13:14:45] 13:14:45 (23956): IsSingleProcess: 0
+[2024-02-14 13:14:45] 13:14:45 (23956): Creating Cef proxy controller
+[2024-02-14 13:14:45] 13:14:45 (23956): Creating Cef interface
+[2024-02-14 13:14:45] 13:14:45 (23956): JobManager subscribes a new sub, eventStr=event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 13:14:45] 13:14:45 (23956): JobManager subscribes a new sub, eventStr=event_readyToInitializeNetworkEventsDevToolsHandler
+[2024-02-14 13:14:45] 13:14:45 (23956): Destroying Cef proxy event handler
+[2024-02-14 13:14:45] 13:14:45 (23956): Initializing Cef proxy controller
+[2024-02-14 13:14:45] 13:14:45 (23956): Using subprocess path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe'
+[2024-02-14 13:14:45] 13:14:45 (23956): Using framework path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:14:45] 13:14:45 (23956): Using locales path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales'
+[2024-02-14 13:14:45] 13:14:45 (23956): Using resources path 'C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\'
+[2024-02-14 13:14:45] 13:14:45 (23956): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronPdfEngineConsole.exe" --browser-subprocess-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --no-sandbox --lang=en-US --log-file=cef.log --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --disable-features=CalculateNativeWinOcclusion,WinUseBrowserSpellChecker,BackForwardCache host=127.0.0.1 port=33350 docker_build=false keep_alive=true linux_and_docker_auto_config=false skip_initialization=false log_path=./IronPdfEngine.log single_process=false chrome_browser_limit=30 chrome_gpu_mode=0 linux_and_docker_auto_config=true programming_language=nodejs'
+[2024-02-14 13:14:45] 13:14:45 (23956): gpu_mode: '0'
+[2024-02-14 13:14:45] 13:14:45 (38256): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --type=gpu-process --no-sandbox --headless --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --lang=en-US --user-data-dir="C:\Users\ravic\AppData\Local\Temp" /prefetch:2'
+[2024-02-14 13:14:45] 13:14:45 (38256): gpu_mode: '0'
+[2024-02-14 13:14:45] 13:14:45 (23956): Cef initialization succeeded
+[2024-02-14 13:14:45] Successfully initialized local Chrome client
+[2024-02-14 13:14:45] 13:14:45 (38256): Cef context initialized
+[2024-02-14 13:14:45] 13:14:45 (38256): Registering custom scheme for rendering raw html
+[2024-02-14 13:14:45] 13:14:45 (38256): Successfully registered custom scheme
+[2024-02-14 13:14:45] 13:14:45 (38256): Cef engine initialization complete
+[2024-02-14 13:14:45] 13:14:45 (38256): Launching child process '"C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\IronCefSubprocess.exe" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --ignore-urlfetcher-cert-requests --no-sandbox --ignore-certificate-errors --mute-audio --ignore-certificate-errors --locales-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20\\locales" --log-severity=disable --resources-dir-path="C:\Users\ravic\Desktop\TalentSyncBackend\node_modules\@ironsoftware\ironpdf-engine-windows-x64\ironpdf-engine-bin-2024.1.20" --lang=en-US --user-data-dir="C:\Users\ravic\AppData\Local\Temp" /prefetch:8'
+[2024-02-14 13:14:45] 13:14:45 (38256): gpu_mode: '0'
+[2024-02-14 13:14:55] 'UsageData' module is disabled
+[2024-02-14 13:14:55] Attempting to obtain value for a key 'IronPdf.LicenseKey' from settings
+[2024-02-14 13:14:55] Couldn't find key 'IronPdf.LicenseKey' in json config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 13:14:55] Couldn't find key 'IronPdf.LicenseKey' in xml config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 13:14:55] Warning! Error while retrieving app settings value
+[2024-02-14 13:14:55] System.ArgumentNullException: Value cannot be null. (Parameter 'path')
+   at System.IO.Path.GetFullPath(String path)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.ReadAzureFunctionConfig(String key, Assembly context)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.TryReadFromDefaultConfigs(String key, Assembly context, String& configValue)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.Read(String key, Assembly context)
+   at IronSoftware.Licenses.LicenseManager.GetConfigValue(String key, Assembly assembly)
+[2024-02-14 13:14:55] Attempting to obtain value for a key 'IronSuite.LicenseKey' from settings
+[2024-02-14 13:14:55] Couldn't find key 'IronSuite.LicenseKey' in json config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 13:14:55] Couldn't find key 'IronSuite.LicenseKey' in xml config files: Value cannot be null. (Parameter 'path')
+[2024-02-14 13:14:55] Warning! Error while retrieving app settings value
+[2024-02-14 13:14:55] System.ArgumentNullException: Value cannot be null. (Parameter 'path')
+   at System.IO.Path.GetFullPath(String path)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.ReadAzureFunctionConfig(String key, Assembly context)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.TryReadFromDefaultConfigs(String key, Assembly context, String& configValue)
+   at IronSoftware.IronConfigurationManager.IronConfigurations.Read(String key, Assembly context)
+   at IronSoftware.Licenses.LicenseManager.GetConfigValue(String key, Assembly assembly)
+[2024-02-14 13:14:55] Setting license key to 'AppAnalytics' module
+[2024-02-14 13:14:55] Error 0x00 while validating license key
+[2024-02-14 13:14:55] Failed to create LicenseKey, returning null. Exception occured:'Error 0x00 while validating license key'
+[2024-02-14 13:14:55] 13:14:55 (38996): PdfDocumentFactory created document 000001EC64757580 from 29731 bytes
+[2024-02-14 13:14:55] 13:14:55 (38996): Document opened from vector
+[2024-02-14 13:14:55] 13:14:55 (38996): Storing new document 0
+[2024-02-14 13:14:55] Document 0 has 1 references remaining (+1)
+[2024-02-14 13:14:55] In-memory object store fetching document e4d61836-346e-4e4c-aeb7-58ecbca65166
+[2024-02-14 13:14:55] In-memory object store fetching document e4d61836-346e-4e4c-aeb7-58ecbca65166
+[2024-02-14 13:15:18] Error 0x01 while validating license key
+[2024-02-14 13:15:18] 13:15:18 (39028): PdfDocumentFactory created document 000001EC64756320 from 29731 bytes
+[2024-02-14 13:15:18] 13:15:18 (39028): Document opened from vector
+[2024-02-14 13:15:18] 13:15:18 (39028): Storing new document 1
+[2024-02-14 13:15:18] Document 1 has 1 references remaining (+1)
+[2024-02-14 13:15:18] In-memory object store fetching document d76d68a5-d9c5-43e2-8af5-2456a7ffb523
+[2024-02-14 13:15:18] In-memory object store fetching document d76d68a5-d9c5-43e2-8af5-2456a7ffb523
