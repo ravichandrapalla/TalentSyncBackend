@@ -318,11 +318,12 @@ const getJobMatches = async (request, response) => {
     );
   }
 };
+const q = `SELECT u.username, u.email, u.mobile_number, r.resume FROM resumes r INNER JOIN users u ON u.id = r.user_id WHERE $1 = ANY(key_words)`;
 const getMatchedResumes = async (req, res) => {
   const exactSearchText = req.query.searchText;
   if (exactSearchText) {
     pool.query(
-      `SELECT resume FROM resumes WHERE $1 = ANY(key_words)`,
+      `SELECT u.username, u.email, u.mobile_number, r.resume FROM resumes r INNER JOIN users u ON u.id = r.user_id WHERE $1 = ANY(key_words)`,
       [exactSearchText],
       (error, result) => {
         console.log("query resp ------->", result);
@@ -338,7 +339,7 @@ const getMatchedResumes = async (req, res) => {
           // );
           res
             .status(200)
-            .json({ message: "Resume found..", resumeBuffer: result.rows });
+            .json({ message: "Resumes found..", clients: result.rows });
         } else {
           res
             .status(404)
