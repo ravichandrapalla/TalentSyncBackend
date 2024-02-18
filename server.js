@@ -1,3 +1,4 @@
+require("./dbconnection");
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
@@ -66,6 +67,7 @@ app.get("/getCurrentUser", authMiddleware.verifyToken, (req, res) => {
   res.status(200).json({ message: "token is verified and looks good" });
 });
 app.get("/getJobMatches", authMiddleware.verifyToken, db.getJobMatches);
+app.get("/getMatchedResumes", authMiddleware.verifyToken, db.getMatchedResumes);
 
 app.get("/dashboard", authMiddleware.verifyToken, (req, res) => {
   res.json({ message: "You Landed on Dashboard" });

@@ -8,7 +8,7 @@ const verifyToken = (request, response, next) => {
   if (!token) {
     return response.status(401).json({ message: "Unauthorized Access" });
   }
-  console.log("token ---------------------> ", token);
+  // console.log("token ---------------------> ", token);
   jwt.verify(token, secretKey, (err, decoded) => {
     if (err) {
       return response
@@ -17,6 +17,8 @@ const verifyToken = (request, response, next) => {
     }
     console.log("decoaded data in backend is ---------------> ", decoded);
     request.user = decoded;
+    request.searchText = request.query.searchText;
+    console.log("search text is -----> ", request.query.searchText);
     next();
   });
 };

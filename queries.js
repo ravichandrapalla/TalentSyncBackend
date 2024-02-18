@@ -284,23 +284,69 @@ const getAllUsers = async (request, response) => {
   }
 };
 const getJobMatches = async (request, response) => {
-  const searchText = request.body.searchText;
+  const searchText = request.searchText;
 
   console.log("backend search text  ---------> ", searchText);
-  pool.query(
-    `SELECT key_words FROM resumes ANY (key_words) = $1 `,
-    [searchText],
-    (error, result) => {
-      if (error) {
-        throw new Error(error);
+  if (searchText) {
+    pool.query(
+      `SELECT key_word
+      FROM resumes,
+           unnest(key_words) AS key_word
+      WHERE LOWER(key_word) LIKE LOWER('%'|| $1 ||'%');`,
+      [searchText],
+      (error, result) => {
+        console.log("query resp ------->", result);
+        if (error) {
+          throw new Error(error);
+        }
+        if (result.rows.length > 0) {
+          console.log(
+            "found matches obj ---------> ",
+            result.rows.reduce((acc, ele) => [...acc, ele.key_word], [])
+          );
+          response.status(200).json({
+            message: "results found",
+            result: result.rows.reduce(
+              (acc, ele) => [...acc, ele.key_word],
+              []
+            ),
+          });
+        } else {
+          response.status(404).json({ message: "no results found" });
+        }
       }
-      if (result.rows.length > 0) {
-        console.log("found matches obj ---------> ", result.rows);
+    );
+  }
+};
+const getMatchedResumes = async (req, res) => {
+  const exactSearchText = req.query.searchText;
+  if (exactSearchText) {
+    pool.query(
+      `SELECT resume FROM resumes WHERE $1 = ANY(key_words)`,
+      [exactSearchText],
+      (error, result) => {
+        console.log("query resp ------->", result);
+        if (error) {
+          throw new Error(error);
+        }
+        if (result.rows.length > 0) {
+          console.log("returned resumes are ------> ", result.rows);
+          res.setHeader("Content-Type", "application/pdf");
+          // res.setHeader(
+          //   "Content-Disposition",
+          //   'attachment; filename="resume.pdf"'
+          // );
+          res
+            .status(200)
+            .json({ message: "Resume found..", resumeBuffer: result.rows });
+        } else {
+          res
+            .status(404)
+            .josn({ message: "No resumes foudn this should not happen" });
+        }
       }
-    }
-  );
-
-  response.status(200).json({ message: "Found JOb matches", data: "" });
+    );
+  }
 };
 
 module.exports = {
@@ -310,4 +356,5 @@ module.exports = {
   verifyEmail,
   storeResume,
   getJobMatches,
+  getMatchedResumes,
 };
