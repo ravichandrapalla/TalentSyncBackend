@@ -113,7 +113,7 @@ const storeResume = async (request, response) => {
     "destructured ---------> ",
     mappedKey,
     fileName,
-    actualFileContent,
+    actualFileContent.toString("base64"),
     fileSize
   );
   pool.query(
@@ -129,7 +129,12 @@ const storeResume = async (request, response) => {
           .then((foundKeywords) => {
             pool.query(
               `INSERT INTO resumes (user_id, upload_timestamp, resume, key_words) VALUES($1, $2, $3, $4) RETURNING id`,
-              [result.rows[0].id, new Date(), actualFileContent, foundKeywords],
+              [
+                result.rows[0].id,
+                new Date(),
+                actualFileContent.toString("base64"),
+                foundKeywords,
+              ],
               (error, result) => {
                 if (error) {
                   throw new Error(error);
@@ -332,11 +337,13 @@ const getMatchedResumes = async (req, res) => {
         }
         if (result.rows.length > 0) {
           console.log("returned resumes are ------> ", result.rows);
-          res.setHeader("Content-Type", "application/pdf");
+          // res.setHeader("Content-Description", "File Transfer");
           // res.setHeader(
           //   "Content-Disposition",
-          //   'attachment; filename="resume.pdf"'
+          //   "attachment; filename=print.pdf"
           // );
+          res.setHeader("Content-Type", "application/pdf");
+
           res
             .status(200)
             .json({ message: "Resumes found..", clients: result.rows });
