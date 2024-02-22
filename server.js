@@ -28,7 +28,7 @@ app.post("/refreshToken", authMiddleware.verifyRefresh, (req, res) => {
   const user = req.user;
   console.log("req.body is -> ", req);
   const newAccessToken = jwt.sign(user, process.env.SECRET_KEY, {});
-  res.setHeader("Authorization", `Bearer ${newAccessToken}`);
+  res.setHeader("Authorization", `${newAccessToken}`);
   res.setHeader("Access-Control-Expose-Headers", "Authorization");
   res.status(200).json({ message: "Token Refresh Complete" });
 });

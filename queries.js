@@ -37,7 +37,7 @@ const createUser = async (request, response) => {
       } else {
         pool.query(
           `INSERT INTO users (username, email, password, mobile_number,	role
-            ) VALUES ($1, $2, $3, $4, $5) RETURNING id, registration_number, verified `,
+            ) VALUES ($1, $2, $3, $4, $5) RETURNING id, registration_number, verified, role`,
           [fullName, email, hashedPassword, mobileNumber, role],
           (error, results) => {
             // console.log("query resp ", error, results);
@@ -232,7 +232,9 @@ const getUser = async (request, response) => {
           updated_at,
           registration_number,
           role_id,
+          role,
         } = results.rows[0];
+        console.log("role is ---> ", role);
         bcrypt.compare(password, storedPassword, (err, result) => {
           if (err) {
             throw new Error("Hach issue");
@@ -244,6 +246,7 @@ const getUser = async (request, response) => {
               storedEmail,
               registration_number,
               role_id,
+              role,
             };
             // const user = { name: email };
             const accessToken = jwt.sign(
@@ -257,7 +260,7 @@ const getUser = async (request, response) => {
               { expiresIn: "7d" } // Refresh token expires in 7 days, adjust as needed
             );
 
-            response.setHeader("Authorization", `Bearer ${accessToken}`);
+            response.setHeader("Authorization", `${accessToken}`);
             response.setHeader("RefreshToken", refreshToken);
             response.setHeader(
               "Access-Control-Expose-Headers",
@@ -317,7 +320,9 @@ const getJobMatches = async (request, response) => {
             ),
           });
         } else {
-          response.status(404).json({ message: "no results found" });
+          response
+            .status(200)
+            .json({ message: "no results found", result: null });
         }
       }
     );
@@ -350,7 +355,7 @@ const getMatchedResumes = async (req, res) => {
         } else {
           res
             .status(404)
-            .josn({ message: "No resumes foudn this should not happen" });
+            .json({ message: "No resumes foudn this should not happen" });
         }
       }
     );
