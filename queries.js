@@ -362,6 +362,29 @@ const getMatchedResumes = async (req, res) => {
   }
 };
 
+const getRecruiters = async (req, res) => {
+  const currUser = req.user;
+  if (currUser.role === "Admin") {
+    pool.query(
+      `SELECT * FROM users WHERE role = 'Recruiter'`,
+      [],
+      (error, result) => {
+        if (error) {
+          throw new Error(error);
+        } else if (result.rows.length > 0) {
+          res.status(200).json({
+            message: "Data found and sent to client",
+            recruiters: result.rows,
+          });
+        }
+      }
+    );
+    return;
+  }
+  res
+    .status(401)
+    .json({ message: "Confidential data, You are not Authorized" });
+};
 module.exports = {
   createUser,
   getUser,
@@ -370,4 +393,5 @@ module.exports = {
   storeResume,
   getJobMatches,
   getMatchedResumes,
+  getRecruiters,
 };

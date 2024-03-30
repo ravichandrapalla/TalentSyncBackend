@@ -17,6 +17,7 @@ const verifyToken = (request, response, next) => {
     }
     console.log("decoaded data in backend is ---------------> ", decoded);
     request.user = decoded;
+
     request.searchText = request.query.searchText;
     console.log("search text is -----> ", request.query.searchText);
     next();
