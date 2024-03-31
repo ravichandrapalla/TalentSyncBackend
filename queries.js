@@ -68,7 +68,7 @@ const createUser = async (request, response) => {
 const pdfExtract = async (fileBuffer) => {
   const pdf = await PdfDocument.fromFile(fileBuffer);
   let extractedText = await pdf.extractText();
-  console.log("extracted text is  ----------------> ", extractedText);
+  // console.log("extracted text is  ----------------> ", extractedText);
 
   const options = {
     method: "POST",
@@ -283,7 +283,9 @@ const getUser = async (request, response) => {
 
 const getAllUsers = async (request, response) => {
   try {
-    const queryResult = await pool.query(`SELECT * FROM users`);
+    const queryResult = await pool.query(
+      `SELECT * FROM users WHERE approval_status IS NULL `
+    );
     // console.log("result ", queryResult);
     response.status(200).json({ users: queryResult.rows });
   } catch (error) {
@@ -366,7 +368,7 @@ const getRecruiters = async (req, res) => {
   const currUser = req.user;
   if (currUser.role === "Admin") {
     pool.query(
-      `SELECT * FROM users WHERE role = 'Recruiter'`,
+      `SELECT * FROM users WHERE role = 'Recruiter' AND approval_status = 'Approved'`,
       [],
       (error, result) => {
         if (error) {
@@ -385,6 +387,79 @@ const getRecruiters = async (req, res) => {
     .status(401)
     .json({ message: "Confidential data, You are not Authorized" });
 };
+
+const getClients = async (req, res) => {
+  const currUser = req.user;
+  if (currUser.role === "Admin") {
+    pool.query(
+      `SELECT * FROM users WHERE role = 'Client'`,
+      [],
+      (error, result) => {
+        if (error) {
+          throw new Error(error);
+        } else if (result.rows.length > 0) {
+          res.status(200).json({
+            message: "Data found and sent to client",
+            clients: result.rows,
+          });
+        }
+      }
+    );
+    return;
+  }
+  res
+    .status(401)
+    .json({ message: "Confidential data, You are not Authorized" });
+};
+
+const approveUser = async (req, res) => {
+  console.log(
+    "IIIIIIIIIIIIIIIIIII aaaaaaaaaaaaaaaaaaaaa MMMMMMMMMMMMMMMMMMM hhhere"
+  );
+  const currUser = req.user;
+  const RegId = req.body.regNumber;
+  console.log(
+    "ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+  );
+  if (currUser.role === "Admin") {
+    console.log(
+      "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    );
+    pool.query(
+      `UPDATE users SET role_id = LOWER(role) WHERE registration_number = $1`,
+      [RegId],
+      (error, result) => {
+        // console.log("result ---> ", result);
+        if (error) {
+          throw new Error(error);
+        } else if (result.rowCount) {
+          console.log(
+            "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          );
+          pool.query(
+            `UPDATE users SET approval_status = 'Approved' WHERE registration_number = $1`,
+            [RegId],
+            (error, result) => {
+              console.log("result is ", result);
+              if (error) {
+                throw new Error(error);
+              } else {
+                res.status(200).json({
+                  message: "Update Cycle Completed Successfully",
+                  updatedUsers: null,
+                });
+              }
+            }
+          );
+        }
+      }
+    );
+    return;
+  }
+  res
+    .status(401)
+    .json({ message: "Confidential data, You are not Authorized" });
+};
 module.exports = {
   createUser,
   getUser,
@@ -394,4 +469,6 @@ module.exports = {
   getJobMatches,
   getMatchedResumes,
   getRecruiters,
+  getClients,
+  approveUser,
 };

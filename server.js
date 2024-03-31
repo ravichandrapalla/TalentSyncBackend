@@ -73,6 +73,8 @@ app.get("/dashboard", authMiddleware.verifyToken, (req, res) => {
   res.json({ message: "You Landed on Dashboard" });
 });
 app.get("/getRecruiters", authMiddleware.verifyToken, db.getRecruiters);
+app.get("/getClients", authMiddleware.verifyToken, db.getClients);
+app.post("/approveUser", authMiddleware.verifyToken, db.approveUser);
 
 // app.post("/api/signup", async (req, res) => {
 //   const { fullName, email, password } = req.body;
