@@ -156,17 +156,26 @@ const storeResume = async (request, response) => {
   );
 };
 
-const sendVerificationEmail = (email, verificationToken) => {
+const sendVerificationEmail = (email, verificationToken = "") => {
+  console.log("email is ", email);
   const mailOptions = {
     from: "TalentSync@gmail.com",
     to: email,
-    subject: "Email Verification",
-    text: `Please click the following link to verify your email:http://localhost:4000/verify/${verificationToken}`,
+    subject: `${
+      verificationToken
+        ? "Email Verification"
+        : "Your TalentSync Profile Rejected"
+    }`,
+    text: `${
+      verificationToken
+        ? `Please click the following link to verify your email:http://localhost:4000/verify/${verificationToken}`
+        : "Hello Dear Customer, Your TalentSync Proile is rejected by admin for incorrect or suspicious Info. please cleate a new account and make sure correct data is added to it."
+    }`,
   };
   console.log("text is ", mailOptions.text);
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-      throw new Error("Error in sending mail");
+      throw new Error(error);
     } else {
       console.log("mail sent successfully", info);
     }
@@ -392,12 +401,17 @@ const getClients = async (req, res) => {
   const currUser = req.user;
   if (currUser.role === "Admin") {
     pool.query(
-      `SELECT * FROM users WHERE role = 'Client'`,
+      `SELECT * FROM users WHERE role = 'Client' AND approval_status = 'Approved'`,
       [],
       (error, result) => {
         if (error) {
           throw new Error(error);
-        } else if (result.rows.length > 0) {
+        } else if (result.rowCount === 0) {
+          res.status(404).json({
+            message: "No data found",
+            clients: result.rows,
+          });
+        } else {
           res.status(200).json({
             message: "Data found and sent to client",
             clients: result.rows,
@@ -413,18 +427,10 @@ const getClients = async (req, res) => {
 };
 
 const approveUser = async (req, res) => {
-  console.log(
-    "IIIIIIIIIIIIIIIIIII aaaaaaaaaaaaaaaaaaaaa MMMMMMMMMMMMMMMMMMM hhhere"
-  );
   const currUser = req.user;
   const RegId = req.body.regNumber;
-  console.log(
-    "ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
-  );
+
   if (currUser.role === "Admin") {
-    console.log(
-      "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-    );
     pool.query(
       `UPDATE users SET role_id = LOWER(role) WHERE registration_number = $1`,
       [RegId],
@@ -433,9 +439,6 @@ const approveUser = async (req, res) => {
         if (error) {
           throw new Error(error);
         } else if (result.rowCount) {
-          console.log(
-            "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
-          );
           pool.query(
             `UPDATE users SET approval_status = 'Approved' WHERE registration_number = $1`,
             [RegId],
@@ -460,6 +463,34 @@ const approveUser = async (req, res) => {
     .status(401)
     .json({ message: "Confidential data, You are not Authorized" });
 };
+
+const rejectUser = async (req, res) => {
+  const currUser = req.user;
+  const RegId = req.body.regNumber;
+  console.log("email is -----> ", req.user);
+  if (currUser.role === "Admin") {
+    pool.query(
+      `DELETE FROM users WHERE registration_number = $1`,
+      [RegId],
+      (error, result) => {
+        // console.log("result ---> ", result);
+        if (error) {
+          throw new Error(error);
+        } else if (result.rowCount) {
+          sendVerificationEmail(currUser.storedEmail);
+          res.status(200).json({
+            message: "Record Succesfully Deleted",
+          });
+        }
+      }
+    );
+    return;
+  }
+  res
+    .status(401)
+    .json({ message: "Confidential data, You are not Authorized" });
+};
+
 module.exports = {
   createUser,
   getUser,
@@ -471,4 +502,5 @@ module.exports = {
   getRecruiters,
   getClients,
   approveUser,
+  rejectUser,
 };
