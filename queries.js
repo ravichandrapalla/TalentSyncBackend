@@ -291,16 +291,45 @@ const getUser = async (request, response) => {
 };
 
 const getAllUsers = async (request, response) => {
-  try {
-    const queryResult = await pool.query(
-      `SELECT * FROM users WHERE approval_status IS NULL `
+  // try {
+  //   const queryResult = await pool.query(
+  //     `SELECT * FROM users WHERE approval_status IS NULL `
+  //   );
+  //   console.log("query result ------> ", queryResult);
+  //   if (queryResult.rows.length === 0) {
+  //     response.status(404).json({ message: "No data found", users: null });
+  //   } else {
+  //     response
+  //       .status(200)
+  //       .json({ message: "Data Found", users: queryResult.rows });
+  //   }
+  // } catch (error) {
+  //   // console.log("result ", error);
+  //   response.status(500).json({ message: "Internal Server Error" });
+  // }
+  const currUser = request.user;
+  if (currUser.role === "Admin") {
+    pool.query(
+      `SELECT * FROM users WHERE approval_status IS NULL`,
+      [],
+      (error, results) => {
+        if (error) {
+          throw new Error(error);
+        }
+        if (results.rows.length !== 0) {
+          response
+            .status(200)
+            .json({ message: "Data Found", users: results.rows });
+        } else {
+          response.status(404).json({ message: "No Data Found", users: null });
+        }
+      }
     );
-    // console.log("result ", queryResult);
-    response.status(200).json({ users: queryResult.rows });
-  } catch (error) {
-    // console.log("result ", error);
-    response.status(500).json({ message: "Internal Server Error" });
+    return;
   }
+  response
+    .status(401)
+    .json({ message: "Confidential data, You are not Authorized" });
 };
 const getJobMatches = async (request, response) => {
   const searchText = request.searchText;
@@ -382,7 +411,12 @@ const getRecruiters = async (req, res) => {
       (error, result) => {
         if (error) {
           throw new Error(error);
-        } else if (result.rows.length > 0) {
+        } else if (result.rows.length === 0) {
+          res.status(404).json({
+            message: "No Data Found",
+            recruiters: null,
+          });
+        } else {
           res.status(200).json({
             message: "Data found and sent to client",
             recruiters: result.rows,
@@ -409,7 +443,7 @@ const getClients = async (req, res) => {
         } else if (result.rowCount === 0) {
           res.status(404).json({
             message: "No data found",
-            clients: result.rows,
+            clients: null,
           });
         } else {
           res.status(200).json({
