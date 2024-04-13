@@ -525,6 +525,32 @@ const rejectUser = async (req, res) => {
     .json({ message: "Confidential data, You are not Authorized" });
 };
 
+const editUser = async (req, res) => {
+  const currUser = req.user;
+  const { regId } = req.params;
+  const { organization, role } = req.body;
+  if (currUser.role === "Admin") {
+    pool.query(
+      `UPDATE users SET organization = $1 , role = $2 WHERE registration_number = $3 RETURNING *`,
+      [organization, role, regId],
+      (error, result) => {
+        if (error) {
+          throw new Error(error);
+        } else if (result.rowCount) {
+          console.log("RESULT IS -----> ", result);
+          return res.status(200).json({
+            message: "Record Updated Successfully",
+            updatedRecord: result.rows,
+          });
+        }
+      }
+    );
+    return;
+  }
+
+  res.status(404).json({ message: "No record found" });
+};
+
 module.exports = {
   createUser,
   getUser,
@@ -537,4 +563,5 @@ module.exports = {
   getClients,
   approveUser,
   rejectUser,
+  editUser,
 };
