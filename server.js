@@ -77,6 +77,7 @@ app.get("/getClients", authMiddleware.verifyToken, db.getClients);
 app.post("/approveUser", authMiddleware.verifyToken, db.approveUser);
 app.post("/rejectUser", authMiddleware.verifyToken, db.rejectUser);
 app.post("/editUser/:regId", authMiddleware.verifyToken, db.editUser);
+app.get("/dashboard/:regId", authMiddleware.verifyToken, db.dashBoard);
 
 // app.post("/api/signup", async (req, res) => {
 //   const { fullName, email, password } = req.body;

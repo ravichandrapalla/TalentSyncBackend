@@ -551,6 +551,39 @@ const editUser = async (req, res) => {
   res.status(404).json({ message: "No record found" });
 };
 
+const dashBoard = async (req, res) => {
+  const currUser = req.user;
+  const { regId } = req.params;
+
+  if (currUser.role === "Admin") {
+    pool.query(
+      `SELECT 
+      COUNT(*) AS total_users,
+      COUNT(CASE WHEN role = 'Recruiter' THEN 1 END) AS total_recruiters,
+      COUNT(CASE WHEN role = 'Client' THEN 1 END) AS total_clients,
+      COUNT(CASE WHEN verified = false THEN 1 END) AS total_unverified,
+      COUNT(CASE WHEN approval_status = NULL THEN 1 END) AS total_waitingList
+    FROM 
+      users`,
+      [],
+      (error, result) => {
+        if (error) {
+          throw new Error(error);
+        } else if (result.rowCount) {
+          console.log("RESULT IS -----> ", result);
+          return res.status(200).json({
+            message: "Records Found",
+            records: result.rows,
+          });
+        }
+      }
+    );
+    return;
+  }
+
+  res.status(404).json({ message: "No records found" });
+};
+
 module.exports = {
   createUser,
   getUser,
@@ -564,4 +597,5 @@ module.exports = {
   approveUser,
   rejectUser,
   editUser,
+  dashBoard,
 };
