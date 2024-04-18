@@ -559,10 +559,10 @@ const dashBoard = async (req, res) => {
     pool.query(
       `SELECT 
       COUNT(*) AS total_users,
-      COUNT(CASE WHEN role = 'Recruiter' THEN 1 END) AS total_recruiters,
-      COUNT(CASE WHEN role = 'Client' THEN 1 END) AS total_clients,
+      COUNT(CASE WHEN role = 'Recruiter' AND approval_status = 'Approved' THEN 1 END) AS total_recruiters,
+      COUNT(CASE WHEN role = 'Client' AND approval_status = 'Approved' THEN 1 END) AS total_clients,
       COUNT(CASE WHEN verified = false THEN 1 END) AS total_unverified,
-      COUNT(CASE WHEN approval_status = NULL THEN 1 END) AS total_waitingList
+      COUNT(CASE WHEN approval_status IS NULL AND verified = true  THEN 1 END) AS total_waitingList
     FROM 
       users`,
       [],
@@ -584,6 +584,64 @@ const dashBoard = async (req, res) => {
   res.status(404).json({ message: "No records found" });
 };
 
+const updateSelf = async (req, res) => {
+  const currUser = req.user;
+  // const { regId } = req.params;
+  const entity = Object.keys(req.body);
+  const value = Object.values(req.body);
+  console.log(
+    "abbbba   --------------->  ",
+    entity[0],
+    value[0],
+    currUser.registration_number
+  );
+
+  const Query = `UPDATE users SET ${entity[0]} = $1 WHERE registration_number = $2 RETURNING *`;
+  if (currUser.role === "Client") {
+    pool.query(
+      Query,
+      [value[0], currUser.registration_number],
+      (error, result) => {
+        if (error) {
+          throw new Error(error);
+        } else if (result.rowCount) {
+          console.log("RESULT IS -----> ", result);
+          return res.status(200).json({
+            message: "Record Updated Successfully",
+            updatedRecord: result.rows,
+          });
+        }
+      }
+    );
+    return;
+  }
+
+  res.status(404).json({ message: "No record found" });
+};
+
+const getCurrUpdatedData = async (req, res) => {
+  const currUser = req.user;
+  // const { regId } = req.params;
+
+  const Query = `SELECT * FROM users WHERE registration_number = $1`;
+  if (currUser.role === "Client") {
+    pool.query(Query, [currUser.registration_number], (error, result) => {
+      if (error) {
+        throw new Error(error);
+      } else if (result.rows.length) {
+        console.log("RESULT IS -----> ", result);
+        return res.status(200).json({
+          message: "Record Found",
+          updatedRecord: result.rows[0],
+        });
+      }
+    });
+    return;
+  }
+
+  res.status(404).json({ message: "No record found" });
+};
+
 module.exports = {
   createUser,
   getUser,
@@ -598,4 +656,6 @@ module.exports = {
   rejectUser,
   editUser,
   dashBoard,
+  updateSelf,
+  getCurrUpdatedData,
 };
