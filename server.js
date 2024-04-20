@@ -84,6 +84,11 @@ app.get(
   authMiddleware.verifyToken,
   db.getCurrUpdatedData
 );
+app.post(
+  "/updateAvatarUrl",
+  authMiddleware.verifyToken,
+  db.updateUserAvatarUrl
+);
 
 // app.post("/api/signup", async (req, res) => {
 //   const { fullName, email, password } = req.body;
