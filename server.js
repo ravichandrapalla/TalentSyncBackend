@@ -38,26 +38,6 @@ app.post(
   authMiddleware.verifyToken,
   upload.single("resume"),
   db.storeResume
-  // (req, res) => {
-  //   const { regId } = req.params;
-  //   const { file, user } = req;
-  //   const {
-  //     fieldname: mappedKey,
-  //     originalname: fileName,
-  //     buffer: actualFileContent,
-  //     size: fileSize,
-  //   } = file;
-  //   console.log("userfiles ------>", req);
-  //   console.log("resume ------>", file, regId);
-  //   console.log(
-  //     "destructured ---------> ",
-  //     mappedKey,
-  //     fileName,
-  //     actualFileContent,
-  //     fileSize
-  //   );
-  //   res.status(201).send("gone through");
-  // }
 );
 
 app.get("/verify/:verificationToken", db.verifyEmail);
