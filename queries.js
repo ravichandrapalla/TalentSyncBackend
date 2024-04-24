@@ -7,6 +7,8 @@ const { transporter } = require("./nodemailer");
 const { v4: uuidv4 } = require("uuid");
 const { PdfDocument } = require("@ironsoftware/ironpdf");
 const axios = require("axios").default;
+const { createClient } = require("@supabase/supabase-js");
+const supabase = createClient(process.env.SUPABASEURL, process.env.SUPABASEKEY);
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
@@ -99,61 +101,87 @@ const pdfExtract = async (fileBuffer) => {
   return filteredData;
 };
 const storeResume = async (request, response) => {
-  const { regId } = request.params;
-  const { file, user } = request;
-  const {
-    fieldname: mappedKey,
-    originalname: fileName,
-    buffer: actualFileContent,
-    size: fileSize,
-  } = file;
-  console.log("userfiles ------>", request);
-  console.log("resume ------>", file, regId);
-  console.log(
-    "destructured ---------> ",
-    mappedKey,
-    fileName,
-    actualFileContent.toString("base64"),
-    fileSize
-  );
-  pool.query(
-    `SELECT * FROM users WHERE registration_number = $1`,
-    [regId],
-    (error, result) => {
-      if (error) {
-        throw new Error(error);
-      }
+  try {
+    const { regId } = request.params;
+    const { file, user } = request;
 
-      if (result.rows[0].id) {
-        pdfExtract(actualFileContent)
-          .then((foundKeywords) => {
-            pool.query(
-              `INSERT INTO resumes (user_id, upload_timestamp, resume, key_words) VALUES($1, $2, $3, $4) RETURNING id`,
-              [
-                result.rows[0].id,
-                new Date(),
-                actualFileContent.toString("base64"),
-                foundKeywords,
-              ],
-              (error, result) => {
-                if (error) {
-                  throw new Error(error);
-                }
-                if (result.rows[0].id) {
-                  response
-                    .status(201)
-                    .json({ message: "Resume Uploaded Successfully" });
-                }
+    const { resumeUrl } = request.query;
+    console.log("req -----> ", file, resumeUrl === undefined);
+
+    const {
+      fieldname: mappedKey,
+      originalname: fileName,
+      buffer: actualFileContent,
+      size: fileSize,
+    } = file;
+    console.log("userfiles ------>", request);
+    console.log("resume ------>", file, regId);
+    console.log(
+      "destructured ---------> ",
+      mappedKey,
+      fileName,
+      actualFileContent.toString("base64"),
+      fileSize
+    );
+
+    const result = await pool.query(
+      `SELECT * FROM users WHERE registration_number = $1`,
+      [regId]
+    );
+
+    if (result.rows.length && result.rows[0].id) {
+      const foundKeywords = await pdfExtract(actualFileContent);
+      const storageScript = resumeUrl
+        ? supabase.storage
+            .from("resumes")
+            .update(
+              `public/resumes/resume-userId-${result.rows[0].id}`,
+              actualFileContent,
+              {
+                cacheControl: "3600",
+                upsert: true,
+              }
+            )
+        : supabase.storage
+            .from("resumes")
+            .upload(
+              `public/resumes/resume-userId-${result.rows[0].id}`,
+              actualFileContent,
+              {
+                cacheControl: "3600",
+                upsert: false,
               }
             );
-            console.log("found key words --------> ", foundKeywords);
-          })
-          .catch((err) => console.log(err));
-      } else {
-        throw new Error("Error in finding uuid");
+      const { data, error } = await storageScript;
+      if (error) throw new Error(error.message);
+
+      const storedResumeUrl = `${process.env.SUPABASEURL}/storage/v1/object/public/resumes/resume-userId-${result.rows[0].id}`;
+      console.log("url -------> ", resumeUrl);
+      const uploadOrUpdateQuery = !resumeUrl
+        ? `INSERT INTO resumes (user_id, upload_timestamp, resume_url, key_words) VALUES($1, $2, $3, $4) RETURNING id`
+        : `UPDATE resumes 
+      SET upload_timestamp = $1, resume_url = $2, key_words = $3 
+      WHERE user_id = $4
+      RETURNING id`;
+      const valuesToUpdate = !resumeUrl
+        ? [result.rows[0].id, new Date(), storedResumeUrl, foundKeywords]
+        : [new Date(), storedResumeUrl, foundKeywords, result.rows[0].id];
+
+      const insertResult = await pool.query(
+        uploadOrUpdateQuery,
+        valuesToUpdate
+      );
+
+      if (insertResult.rows.length && insertResult.rows[0].id) {
+        response.status(201).json({ message: "Resume Uploaded Successfully" });
       }
+    } else {
+      throw new Error("Error in finding uuid");
     }
-  );
+  } catch (error) {
+    console.error(error);
+    response.status(500).json({ error: error.message });
+  }
 };
 
 const sendVerificationEmail = (email, verificationToken = "") => {
@@ -622,10 +650,15 @@ const updateSelf = async (req, res) => {
 const getCurrUpdatedData = async (req, res) => {
   const currUser = req.user;
   // const { regId } = req.params;
+  const JointQuery = `SELECT u.*, r.resume_url
+ FROM users u
+ LEFT JOIN resumes r ON u.id = r.user_id
+ WHERE u.registration_number = $1;
+ `;
 
   const Query = `SELECT * FROM users WHERE registration_number = $1`;
   if (currUser.role === "Client") {
-    pool.query(Query, [currUser.registration_number], (error, result) => {
+    pool.query(JointQuery, [currUser.registration_number], (error, result) => {
       if (error) {
         throw new Error(error);
       } else if (result.rows.length) {
