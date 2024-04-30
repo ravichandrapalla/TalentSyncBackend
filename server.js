@@ -8,6 +8,7 @@ const db = require("./queries");
 const authMiddleware = require("./authMiddleware");
 const port = process.env.PORT || 3001;
 const multer = require("multer");
+
 const upload = multer();
 // const HOST = "127.0.0.1";
 require("dotenv").config();
@@ -22,16 +23,9 @@ app.use(
 );
 
 app.post("/signup", db.createUser);
-app.post("/login", db.getUser);
+app.post("/login", db.login);
 
-app.post("/refreshToken", authMiddleware.verifyRefresh, (req, res) => {
-  const user = req.user;
-  console.log("req.body is -> ", req);
-  const newAccessToken = jwt.sign(user, process.env.SECRET_KEY, {});
-  res.setHeader("Authorization", `${newAccessToken}`);
-  res.setHeader("Access-Control-Expose-Headers", "Authorization");
-  res.status(200).json({ message: "Token Refresh Complete" });
-});
+app.post("/refreshToken", authMiddleware.verifyToken, db.tokenRefresh);
 
 app.post(
   "/uploadResume/:regId",

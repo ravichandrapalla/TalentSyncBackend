@@ -16,6 +16,67 @@ const pool = new Pool({
     rejectUnauthorized: false,
   },
 });
+const tokenRefresh = async (request, response) => {
+  const user = request.user;
+  const { registration_number } = user;
+
+  console.log("req.body is -> ", request);
+  pool.query(
+    `SELECT * FROM users WHERE registration_number = $1`,
+    [registration_number],
+    (error, result) => {
+      if (error) {
+        return response.status(500).json({ message: "Database error" });
+      }
+      if (!result.rows.length) {
+        return response.status(404).json({ message: "User not found" });
+      }
+      if (result) {
+        const {
+          username,
+          email: storedEmail,
+          password: storedPassword,
+          registration_number,
+          role_id,
+          role,
+        } = result.rows[0];
+        const payload = {
+          username,
+          storedEmail,
+          registration_number,
+          role_id,
+          role,
+        };
+        const expiryTime = Math.floor(Date.now() / 1000) + 15 * 60; // 15 minutes expiration
+        console.log("payload for refreshed access token is ----> ", payload);
+        const dateTime = Date.now();
+        const oneMinuteLater = new Date(dateTime + 60 * 1000);
+
+        // Convert the Date object to a Unix timestamp (in milliseconds)
+        const unixTimestampMs = dateTime;
+        const unixTimestampMsOneMinuteLater = oneMinuteLater.getTime(); // Corrected
+
+        // Convert milliseconds to seconds (Unix epoch format)
+        const unixTimestampSec = Math.floor(unixTimestampMs / 1000);
+        const unixTimestampSecOneMinuteLater = Math.floor(
+          unixTimestampMsOneMinuteLater / 1000
+        );
+        const accessToken = jwt.sign(
+          {
+            ...payload,
+            iat: unixTimestampSec,
+            exp: unixTimestampSecOneMinuteLater,
+          },
+          process.env.SECRET_KEY
+        );
+
+        response.setHeader("Authorization", accessToken);
+        response.setHeader("Access-Control-Expose-Headers", "Authorization");
+        response.status(200).json({ message: "Token Refresh Complete" });
+      }
+    }
+  );
+};
 
 const createUser = async (request, response) => {
   const { fullName, email, password, mobileNumber, role } = request.body;
@@ -249,7 +310,7 @@ const verifyEmail = async (request, response) => {
   );
 };
 
-const getUser = async (request, response) => {
+const login = async (request, response) => {
   const { email, password } = request.body;
 
   pool.query(
@@ -257,7 +318,7 @@ const getUser = async (request, response) => {
     [email],
     (error, results) => {
       if (error) {
-        throw new Error(error);
+        response.status(400).send("User not found");
       }
       if (results.rows.length > 0) {
         // console.log("results are ---", results);
@@ -271,13 +332,60 @@ const getUser = async (request, response) => {
           role_id,
           role,
         } = results.rows[0];
+
         console.log("role is ---> ", role);
         bcrypt.compare(password, storedPassword, (err, result) => {
           if (err) {
-            throw new Error("Hach issue");
+            response.status(400).send("Error in password validation");
           }
           // console.log("compare ", password, results.rows[0].password, result);
           if (result) {
+            const currentDateTimeUTC = new Date();
+            const ISTOffset = 330;
+            const currentDateTimeIST = new Date(
+              currentDateTimeUTC.getTime() + ISTOffset * 60000
+            );
+            const formattedDateTime = currentDateTimeIST.toISOString();
+            console.log(formattedDateTime);
+
+            // Convert the time to the local time zone (India)
+            const options = { timeZone: "Asia/Kolkata" }; // India's time zone is 'Asia/Kolkata'
+            const indianTime = currentDateTimeUTC.toLocaleString(
+              "en-US",
+              options
+            );
+            console.log("india time is ", indianTime);
+            // const dateTimeString = indianTime;
+
+            // // Convert the date and time string to a Date object
+            // const dateTime = new Date(dateTimeString);
+            // const oneMinuteLater = new Date(dateTime.getTime() + 60 * 1000);
+
+            // // Convert the Date object to a Unix timestamp (in milliseconds)
+            // const unixTimestampMs = dateTime.getTime();
+            // const unixTimestampMsOneMinuteLater = oneMinuteLater.getTime();
+
+            // // Convert milliseconds to seconds (Unix epoch format)
+            // const unixTimestampSec = Math.floor(unixTimestampMs / 1000);
+            // const unixTimestampSecOneMinuteLater = Math.floor(
+            //   unixTimestampMsOneMinuteLater / 1000
+            // );
+
+            const dateTime = Date.now();
+            const oneMinuteLater = new Date(dateTime + 60 * 1000);
+
+            // Convert the Date object to a Unix timestamp (in milliseconds)
+            const unixTimestampMs = dateTime;
+            const unixTimestampMsOneMinuteLater = oneMinuteLater.getTime(); // Corrected
+
+            // Convert milliseconds to seconds (Unix epoch format)
+            const unixTimestampSec = Math.floor(unixTimestampMs / 1000);
+            const unixTimestampSecOneMinuteLater = Math.floor(
+              unixTimestampMsOneMinuteLater / 1000
+            );
+            console.log("unix sec is ", unixTimestampSec);
+            console.log("one minute later ", unixTimestampSecOneMinuteLater);
+
             const payload = {
               username,
               storedEmail,
@@ -285,34 +393,63 @@ const getUser = async (request, response) => {
               role_id,
               role,
             };
-            // const user = { name: email };
+
             const accessToken = jwt.sign(
-              payload,
-              process.env.SECRET_KEY,
-              { expiresIn: "10000" } // Access token expires in 1 minute, adjust as needed
+              {
+                ...payload,
+                iat: unixTimestampSec,
+                exp: unixTimestampSecOneMinuteLater,
+              },
+              process.env.SECRET_KEY
+              //{ expiresIn: "1m" }  Access token expires in 1 minute, adjust as needed
             );
+            const decoad = jwt.decode(accessToken);
+
+            const createdatTime = decoad.iat;
+            const expirationTimeInSeconds = decoad.exp;
+            const creatingDate = new Date(createdatTime * 1000);
+            const expirationDate = new Date(expirationTimeInSeconds * 1000);
+
+            console.log("decoaded token creating time ", creatingDate);
+
+            console.log("decoaded token expoiry time ", expirationDate);
+
             const refreshToken = jwt.sign(
               payload,
-              process.env.REFRESH_SECRET_KEY,
+              process.env.REFRESH_KEY,
               { expiresIn: "7d" } // Refresh token expires in 7 days, adjust as needed
+            );
+            pool.query(
+              `UPDATE users SET refresh_token = $1 WHERE registration_number = $2`,
+              [refreshToken, registration_number],
+              (error, result) => {
+                if (error) {
+                  response
+                    .status(404)
+                    .send("Unable to find the user to Update refresh token");
+                } else if (result) {
+                  console.log("found user to update ----> ", result);
+                }
+              }
             );
 
             response.setHeader("Authorization", `${accessToken}`);
-            response.setHeader("RefreshToken", refreshToken);
+            response.setHeader("refreshtoken", refreshToken);
             response.setHeader(
               "Access-Control-Expose-Headers",
+
               "Authorization, RefreshToken"
             );
 
             response.status(200).json({ message: "Successfully logged in" });
           } else {
-            response.status(401).json({ message: "Incorrect Password" });
+            return response.status(401).send("Invalid password");
           }
         });
       } else {
-        response.status(404).json({
-          message: "Email not found. please Register before Login...",
-        });
+        response
+          .status(404)
+          .send("No error but user not found some thing went wrong");
       }
     }
   );
@@ -699,7 +836,7 @@ const updateUserAvatarUrl = async (req, res) => {
 
 module.exports = {
   createUser,
-  getUser,
+  login,
   getAllUsers,
   verifyEmail,
   storeResume,
@@ -714,4 +851,5 @@ module.exports = {
   updateSelf,
   getCurrUpdatedData,
   updateUserAvatarUrl,
+  tokenRefresh,
 };
