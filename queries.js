@@ -50,7 +50,7 @@ const tokenRefresh = async (request, response) => {
         const expiryTime = Math.floor(Date.now() / 1000) + 15 * 60; // 15 minutes expiration
         console.log("payload for refreshed access token is ----> ", payload);
         const dateTime = Date.now();
-        const oneMinuteLater = new Date(dateTime + 60 * 1000);
+        const oneMinuteLater = new Date(dateTime + 360 * 1000);
 
         // Convert the Date object to a Unix timestamp (in milliseconds)
         const unixTimestampMs = dateTime;
@@ -195,24 +195,18 @@ const storeResume = async (request, response) => {
       const storageScript = resumeUrl
         ? supabase.storage
             .from("resumes")
-            .update(
-              `public/resumes/resume-userId-${result.rows[0].id}`,
-              actualFileContent,
-              {
-                cacheControl: "3600",
-                upsert: true,
-              }
-            )
+            .update(`resume-userId-${result.rows[0].id}`, actualFileContent, {
+              cacheControl: "3600",
+              upsert: true,
+              contentType: "application/pdf",
+            })
         : supabase.storage
             .from("resumes")
-            .upload(
-              `public/resumes/resume-userId-${result.rows[0].id}`,
-              actualFileContent,
-              {
-                cacheControl: "3600",
-                upsert: false,
-              }
-            );
+            .upload(`resume-userId-${result.rows[0].id}`, actualFileContent, {
+              cacheControl: "3600",
+              upsert: false,
+              contentType: "application/pdf",
+            });
       const { data, error } = await storageScript;
       if (error) throw new Error(error.message);
 
@@ -372,7 +366,7 @@ const login = async (request, response) => {
             // );
 
             const dateTime = Date.now();
-            const oneMinuteLater = new Date(dateTime + 60 * 1000);
+            const oneMinuteLater = new Date(dateTime + 360 * 1000);
 
             // Convert the Date object to a Unix timestamp (in milliseconds)
             const unixTimestampMs = dateTime;
@@ -417,7 +411,7 @@ const login = async (request, response) => {
             const refreshToken = jwt.sign(
               payload,
               process.env.REFRESH_KEY,
-              { expiresIn: "7d" } // Refresh token expires in 7 days, adjust as needed
+              { expiresIn: "1d" } // Refresh token expires in 1 day
             );
             pool.query(
               `UPDATE users SET refresh_token = $1 WHERE registration_number = $2`,
@@ -538,7 +532,7 @@ const getMatchedResumes = async (req, res) => {
   const exactSearchText = req.query.searchText;
   if (exactSearchText) {
     pool.query(
-      `SELECT u.username, u.email, u.mobile_number, r.resume FROM resumes r INNER JOIN users u ON u.id = r.user_id WHERE $1 = ANY(key_words)`,
+      `SELECT u.username, u.email, u.mobile_number, r.resume_url FROM resumes r INNER JOIN users u ON u.id = r.user_id WHERE $1 = ANY(key_words)`,
       [exactSearchText],
       (error, result) => {
         console.log("query resp ------->", result);
