@@ -63,6 +63,7 @@ app.post(
   authMiddleware.verifyToken,
   db.updateUserAvatarUrl
 );
+app.post("/postJob", authMiddleware.verifyToken, db.postJob);
 
 // app.post("/api/signup", async (req, res) => {
 //   const { fullName, email, password } = req.body;

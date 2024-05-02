@@ -827,6 +827,27 @@ const updateUserAvatarUrl = async (req, res) => {
 
   res.status(404).json({ message: "No record found" });
 };
+const postJob = async (req, res) => {
+  const currUser = req.user;
+  const { title, description, company, location, salary } = req.body;
+  pool.query(
+    `INSERT INTO jobs (recruiter_id, title, description, company, currlocation, salary) VALUES($1, $2, $3, $4, $5, $6) RETURNING job_id`,
+    [
+      currUser.registration_number,
+      title,
+      description,
+      company,
+      location,
+      salary,
+    ],
+    (error, result) => {
+      if (error) res.status(500).send(error.message);
+      if (result) {
+        res.status(201).json({ message: "JOb Posting successfully created" });
+      }
+    }
+  );
+};
 
 module.exports = {
   createUser,
@@ -846,4 +867,5 @@ module.exports = {
   getCurrUpdatedData,
   updateUserAvatarUrl,
   tokenRefresh,
+  postJob,
 };
