@@ -848,6 +848,23 @@ const postJob = async (req, res) => {
     }
   );
 };
+const getJobPostings = async (req, res) => {
+  const currUser = req.user;
+  const { registration_number } = currUser;
+  const Query =
+    currUser.role === "Recruiter"
+      ? `SELECT * FROM jobs where recruiter_id = $1`
+      : `SELECT * FROM jobs`;
+  const parameters = currUser.role === "Recruiter" ? [registration_number] : [];
+  pool.query(Query, parameters, (error, result) => {
+    if (error) return res.status(500).send("error in query");
+    if (result.rows.length) {
+      return res
+        .status(200)
+        .json({ message: "data found", jobPosts: result.rows });
+    }
+  });
+};
 
 module.exports = {
   createUser,
@@ -868,4 +885,5 @@ module.exports = {
   updateUserAvatarUrl,
   tokenRefresh,
   postJob,
+  getJobPostings,
 };
