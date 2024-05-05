@@ -865,6 +865,57 @@ const getJobPostings = async (req, res) => {
     }
   });
 };
+const applyJobPosting = async (req, res) => {
+  const currUser = req.user;
+  const { registration_number } = currUser;
+
+  const { jobId } = req.body;
+  if (!jobId) {
+    return res.status(400).json({ error: "Job ID is required" });
+  }
+  const insertQuery = `
+      INSERT INTO Applications (job_id, user_id, resume_url)
+      VALUES ($1, $2, $3)
+      RETURNING application_id`;
+  const query = `
+      SELECT u.id, r.resume_url
+      FROM users u
+      INNER JOIN resumes r ON u.id = r.user_id
+      WHERE u.registration_number = $1
+      `;
+  pool.query(query, [registration_number], (error, result) => {
+    if (error) throw new Error(error.message);
+    if (result) {
+      // console.log("result is ---> ", result);
+      const { id, resume_url } = result.rows[0];
+      pool.query(insertQuery, [jobId, id, resume_url], (error, results) => {
+        if (error) throw new Error(error.message);
+        if (result) {
+          const applicationId = results.rows[0].application_id;
+          res.status(201).json({
+            message: "Job application submitted successfully",
+            applicationId,
+          });
+        }
+      });
+    }
+  });
+};
+
+const getJobApplications = async (req, res) => {
+  const currUser = req.user;
+  const { registration_number } = currUser;
+  const Query = `SELECT status, resume_url, application_id, title, description, company, currlocation FROM applications a INNER JOIN jobs j ON (j.job_id = a.job_id) WHERE a.job_id IN (SELECT job_id FROM jobs WHERE recruiter_id = $1)`;
+  pool.query(Query, [registration_number], (error, result) => {
+    if (error) throw new Error(error.message);
+    console.log(`applications are ----> `, result);
+    if (result) {
+      res
+        .status(200)
+        .json({ message: "data found", applications: result.rows });
+    }
+  });
+};
 
 module.exports = {
   createUser,
@@ -886,4 +937,6 @@ module.exports = {
   tokenRefresh,
   postJob,
   getJobPostings,
+  applyJobPosting,
+  getJobApplications,
 };

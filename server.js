@@ -65,6 +65,12 @@ app.post(
 );
 app.post("/postJob", authMiddleware.verifyToken, db.postJob);
 app.get("/getJobPostings", authMiddleware.verifyToken, db.getJobPostings);
+app.post("/applyJobPosting", authMiddleware.verifyToken, db.applyJobPosting);
+app.get(
+  "/getJobApplications",
+  authMiddleware.verifyToken,
+  db.getJobApplications
+);
 
 // app.post("/api/signup", async (req, res) => {
 //   const { fullName, email, password } = req.body;
