@@ -33,6 +33,7 @@ const tokenRefresh = async (request, response) => {
       }
       if (result) {
         const {
+          id: userId,
           username,
           email: storedEmail,
           password: storedPassword,
@@ -41,6 +42,7 @@ const tokenRefresh = async (request, response) => {
           role,
         } = result.rows[0];
         const payload = {
+          userId,
           username,
           storedEmail,
           registration_number,
@@ -317,6 +319,7 @@ const login = async (request, response) => {
       if (results.rows.length > 0) {
         // console.log("results are ---", results);
         const {
+          id: userId,
           username,
           email: storedEmail,
           password: storedPassword,
@@ -381,6 +384,7 @@ const login = async (request, response) => {
             console.log("one minute later ", unixTimestampSecOneMinuteLater);
 
             const payload = {
+              userId,
               username,
               storedEmail,
               registration_number,
@@ -850,12 +854,14 @@ const postJob = async (req, res) => {
 };
 const getJobPostings = async (req, res) => {
   const currUser = req.user;
-  const { registration_number } = currUser;
+  const { registration_number, userId } = currUser;
   const Query =
     currUser.role === "Recruiter"
       ? `SELECT * FROM jobs where recruiter_id = $1`
-      : `SELECT * FROM jobs`;
-  const parameters = currUser.role === "Recruiter" ? [registration_number] : [];
+      : `SELECT * FROM jobs WHERE job_id NOT IN (SELECT job_id FROM applications WHERE user_Id = $1)`;
+  const parameters =
+    currUser.role === "Recruiter" ? [registration_number] : [userId];
+
   pool.query(Query, parameters, (error, result) => {
     if (error) return res.status(500).send("error in query");
     if (result.rows.length) {
@@ -876,7 +882,7 @@ const applyJobPosting = async (req, res) => {
   const insertQuery = `
       INSERT INTO Applications (job_id, user_id, resume_url)
       VALUES ($1, $2, $3)
-      RETURNING application_id`;
+      RETURNING application_id, job_id`;
   const query = `
       SELECT u.id, r.resume_url
       FROM users u
@@ -891,10 +897,10 @@ const applyJobPosting = async (req, res) => {
       pool.query(insertQuery, [jobId, id, resume_url], (error, results) => {
         if (error) throw new Error(error.message);
         if (result) {
-          const applicationId = results.rows[0].application_id;
+          const appliedJobId = results.rows[0].job_id;
           res.status(201).json({
             message: "Job application submitted successfully",
-            applicationId,
+            appliedJobId,
           });
         }
       });
@@ -906,13 +912,43 @@ const getJobApplications = async (req, res) => {
   const currUser = req.user;
   const { registration_number } = currUser;
   const Query = `SELECT status, resume_url, application_id, title, description, company, currlocation FROM applications a INNER JOIN jobs j ON (j.job_id = a.job_id) WHERE a.job_id IN (SELECT job_id FROM jobs WHERE recruiter_id = $1)`;
-  pool.query(Query, [registration_number], (error, result) => {
+  pool.query(Query, [registration_number], (error, applicationDetails) => {
     if (error) throw new Error(error.message);
-    console.log(`applications are ----> `, result);
+    console.log(`applications are ----> `, applicationDetails);
+    if (applicationDetails) {
+      pool.query(
+        `SELECT username, email, organization, mobile_number, experience, highest_education FROM users WHERE registration_number = $1`,
+        [registration_number],
+        (error, results) => {
+          if (error) throw new Error(error.message);
+          if (results) {
+            const allApplications = applicationDetails.rows.map(
+              (application) => {
+                return { ...application, ...results.rows[0] };
+              }
+            );
+
+            res.status(200).json({
+              message: "data found",
+              applicationRecords: allApplications,
+            });
+          }
+        }
+      );
+    }
+  });
+};
+const getClientJobApplications = async (req, res) => {
+  const currUser = req.user;
+  const { userId } = currUser;
+  const jobDetailQuery = `SELECT j.title, j.company, j.salary, j.currLocation, a.status, a.applied_at,	a.resume_url FROM jobs j INNER JOIN applications a ON (j.job_id = a.job_id) WHERE a.user_id = $1`;
+  // const Query = `SELECT status, applied_at,	resume_url FROM applications WHERE user_id = $1`;
+  pool.query(jobDetailQuery, [userId], (error, result) => {
+    if (error) throw new Error(error.message);
     if (result) {
-      res
+      return res
         .status(200)
-        .json({ message: "data found", applications: result.rows });
+        .json({ message: "data found", applicationRecords: result.rows });
     }
   });
 };
@@ -939,4 +975,5 @@ module.exports = {
   getJobPostings,
   applyJobPosting,
   getJobApplications,
+  getClientJobApplications,
 };

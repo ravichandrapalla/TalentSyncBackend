@@ -71,6 +71,11 @@ app.get(
   authMiddleware.verifyToken,
   db.getJobApplications
 );
+app.get(
+  "/getclientjobapplications",
+  authMiddleware.verifyToken,
+  db.getClientJobApplications
+);
 
 // app.post("/api/signup", async (req, res) => {
 //   const { fullName, email, password } = req.body;
