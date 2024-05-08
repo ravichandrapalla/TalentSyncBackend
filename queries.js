@@ -952,6 +952,21 @@ const getClientJobApplications = async (req, res) => {
     }
   });
 };
+const updateStatusOfApplicant = async (req, res) => {
+  const currUser = req.user;
+  const { userId } = currUser;
+  const { value: status, applicationId } = req.body;
+  console.log("status     ------------------------------> ", status, userId);
+  const updateQuery = `UPDATE applications SET status = $1 WHERE application_id = $2`;
+
+  pool.query(updateQuery, [status, applicationId], (error, result) => {
+    if (error) throw new Error(error.message);
+    if (result) {
+      console.log(" update response ---> ", result);
+      return res.status(200).json({ message: "data updated" });
+    }
+  });
+};
 
 module.exports = {
   createUser,
@@ -976,4 +991,5 @@ module.exports = {
   applyJobPosting,
   getJobApplications,
   getClientJobApplications,
+  updateStatusOfApplicant,
 };
