@@ -33,6 +33,7 @@ app.post(
   upload.single("resume"),
   db.storeResume
 );
+app.put("/revokeAccess", authMiddleware.verifyToken, db.revokeAccess);
 
 app.get("/verify/:verificationToken", db.verifyEmail);
 

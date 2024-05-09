@@ -305,6 +305,27 @@ const verifyEmail = async (request, response) => {
     }
   );
 };
+const revokeAccess = async (request, response) => {
+  const currUser = request.user;
+  const { userId } = request.body;
+  const approvalQuery = `SELECT approval_status FROM users WHERE id = $1`;
+  const revokeQuery = `UPDATE users SET approval_status = NULL WHERE id = $1`;
+  pool.query(approvalQuery, [userId], (error, result) => {
+    if (error) throw new Error(error.message);
+    if (result.rows[0].approval_status) {
+      pool.query(revokeQuery, [userId], (error, results) => {
+        if (error) throw new Error(error.message);
+        if (results.rows) {
+          response.status(200).json({ message: "success" });
+        }
+      });
+    } else if (result.rows[0].approval_status === "") {
+      response
+        .status(200)
+        .json({ message: "this user is already pending approval" });
+    }
+  });
+};
 
 const login = async (request, response) => {
   const { email, password } = request.body;
@@ -441,7 +462,7 @@ const login = async (request, response) => {
 
             response.status(200).json({ message: "Successfully logged in" });
           } else {
-            return response.status(401).send("Invalid password");
+            return response.status(401).send({ message: "Invalid password" });
           }
         });
       } else {
@@ -855,6 +876,12 @@ const postJob = async (req, res) => {
 const getJobPostings = async (req, res) => {
   const currUser = req.user;
   const { registration_number, userId } = currUser;
+  const { rows } = await pool.query(
+    `SELECT approval_status FROM users WHERE id = $1`,
+    [userId]
+  );
+  const isApproved = rows[0]?.approval_status;
+  console.log("is approved is -------------> ", isApproved);
   const Query =
     currUser.role === "Recruiter"
       ? `SELECT * FROM jobs where recruiter_id = $1`
@@ -865,9 +892,11 @@ const getJobPostings = async (req, res) => {
   pool.query(Query, parameters, (error, result) => {
     if (error) return res.status(500).send("error in query");
     if (result.rows.length) {
-      return res
-        .status(200)
-        .json({ message: "data found", jobPosts: result.rows });
+      return res.status(200).json({
+        message: "data found",
+        jobPosts: result.rows,
+        isUserAllowed: isApproved ? true : false,
+      });
     }
   });
 };
@@ -992,4 +1021,5 @@ module.exports = {
   getJobApplications,
   getClientJobApplications,
   updateStatusOfApplicant,
+  revokeAccess,
 };
