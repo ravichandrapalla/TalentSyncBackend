@@ -781,7 +781,7 @@ const updateSelf = async (req, res) => {
   );
 
   const Query = `UPDATE users SET ${entity[0]} = $1 WHERE registration_number = $2 RETURNING *`;
-  if (currUser.role === "Client") {
+  if (currUser.role === "Client" || currUser.role === "Recruiter") {
     pool.query(
       Query,
       [value[0], currUser.registration_number],
@@ -813,7 +813,7 @@ const getCurrUpdatedData = async (req, res) => {
  `;
 
   const Query = `SELECT * FROM users WHERE registration_number = $1`;
-  if (currUser.role === "Client") {
+  if (currUser.role === "Client" || currUser.role === "Recruiter") {
     pool.query(JointQuery, [currUser.registration_number], (error, result) => {
       if (error) {
         throw new Error(error);
@@ -836,7 +836,7 @@ const updateUserAvatarUrl = async (req, res) => {
   const { url } = req.body;
   console.log("1 --->", url, "2 ----> ", currUser.registration_number);
   const Query = `UPDATE users SET avatar_url = $1 WHERE registration_number = $2`;
-  if (currUser.role === "Client") {
+  if (currUser.role === "Client" || currUser.role === "Recruiter") {
     pool.query(Query, [url, currUser.registration_number], (error, result) => {
       if (error) {
         throw new Error(error);
@@ -854,9 +854,13 @@ const updateUserAvatarUrl = async (req, res) => {
 };
 const postJob = async (req, res) => {
   const currUser = req.user;
-  const { title, description, company, location, salary } = req.body;
+  const { title, description, company, skills, location, salary } = req.body;
+  const skillsArrayFormatted = `{${skills
+    .map((skill) => `"${skill}"`)
+    .join(",")}}`;
+  console.log(`skilla sre =>.... `, skills);
   pool.query(
-    `INSERT INTO jobs (recruiter_id, title, description, company, currlocation, salary) VALUES($1, $2, $3, $4, $5, $6) RETURNING job_id`,
+    `INSERT INTO jobs (recruiter_id, title, description, company, currlocation, salary, skills) VALUES($1, $2, $3, $4, $5, $6, $7) RETURNING job_id`,
     [
       currUser.registration_number,
       title,
@@ -864,6 +868,7 @@ const postJob = async (req, res) => {
       company,
       location,
       salary,
+      skillsArrayFormatted,
     ],
     (error, result) => {
       if (error) res.status(500).send(error.message);
@@ -939,9 +944,17 @@ const applyJobPosting = async (req, res) => {
 
 const getJobApplications = async (req, res) => {
   const currUser = req.user;
-  const { registration_number } = currUser;
-  const Query = `SELECT status, resume_url, application_id, title, description, company, currlocation FROM applications a INNER JOIN jobs j ON (j.job_id = a.job_id) WHERE a.job_id IN (SELECT job_id FROM jobs WHERE recruiter_id = $1)`;
-  pool.query(Query, [registration_number], (error, applicationDetails) => {
+  const { jobId } = req.query;
+  console.log("received jobId ---> ", jobId);
+  const { registration_number, userId } = currUser;
+  const { rows } = await pool.query(
+    `SELECT approval_status FROM users WHERE id = $1`,
+    [userId]
+  );
+  const isApproved = rows[0]?.approval_status;
+
+  const Query = `SELECT status, resume_url, application_id, title, description, company, currlocation FROM applications a INNER JOIN jobs j ON (j.job_id = a.job_id) WHERE a.job_id = $1`;
+  pool.query(Query, [jobId], (error, applicationDetails) => {
     if (error) throw new Error(error.message);
     console.log(`applications are ----> `, applicationDetails);
     if (applicationDetails) {
@@ -960,6 +973,7 @@ const getJobApplications = async (req, res) => {
             res.status(200).json({
               message: "data found",
               applicationRecords: allApplications,
+              isUserAllowed: isApproved ? true : false,
             });
           }
         }
@@ -970,14 +984,22 @@ const getJobApplications = async (req, res) => {
 const getClientJobApplications = async (req, res) => {
   const currUser = req.user;
   const { userId } = currUser;
+  const { rows } = await pool.query(
+    `SELECT approval_status FROM users WHERE id = $1`,
+    [userId]
+  );
+  const isApproved = rows[0]?.approval_status;
+
   const jobDetailQuery = `SELECT j.title, j.company, j.salary, j.currLocation, a.status, a.applied_at,	a.resume_url FROM jobs j INNER JOIN applications a ON (j.job_id = a.job_id) WHERE a.user_id = $1`;
   // const Query = `SELECT status, applied_at,	resume_url FROM applications WHERE user_id = $1`;
   pool.query(jobDetailQuery, [userId], (error, result) => {
     if (error) throw new Error(error.message);
     if (result) {
-      return res
-        .status(200)
-        .json({ message: "data found", applicationRecords: result.rows });
+      return res.status(200).json({
+        message: "data found",
+        applicationRecords: result.rows,
+        isUserAllowed: isApproved ? true : false,
+      });
     }
   });
 };
@@ -995,6 +1017,32 @@ const updateStatusOfApplicant = async (req, res) => {
       return res.status(200).json({ message: "data updated" });
     }
   });
+};
+const getJobApplicationsForRecruiter = async (req, res) => {
+  const currUser = req.user;
+  const { registration_number, userId } = currUser;
+
+  const { rows } = await pool.query(
+    `SELECT approval_status FROM users WHERE id = $1`,
+    [userId]
+  );
+  const isApproved = rows[0]?.approval_status;
+  try {
+    const firstquery = `SELECT j.company, j.job_id, j.title, COUNT(a.application_id) AS application_count  FROM jobs j LEFT JOIN applications a ON j.job_id = a.job_id WHERE recruiter_id = $1 GROUP BY j.job_id`;
+    const parameters = [registration_number];
+    const jobs = await pool.query(firstquery, parameters);
+    console.log(" query response is ---> ", jobs);
+    // const secondQuery = ``;
+    // const
+
+    res.json({
+      applicationRecords: jobs.rows,
+      message: "got results",
+      isUserAllowed: isApproved,
+    });
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 module.exports = {
@@ -1022,4 +1070,5 @@ module.exports = {
   getClientJobApplications,
   updateStatusOfApplicant,
   revokeAccess,
+  getJobApplicationsForRecruiter,
 };

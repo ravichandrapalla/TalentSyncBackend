@@ -82,6 +82,11 @@ app.put(
   authMiddleware.verifyToken,
   db.updateStatusOfApplicant
 );
+app.get(
+  "/getRecruiterJobApplications",
+  authMiddleware.verifyToken,
+  db.getJobApplicationsForRecruiter
+);
 
 // app.post("/api/signup", async (req, res) => {
 //   const { fullName, email, password } = req.body;
