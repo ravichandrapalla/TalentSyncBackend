@@ -953,14 +953,14 @@ const getJobApplications = async (req, res) => {
   );
   const isApproved = rows[0]?.approval_status;
 
-  const Query = `SELECT status, resume_url, application_id, title, description, company, currlocation FROM applications a INNER JOIN jobs j ON (j.job_id = a.job_id) WHERE a.job_id = $1`;
+  const Query = `SELECT status, resume_url, user_id, application_id, title, description, company, currlocation FROM applications a INNER JOIN jobs j ON (j.job_id = a.job_id) WHERE a.job_id = $1`;
   pool.query(Query, [jobId], (error, applicationDetails) => {
     if (error) throw new Error(error.message);
     console.log(`applications are ----> `, applicationDetails);
     if (applicationDetails) {
       pool.query(
-        `SELECT username, email, organization, mobile_number, experience, highest_education FROM users WHERE registration_number = $1`,
-        [registration_number],
+        `SELECT username, email, organization, mobile_number, experience, highest_education FROM users u INNER JOIN applications a ON (u.id = a.user_id) WHERE job_id = $1`,
+        [jobId],
         (error, results) => {
           if (error) throw new Error(error.message);
           if (results) {
