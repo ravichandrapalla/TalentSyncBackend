@@ -1,17 +1,17 @@
+require("dotenv").config();
 require("./dbconnection");
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const app = express();
 const jwt = require("jsonwebtoken");
 const db = require("./queries");
 const authMiddleware = require("./authMiddleware");
 const port = process.env.PORT || 3001;
 const multer = require("multer");
 
+const app = express();
 const upload = multer();
 // const HOST = "127.0.0.1";
-require("dotenv").config();
 
 // middlewares
 app.use(cors());
@@ -88,31 +88,9 @@ app.get(
   db.getJobApplicationsForRecruiter
 );
 
-// app.post("/api/signup", async (req, res) => {
-//   const { fullName, email, password } = req.body;
-//   const responseData = {};
-//   if (fullName && email && password) {
-//     responseData.data = { fullName, email, password };
-//     responseData.error = undefined;
-//   } else {
-//     responseData.data = undefined;
-//     responseData.error = "error from backend";
-//   }
-//   res.json(responseData);
+// app.listen(port, () => {
+//   console.log(`listening on port ${port}....`);
 // });
-// app.post("/api/login", async (req, res) => {
-//   const { fullName, email, password } = req.body;
-//   const responseData = {};
-//   if (fullName && email && password) {
-//     responseData.data = { fullName, email, password };
-//     responseData.error = undefined;
-//   } else {
-//     responseData.data = undefined;
-//     responseData.error = "error from backend";
-//   }
-//   res.json(responseData);
-// });
-
-app.listen(port, () => {
-  console.log(`listening on port ${port}....`);
-});
+module.exports = (req, res) => {
+  app(req, res);
+};
