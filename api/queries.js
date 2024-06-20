@@ -3,7 +3,7 @@ require("dotenv").config();
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const express = require("express");
-const { transporter } = require("../nodemailer");
+const { transporter } = require("./nodemailer");
 const { v4: uuidv4 } = require("uuid");
 const { PdfDocument } = require("@ironsoftware/ironpdf");
 const axios = require("axios").default;
