@@ -6,7 +6,7 @@ const cors = require("cors");
 const jwt = require("jsonwebtoken");
 const db = require("./queries");
 const authMiddleware = require("./authMiddleware");
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 4000;
 const multer = require("multer");
 
 const app = express();
